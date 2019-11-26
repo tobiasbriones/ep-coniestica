@@ -1,12 +1,23 @@
 * {
+    position: relative;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
+    color: rgba(0, 0, 0, 0.89);
+}
+
+body {
+    
 }
 
 header {
-
+    width: 100%;
 }
 
 header > nav {
+    width: 100%;
+    height: 96px;
 
 }
 
@@ -14,6 +25,28 @@ footer {
 
 }
 
-#container {
+#logo {
+    width: 100%;
+    margin: 16px 0px;
+}
 
+#logo > img {
+    display: block;
+    widows: 64px;
+    height: 64px;
+    margin: auto;
+}
+
+#logo > h1 {
+    padding: 8px 0px;
+    font-size: 28px;
+    text-align: center;
+}
+
+#container {
+    padding: 3% 64px;
+    background-image: url(../img/background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-origin: border-box;
 }
