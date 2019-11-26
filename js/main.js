@@ -19,6 +19,11 @@
  * Copyright (c) 2019 Tobias Briones
  */
 
-document.addEventListener('DOMContentLoaded', () => {
+const onAboutClick = () => {
   
+}
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  document.getElementById('actionAboutUs').addEventListener('click', onAboutClick);
 });
