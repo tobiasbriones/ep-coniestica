@@ -21,7 +21,8 @@
 
 :root {
     --nav-height: 96px;
-    --brown-primary: rgb(237, 169, 119);
+    --brown-primary: #eda977;
+    --footer-bg: #09172f;
 }
 
 .gone {
@@ -137,7 +138,34 @@ header > nav > div > ul > li > a > span {
 
 /* --------------------------------------------- FOOTER --------------------------------------------- */
 footer {
+    padding: 16px 32px;
+    background-color: var(--footer-bg);
+}
 
+footer li {
+    max-width: 240px;
+    padding: 4px 0px;
+}
+
+footer a {
+    color: #e0e0e0;
+    text-decoration: underline;
+}
+
+footer span {
+    color: #e0e0e0;
+}
+
+footer p.title {
+    margin-bottom: 4px;
+    color: white;
+    font-size: 16px;
+}
+
+footer > div > div {
+    display: inline-block;
+    padding: 16px 32px;
+    vertical-align: top;
 }
 
 /* --------------------------------------------- LOGO --------------------------------------------- */
