@@ -37,7 +37,7 @@
 }
 
 body {
-    
+    min-width: 480px;
 }
 
 /* --------------------------------------------- HEADER --------------------------------------------- */
@@ -156,10 +156,19 @@ footer {
     text-align: center;
 }
 
+/* --------------------------------------------- CONTENTS --------------------------------------------- */
 #container {
     padding: 3% 64px;
     background-image: url(../img/background.jpg);
-    background-size: cover;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
     background-origin: border-box;
+}
+
+#content {
+    height: 800px;
+}
+
+#content > p {
+    background-color: rgba(255, 255, 255, 0.3);
 }
