@@ -19,29 +19,6 @@
  * Copyright (c) 2019 Tobias Briones
  */
 
-:root {
-    --nav-height: 96px;
-    --brown-primary: #eda977;
-    --footer-bg: #09172f;
-}
-
-.gone {
-    display: none;
-}
-
-* {
-    position: relative;
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
-    color: rgba(0, 0, 0, 0.89);
-}
-
-a {
-    text-decoration: none;
-}
-
 body {
     min-width: 480px;
 }
@@ -143,7 +120,7 @@ footer {
 }
 
 footer li {
-    max-width: 240px;
+    max-width: 160px;
     padding: 4px 0px;
 }
 
