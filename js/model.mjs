@@ -27,10 +27,10 @@ const NAV_ABOUT_ITEMS = [
 ];
 
 const NAV_ABOUT_ITEMS_URLS = [
-  'about/mission',
-  'about/vision',
-  'about/objectives',
-  'about/contact'
+  'about.html?v=mission',
+  'about.html?v=vision',
+  'about.html?v=objectives',
+  'about.html?v=contact'
 ];
 
 export { NAV_ABOUT_ITEMS, NAV_ABOUT_ITEMS_URLS }

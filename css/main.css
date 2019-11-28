@@ -40,6 +40,7 @@ body {
     
 }
 
+/* --------------------------------------------- HEADER --------------------------------------------- */
 header {
     width: 100%;
     z-index: 10000;
@@ -60,34 +61,36 @@ header > nav > div > ul > .dropdown-menu {
     position: absolute;
     top: var(--nav-height);
     margin-top: -32px;
-    background-color: #B0BEC5;
+    background-color: rgba(0, 0, 0, 0.6);
     z-index: 10000;
 }
 
 header > nav > div > ul > .dropdown-menu > a {
     display: block;
-    min-width: 160px;
+    min-width: 164px;
     height: 56px;
+    padding-right: 4px;
     line-height: 24px;
-    border: 2px solid transparent;
+    border: 4px solid transparent;
     text-decoration: none;
     text-align: left;
     transition: border 200ms;
 }
 
 header > nav > div > ul > .dropdown-menu > a:hover {
-    border: 2px solid rgba(79, 195, 247, 0.6);
+    border-left: 4px solid rgba(79, 195, 247, 0.6);
 }
 
 
 header > nav > div > ul > .dropdown-menu > a:active {
-    background-color: #F5F5F5;
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
 header > nav > div > ul > .dropdown-menu > a > span {
     display: block;
     height: 100%;
     padding: 16px 32px;
+    color: white;
 }
 
 header > nav > div > ul > li {
@@ -99,6 +102,10 @@ header > nav > div > ul > li {
 
 header > nav > div > ul > li:hover {
     border-bottom: 2px solid rgba(69, 90, 100, 0.30);
+}
+
+header > nav > div > ul > li.dropdown {
+    border-left: 4px solid transparent;
 }
 
 header > nav > div > ul > li.dropdown:hover {
@@ -125,10 +132,12 @@ header > nav > div > ul > li > a > span {
     padding: 0px 16px;
 }
 
+/* --------------------------------------------- FOOTER --------------------------------------------- */
 footer {
 
 }
 
+/* --------------------------------------------- LOGO --------------------------------------------- */
 #logo {
     width: 100%;
     margin: 16px 0px;
