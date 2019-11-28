@@ -19,8 +19,9 @@
  * Copyright (c) 2019 Tobias Briones
  */
 
+import { NAV_ABOUT_ITEMS, NAV_ABOUT_ITEMS_URLS } from './model.mjs';
 
-class NavigationManager {
+export class NavigationManager {
 
   aboutEl;
   dropDownMenu;
@@ -29,22 +30,10 @@ class NavigationManager {
   constructor() {}
 
   getAboutItemsHTML() {
-    const items = [
-      'Misión',
-      'Visión',
-      'Objetivos',
-      'Contacto'
-    ];
-    const urls = [
-      'about/mission',
-      'about/vision',
-      'about/objectives',
-      'about/contact'
-    ];
     let html = '';
 
-    items.forEach((item, i) => html += `
-      <a href="${urls[i]}">
+    NAV_ABOUT_ITEMS.forEach((item, i) => html += `
+      <a href="${NAV_ABOUT_ITEMS_URLS[i]}">
         <span>${item}</span>
       </a>
     `);
@@ -84,9 +73,3 @@ class NavigationManager {
   }
 
 }
-
-const navigationManager = new NavigationManager();
-
-document.addEventListener('DOMContentLoaded', () => {
-  navigationManager.init();
-});
