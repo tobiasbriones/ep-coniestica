@@ -78,7 +78,7 @@ header > nav > div > ul > .dropdown-menu > a {
 }
 
 header > nav > div > ul > .dropdown-menu > a:hover {
-    border-left: 4px solid rgba(79, 195, 247, 0.6);
+    border-left: 4px solid rgba(237, 169, 119, 0.6);
 }
 
 
@@ -101,7 +101,7 @@ header > nav > div > ul > li {
 }
 
 header > nav > div > ul > li:hover {
-    border-bottom: 2px solid rgba(69, 90, 100, 0.30);
+    border-bottom: 2px solid rgb(237, 169, 119);
 }
 
 header > nav > div > ul > li.dropdown {
@@ -110,7 +110,7 @@ header > nav > div > ul > li.dropdown {
 
 header > nav > div > ul > li.dropdown:hover {
     border-bottom: none;
-    border-left: 4px solid rgba(69, 90, 100, 0.30);
+    border-left: 4px solid rgb(237, 169, 119);
 }
 
 header > nav > div > ul > li > a {
@@ -169,6 +169,26 @@ footer {
     height: 800px;
 }
 
-#content > p {
-    background-color: rgba(255, 255, 255, 0.3);
+#content strong {
+    color: white;
+}
+
+#content > .cards > div {
+    padding: 32px 64px;
+    margin: 32px 0px;
+    border-radius: 4px;
+    background-color: rgba(0, 14, 21, 0.6);
+}
+
+#content > .cards > div > span {
+    display: block;
+    padding: 0px 0px 24px 0px;
+    font-size: 28px;
+    font-weight: bold;
+    color: rgb(237, 169, 119);
+}
+
+#content > .cards > div > p {
+    text-align: center;
+    color: white;
 }
