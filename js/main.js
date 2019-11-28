@@ -19,11 +19,74 @@
  * Copyright (c) 2019 Tobias Briones
  */
 
-const onAboutClick = () => {
-  
+
+class NavigationManager {
+
+  aboutEl;
+  dropDownMenu;
+  aboutDropDownItemsHTML;
+
+  constructor() {}
+
+  getAboutItemsHTML() {
+    const items = [
+      'Misión',
+      'Visión',
+      'Objetivos',
+      'Contacto'
+    ];
+    const urls = [
+      'about/mission',
+      'about/vision',
+      'about/objectives',
+      'about/contact'
+    ];
+    let html = '';
+
+    items.forEach((item, i) => html += `
+      <a href="${urls[i]}">
+        <span>${item}</span>
+      </a>
+    `);
+    return html;
+  }
+
+  init() {
+    this.aboutEl = document.querySelector('nav > div > ul > .about');
+    this.dropDownMenu = document.querySelector('nav > div > ul > .dropdown-menu');
+    this.aboutDropDownItemsHTML = this.getAboutItemsHTML();
+    const aboutEl = document.getElementById('actionAboutUs');
+
+    aboutEl.addEventListener('mouseover', this.onAboutHover);
+    aboutEl.addEventListener('mouseout', this.onAboutHoverOut);
+    this.dropDownMenu.addEventListener('mouseout', this.onAboutHoverOut);
+  }
+
+  onAboutHover = () => {
+    const x = this.aboutEl.getClientRects()[0].x;
+    this.dropDownMenu.innerHTML = this.aboutDropDownItemsHTML;
+    this.dropDownMenu.style.transform = `translateX(${x}px)`;
+    this.dropDownMenu.classList.remove('gone');
+  }
+
+  onAboutHoverOut = (e) => {
+    const isInBounds = () => {
+      const rect = this.dropDownMenu.getClientRects()[0];
+      
+      if(!rect) {
+        return false;
+      }
+      return e.pageX >= rect.left && e.pageX <= rect.right && e.pageY >= rect.top && e.pageY <= rect.bottom;
+    }
+    if(!isInBounds()) {
+      this.dropDownMenu.classList.add('gone');
+    }
+  }
+
 }
 
+const navigationManager = new NavigationManager();
 
 document.addEventListener('DOMContentLoaded', () => {
-  document.getElementById('actionAboutUs').addEventListener('click', onAboutClick);
+  navigationManager.init();
 });
