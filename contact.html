@@ -26,9 +26,9 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto&display=swap">
         <link rel="stylesheet" href="css/default.css">
         <link rel="stylesheet" href="css/main.css">
-        <link rel="stylesheet" href="css/about.css">
+        <link rel="stylesheet" href="css/contact.css">
         <link rel="icon" type="image/x-icon" href="favicon.png">
-        <title>Coniestica - Consolidadora de cargas</title>
+        <title>Coniestica - Contacto</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#455A64">
@@ -64,7 +64,7 @@
                 <a href="/index.html">
                     <img src="img/coniestica.png" alt="Coniestica">
                 </a>
-                <h1>Coniestica S.A.</h1>
+                <h1>Coniestica, S.A.</h1>
             </div>
         </header>
 
@@ -72,20 +72,38 @@
             
             <div id="content">
                 <div class="cards">
-                    
+                    <div>
+                        <span class="center">Dirección de nuestro cuartel general</span>
+                        <p>
+                            Col. TheSmiths, 2 Calle. 18-19 Ave. S.E. No.1044, San Pedro Sula, Honduras
+                        </p>
+                    </div>
+                    <div class="right">
+                        <span>Contacto telefónico</span>
+                        <p>
+                            Nuestros call centers están disponibles 24/7 para asistirle en cualquier consulta
+                        </p>
+                        <ul>
+                            <li>+504 355-85000</li>
+                            <li>+504 355-85001</li>
+                            <li>+504 355-85002</li>
+                        </ul>
+                    </div>
+                    <div class="left chat">
+                        <span>Iniciar chat en vivo</span>
+                        <p>
+                            Comuníquese en tiempo real con nuestros agentes disponibles 24/7 para darle soporte
+                            inmediato
+                        </p>
+                        <div>
+                            <span>CHAT</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="options">
-                    <div>
-                        <button id="missionButton">Ver la misión de la empresa</button>
-                    </div>
-                    <div>
-                        <button id="visionButton">Ver la visión de la empresa</button>
-                    </div>
-                    <div>
-                        <button id="objectivesButton">Ver los objetivos de la empresa</button>
-                    </div>
-                </div>
+                <div id="map"></div>
+                <span class="disc" style="color:white">(Ups... No credit card in hand for using Google Maps >: !)</span>
             </div>
+
         </div>
 
         <footer>
@@ -103,7 +121,7 @@
                             <a href="/clients.html">Clientes</a>
                         </li>
                         <li>
-                            <a href="/contact.html">Contacto</a>
+                            <a href="#">Contacto</a>
                         </li>
                         <li>
                             <span>
@@ -142,8 +160,19 @@
         </footer>
         
         <noscript>Please enable JavaScript to continue using this application.</noscript>
-        <script type="module" src="js/about.mjs"></script>
-
+        <script type="module" src="js/contact.mjs"></script>
+        <script>
+            // Initialize and add the map
+            function initMap() {
+                const uluru = { lat: -25.344, lng: 131.036 };
+                const mapEl = document.getElementById('map');
+                const map = new google.maps.Map(mapEl, { zoom: 4, center: uluru });
+                // The marker, positioned at Uluru
+                const marker = new google.maps.Marker({ position: uluru, map: map });
+            }
+        </script>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD9etw_aibbX2lP4hURqOZBQUxT10xqhI0&callback=initMap"></script>
+    
     </body>
 
 </html>

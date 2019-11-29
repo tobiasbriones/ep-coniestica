@@ -30,7 +30,7 @@ const NAV_ABOUT_ITEMS_URLS = [
   'about.html?v=mission',
   'about.html?v=vision',
   'about.html?v=objectives',
-  'about.html?v=contact'
+  'contact.html'
 ];
 
 const COMPANY_MISSION_CARD_HTML = `

@@ -276,6 +276,10 @@ footer > div > div {
     left: 0%;
 }
 
+#content > .cards > div.left {
+    width: 100%;
+}
+
 @media (min-width: 600px) {
 
     #container > .email {
@@ -292,6 +296,10 @@ footer > div > div {
         left: 10%;
     }
 
+    #content > .cards > div.left {
+        width: 90%;
+    }
+    
 }
 
 @media (min-width: 800px) {
@@ -307,6 +315,10 @@ footer > div > div {
     #content > .cards > div.right {
         width: 80%;
         left: 20%;
+    }
+    
+    #content > .cards > div.left {
+        width: 80%;
     }
 
 }

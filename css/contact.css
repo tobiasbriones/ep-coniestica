@@ -1,0 +1,132 @@
+/*
+ * This file is part of example.programming.web.coniestica = Coniestica.
+ *
+ * Coniestica is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * Coniestica is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with Coniestica.  If not, see <https://www.gnu.org/licenses/>.
+ */
+
+/*
+ * Copyright (c) 2019 Tobias Briones
+ */
+
+#content {
+    min-height: 600px;
+    height: auto;
+    padding-top: 10%;
+    padding-bottom: 10%;
+}
+
+#content > .cards > div > p.margin {
+    margin-top: 24px;
+}
+
+#content > .cards > div.chat {
+    padding-bottom: 160px;
+}
+
+#content > .cards > div.chat > div {
+    width: 96px;
+    height: 96px;
+    margin-top: 24px;
+    float: right;
+    border-radius: 50%;
+    background-color: var(--blue-accent);
+    transition: border 100ms;
+    cursor: pointer;
+    -webkit-user-select: none; /* Safari 3.1+ */
+    -moz-user-select: none; /* Firefox 2+ */
+    -ms-user-select: none; /* IE 10+ */
+    user-select: none; /* Standard syntax */
+}
+
+#content > .cards > div.chat > div:active {
+    border: 2px solid var(--brown-primary);
+}
+
+#content > .cards > div.chat > div > span {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-weight: bold;
+}
+
+#content > .options > div {
+    margin: auto;
+    width: 320px;
+}
+
+#content > .options > div > button {
+    display: block;
+    width: 320px;
+    margin-bottom: 12px;
+}
+
+#map {
+    width: 300px;
+    height: 300px;
+    margin: auto;
+}
+
+@media (min-width: 600px) {
+
+    #map {
+        width: 400px;
+        margin-top: 48px;
+    }
+    
+}
+
+@media (min-width: 800px) {
+
+    #map {
+        width: 500px;
+        height: 400px;
+    }
+
+}
+
+@media (min-width: 1024px) {
+
+    #map {
+        width: 600px;
+    }
+
+}
+
+@media (min-width: 1360px) {
+
+    #map {
+        width: 800px;
+        height: 500px;
+    }
+
+}
+
+@media (min-width: 1920px) {
+
+    #content {
+        padding: 0% 5% 5% 45%;
+    }
+
+    #map {
+        position: absolute;
+        width: 600px;
+        height: 400px;
+        top: 0px;
+        left: 5%;
+        margin: 0px;
+    }
+
+}
