@@ -115,13 +115,14 @@ header > nav > div > ul > li > a > span {
 
 /* --------------------------------------------- FOOTER --------------------------------------------- */
 footer {
-    padding: 16px 32px;
+    padding: 16px 8px;
     background-color: var(--footer-bg);
 }
 
 footer li {
     max-width: 160px;
     padding: 4px 0px;
+    list-style: none;
 }
 
 footer a {
@@ -179,7 +180,7 @@ footer > div > div {
 }
 
 #content {
-    min-height: 800px;
+    padding: 0%;
 }
 
 #content strong,
@@ -192,7 +193,7 @@ footer > div > div {
     padding: 8px 16px;
     border-radius: 8px;
     border: 2px solid transparent;
-    background-color: rgb(58, 74, 82);
+    background-color: #546E7A;
 }
 
 #content a:active {
@@ -203,7 +204,11 @@ footer > div > div {
     padding: 32px 64px;
     margin: 32px 0px;
     border-radius: 4px;
-    background-color: rgba(0, 14, 21, 0.6);
+    background-color: rgba(0, 14, 21, 0.8);
+}
+
+#content > .cards > div.link {
+    padding-bottom: 96px;
 }
 
 #content > .cards > div > span {
@@ -212,6 +217,10 @@ footer > div > div {
     font-size: 28px;
     font-weight: bold;
     color: var(--brown-primary);
+}
+
+#content > .cards > div > span.center {
+    text-align: center;
 }
 
 #content > .cards > div > p {
@@ -228,13 +237,95 @@ footer > div > div {
     color: #e0e0e0;
 }
 
-#content > .cards > div > a {
+#content > .cards > div.link > a {
     margin-top: 24px;
     float: right;
     font-weight: bold;
 }
 
 #content > .cards > div.right {
-    width: 80%;
-    float: right;
+    width: 100%;
+    left: 0%;
+}
+
+@media (min-width: 600px) {
+
+    #content > .cards > div.right {
+        width: 90%;
+        left: 10%;
+    }
+
+}
+
+@media (min-width: 800px) {
+
+    footer {
+        padding: 32px 16px;
+    }
+
+    footer li {
+        max-width: 240px;
+    }
+
+    #content > .cards > div.right {
+        width: 80%;
+        left: 20%;
+    }
+
+}
+
+@media (min-width: 1024px) {
+
+    footer {
+        padding: 32px 32px;
+    }
+
+    footer > div > div {
+        padding: 16px 64px;
+    }
+
+    #content {
+        padding: 0% 5%;
+    }
+
+    #content > .cards > div {
+        margin-bottom: 64px;
+    }
+
+}
+
+@media (min-width: 1360px) {
+
+    footer {
+        padding: 32px 48px;
+    }
+
+    footer li {
+        max-width: 360px;
+    }
+
+    #content {
+        padding: 0% 15%;
+    }
+
+    #content > .cards > div {
+        margin-bottom: 96px;
+    }
+
+}
+
+@media (min-width: 1920px) {
+
+    footer {
+        padding: 48px 160px;
+    }
+
+    footer li {
+        max-width: 600px;
+    }
+
+    #content {
+        padding: 0% 25%;
+    }
+
 }
