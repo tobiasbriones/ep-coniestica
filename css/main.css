@@ -173,10 +173,31 @@ footer > div > div {
 /* --------------------------------------------- CONTENTS --------------------------------------------- */
 #container {
     padding: 3% 64px;
+    padding-bottom: 0px;
     background-image: url(../img/background.jpg);
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-origin: border-box;
+}
+
+#container > .email {
+    display: block;
+    width: 360px;
+    padding: 16px 32px;
+    left: calc(100% - 296px);
+    border-top-left-radius: 8px;
+    background: var(--footer-bg);
+}
+
+#container > .email > p {
+    margin-bottom: 8px;
+    font-size: 18px;
+    color: white;
+}
+
+#container > .email > input {
+    width: 160px;
+    color: white;
 }
 
 #content {
@@ -250,6 +271,15 @@ footer > div > div {
 
 @media (min-width: 600px) {
 
+    #container > .email {
+        width: 400px;
+        left: calc(100% - 336px);
+    }
+    
+    #container > .email > input {
+        width: 200px;
+    }
+
     #content > .cards > div.right {
         width: 90%;
         left: 10%;
@@ -282,6 +312,15 @@ footer > div > div {
 
     footer > div > div {
         padding: 16px 64px;
+    }
+
+    #container > .email {
+        width: 420px;
+        left: calc(100% - 356px);
+    }
+    
+    #container > .email > input {
+        width: 240px;
     }
 
     #content {

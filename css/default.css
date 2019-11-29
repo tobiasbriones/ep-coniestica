@@ -22,7 +22,7 @@
 :root {
     --nav-height: 96px;
     --brown-primary: #EDA977;
-    --blue-accent: #384850;
+    --blue-accent: #546E7A;
     --footer-bg: #09172f;
 }
 
@@ -53,4 +53,15 @@ button {
     font-weight: bold;
     outline: none;
     cursor: pointer;
+}
+
+input {
+    padding: 8px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    border-bottom: 2px solid var(--brown-primary);
 }
