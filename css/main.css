@@ -244,6 +244,13 @@ footer > div > div {
     text-align: center;
 }
 
+#content > .cards > div > img {
+    display: block;
+    height: 96px;
+    margin: auto;
+    margin-bottom: 24px;
+}
+
 #content > .cards > div > p {
     text-align: center;
     color: white;
