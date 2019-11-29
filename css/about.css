@@ -19,38 +19,16 @@
  * Copyright (c) 2019 Tobias Briones
  */
 
-:root {
-    --nav-height: 96px;
-    --brown-primary: #EDA977;
-    --blue-accent: #384850;
-    --footer-bg: #09172f;
+#content {
+    height: auto;
 }
 
-.gone {
-    display: none;
+#content > .options > div {
+    margin: auto;
+    width: 320px;
 }
 
-* {
-    position: relative;
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
-    color: rgba(0, 0, 0, 0.89);
-}
-
-a {
-    text-decoration: none;
-}
-
-button {
-    padding: 12px 24px;
-    margin: 4px 8px;
-    border-radius: 8px;
-    border: none;
-    background-color: var(--blue-accent);
-    color: #efefef;
-    font-weight: bold;
-    outline: none;
-    cursor: pointer;
+#content > .options > div > button {
+    display: block;
+    width: 320px;
 }

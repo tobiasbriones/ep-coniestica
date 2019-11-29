@@ -148,12 +148,17 @@ footer > div > div {
 /* --------------------------------------------- LOGO --------------------------------------------- */
 #logo {
     width: 100%;
-    margin: 16px 0px;
+    padding: 16px 0px;
 }
 
-#logo > img {
+#logo > a {
+    width: 74px;
+    margin: auto;
+}
+
+#logo > a > img {
     display: block;
-    widows: 64px;
+    width: auto;
     height: 64px;
     margin: auto;
 }
@@ -174,7 +179,7 @@ footer > div > div {
 }
 
 #content {
-    height: 800px;
+    min-height: 800px;
 }
 
 #content strong,
@@ -212,6 +217,15 @@ footer > div > div {
 #content > .cards > div > p {
     text-align: center;
     color: white;
+}
+
+#content > .cards > div > ul {
+    margin: 16px 0px 8px 0px;
+}
+
+#content > .cards > div > ul > li {
+    margin-bottom: 16px;
+    color: #e0e0e0;
 }
 
 #content > .cards > div > a {
