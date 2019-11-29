@@ -19,9 +19,17 @@
  * Copyright (c) 2019 Tobias Briones
  */
 
+import { NavigationManager } from './navigation.mjs';
 import { COMPANY_MISSION_CARD_HTML, COMPANY_VISION_CARD_HTML, COMPANY_OBJECTIVES_CARD_HTML } from './model.mjs';
 
+const navigationManager = new NavigationManager();
 var cardsParentEl;
+
+const getURLParam = paramName => {
+  const urlStr = window.location.href;
+  const url = new URL(urlStr);
+  return url.searchParams.get("v");
+}
 
 const gotoMission = () => {
   history.pushState({}, 'Coniestica - Misión de la empresa', '/about.html?v=mission');
@@ -40,7 +48,25 @@ const gotoObjectives = () => {
 
 document.addEventListener('DOMContentLoaded', () => {
   cardsParentEl = document.querySelector('#content > .cards');
+  const param = getURLParam('v');
+
+  navigationManager.init();
   document.getElementById('missionButton').addEventListener('click', gotoMission);
   document.getElementById('visionButton').addEventListener('click', gotoVision);
   document.getElementById('objectivesButton').addEventListener('click', gotoObjectives);
+
+  switch(param) {
+    case 'vision':
+      gotoVision();
+      break;
+
+    case 'objectives':
+      gotoObjectives();
+      break;
+
+    default:
+      gotoMission();
+      break;
+  }
+
 });
