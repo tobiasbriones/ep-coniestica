@@ -23,6 +23,21 @@ import { NavigationManager } from './navigation.mjs';
 
 const navigationManager = new NavigationManager();
 
+const onSubscribeClick = () => {
+  const inputEl = document.querySelector('#container > .email > input');
+  const email = inputEl.value;
+  const simpleEmailRegex = new RegExp('[^@]+@[^\.]+\..+');
+
+  if(!simpleEmailRegex.test(email)) {
+    alert('Porfavor ingrese correctamente su correo');
+    return;
+  }
+  inputEl.value = '';
+  // ...
+  alert('Se ha suscrito a nosotros!');
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   navigationManager.init();
+  document.getElementById('subscribeButton').addEventListener('click', onSubscribeClick);
 });
