@@ -26,8 +26,9 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto&display=swap">
         <link rel="stylesheet" href="css/default.css">
         <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/clients.css">
         <link rel="icon" type="image/x-icon" href="favicon.png">
-        <title>Coniestica - Consolidadora de cargas</title>
+        <title>Coniestica - Enlaces de interés</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#455A64">
@@ -74,36 +75,39 @@
         <div id="container">
             
             <div id="content">
+                <p class="title">Sitios interesantes para visitar</p>
                 <div class="cards">
-                    <div>
-                        <span class="center">Coniestica</span>
-                        <p>
-                            <strong>Coniestica</strong> significa <strong>Consolidadora Internacional Importación Exportación y Servicios de Logística</strong>.
-                            En nuestro sitio web puede encontrar la información sobre los servicios que ofrecemos y ponerse en contacto con
-                            nosotros.
-                        </p>
+                    <div class="desc" data-url="https://www.shiplilly.com/es/blog/debe-hacer-sus-envios-con-una-empresa-consolidadora-de-carga/">
+                        <span class="center">Artículo</span>
+                        <img src="img/ic_article.png" alt="Link">
+                        <span class="desc">Artículo sobre empresas consolidadoras de carga</span>
+                        <span class="src">https://www.shiplilly.com/</span>
                     </div>
-                    <div class="right link">
-                        <span>Nuestros servicios</span>
-                        <img src="img/ic_services.png" alt="Servicios">
-                        <p>
-                            Nos dedicamos a manejar profesionalmente todos los procesos de Importación
-                            y Exportación de carga para todo tipo de usuario desde paquetes personales
-                            hasta cargas para grandes organizaciones. Deje las complejas tareas
-                            de logística a los profesionales y enfóquese en su negocio para ser más
-                            productivo.
-                        </p>
-                        <a href="/services.html">Saber más</a>
+                    <div class="desc" data-url="https://pixabay.com/">
+                        <span class="center">Imágenes</span>
+                        <img src="img/ic_images.jpg" alt="Link">
+                        <span class="desc">Imágenes de calidad gratis sin atribución</span>
+                        <span class="src">https://pixabay.com/</span>
+                    </div>
+                    <div class="desc" data-url="https://publicdomainvectors.org/">
+                        <span class="center">Vectores</span>
+                        <img src="img/ic_vector.png" alt="Link">
+                        <span class="desc">Vectores de dominio público</span>
+                        <span class="src">https://publicdomainvectors.org/</span>
+                    </div>
+                    <div class="desc" data-url="https://tobiasbriones.github.io/example.programming.web.coniestica/">
+                        <span class="center">Esta página web</span>
+                        <img src="img/coniestica.png" alt="Link">
+                        <span class="desc">La versión en internet de Coniestica</span>
+                        <span class="src">https://tobiasbriones.github.io/</span>
+                    </div>
+                    <div class="desc" data-url="https://github.com/TobiasBriones/example.programming.web.coniestica">
+                        <span class="center">GitHub</span>
+                        <img src="img/ic_github.png" alt="Link">
+                        <span class="desc">Repositorio de este proyecto en GitHub ♥</span>
+                        <span class="src">https://github.com/</span>
                     </div>
                 </div>
-                <div class="links">
-                    <a href="/suggestions.html">Enlaces de interés</a>
-                </div>
-            </div>
-            <div class="email">
-                <p>Suscríbase para mantenerse informado</p>
-                <input type="text" placeholder="Suscribirse">
-                <button id="subscribeButton">Enviar</button>
             </div>
 
         </div>
@@ -162,7 +166,20 @@
         </footer>
         
         <noscript>Please enable JavaScript to continue using this application.</noscript>
-        <script type="module" src="js/main.mjs"></script>
+        <script type="module" src="js/services.mjs"></script>
+        <script>
+            
+            document.addEventListener('DOMContentLoaded', () => {
+                document.querySelector('#content > .cards').addEventListener('click', e => {
+                    const target = e.target;
+                    const url = target.dataset['url'] || target.parentElement.dataset['url'];
+                    
+                    if(!url) return;
+                    window.open(url, '_blank');
+                });
+            });
+
+        </script>
 
     </body>
 

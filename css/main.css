@@ -280,6 +280,12 @@ footer > div > div {
     width: 100%;
 }
 
+.links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 @media (min-width: 600px) {
 
     #container > .email {
