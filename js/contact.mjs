@@ -22,17 +22,7 @@
 import { NavigationManager } from './navigation.mjs';
 
 const navigationManager = new NavigationManager();
-var cardsParentEl;
-
-const getURLParam = paramName => {
-  const urlStr = window.location.href;
-  const url = new URL(urlStr);
-  return url.searchParams.get("v");
-}
 
 document.addEventListener('DOMContentLoaded', () => {
-  cardsParentEl = document.querySelector('#content > .cards');
-
   navigationManager.init();
-
 });
