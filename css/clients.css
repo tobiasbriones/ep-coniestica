@@ -1,0 +1,84 @@
+/*
+ * This file is part of example.programming.web.coniestica = Coniestica.
+ *
+ * Coniestica is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * Coniestica is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with Coniestica.  If not, see <https://www.gnu.org/licenses/>.
+ */
+
+/*
+ * Copyright (c) 2019 Tobias Briones
+ */
+
+#container {
+    padding: 0%;
+}
+
+#content {
+    min-height: 600px;
+    height: auto;
+    padding: 3% 0% 10% 0%;
+}
+
+#content > .cards > div > p.margin {
+    margin-top: 24px;
+}
+
+#content > .options > div {
+    margin: auto;
+    width: 320px;
+}
+
+#content > .options > div > button {
+    display: block;
+    width: 320px;
+    margin-bottom: 12px;
+}
+
+#content > .title {
+    margin-bottom: 8px;
+    font-size: 24px;
+    text-align: center;
+    color: white;
+}
+
+#content > .cards {
+    display: flex;
+    justify-content: center;
+    align-content: space-around;
+    flex-wrap: wrap;
+}
+
+#content > .cards > div {
+    width: 200px;
+    padding: 16px 8px;
+    margin: 16px;
+}
+
+@media (min-width: 1024px) {
+
+    #content {
+        padding: 3% 5% 10% 5%;
+    }
+
+    #content > .title {
+        margin-bottom: 24px;
+        font-size: 36px;
+    }
+
+    #content > .cards > div {
+        display: inline-block;
+        width: 400px;
+        margin: 16px;
+    }
+
+}
