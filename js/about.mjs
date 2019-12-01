@@ -22,7 +22,7 @@
 import { NavigationManager } from './navigation.mjs';
 import { COMPANY_MISSION_CARD_HTML, COMPANY_VISION_CARD_HTML, COMPANY_OBJECTIVES_CARD_HTML } from './model.mjs';
 
-const baseURL = 'example.programming.web.coniestica';
+const baseURL = '';
 const navigationManager = new NavigationManager();
 var cardsParentEl;
 
