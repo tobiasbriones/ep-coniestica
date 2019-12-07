@@ -19,6 +19,19 @@
  * Copyright (c) 2019 Tobias Briones
  */
 
+aside {
+    margin: 64px;
+}
+
+aside strong {
+    color: white;
+}
+
+/* Temporary, add two backgrounds for 4 and 4 services */
+#container {
+    max-height: none;
+}
+
 #content {
     min-height: 600px;
     height: auto;
@@ -57,6 +70,10 @@
 
 @media (min-width: 960px) {
 
+    aside {
+        margin: 64px 256px;
+    }
+
     #content > .cards > div.link {
         width: 43%;
         height: 500px;
@@ -76,6 +93,10 @@
 
 @media (min-width: 1920px) {
     
+    aside {
+        margin: 64px 25%;
+    }
+
     #content {
         padding: 0% 15% 10% 15%;
     }

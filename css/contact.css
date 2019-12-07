@@ -19,6 +19,10 @@
  * Copyright (c) 2019 Tobias Briones
  */
 
+#container {
+    max-height: none;
+}
+
 #content {
     min-height: 600px;
     height: auto;

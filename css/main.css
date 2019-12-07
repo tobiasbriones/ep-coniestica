@@ -171,12 +171,16 @@ footer > div > div {
 }
 
 /* --------------------------------------------- CONTENTS --------------------------------------------- */
+body > .bg {
+    background-color: #141414;
+}
+
 #container {
+    max-height: 1280px;
     padding: 3% 64px;
     padding-bottom: 0px;
     background-image: url(../img/background.jpg);
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
+    background-size: cover;
     background-origin: border-box;
 }
 
@@ -221,18 +225,18 @@ footer > div > div {
     border: 2px solid var(--brown-primary);
 }
 
-#content > .cards > div {
+.cards > div {
     padding: 32px 64px;
     margin: 32px 0px;
     border-radius: 4px;
     background-color: rgba(0, 14, 21, 0.8);
 }
 
-#content > .cards > div.link {
+.cards > div.link {
     padding-bottom: 96px;
 }
 
-#content > .cards > div > span {
+.cards > div > span {
     display: block;
     padding: 0px 0px 24px 0px;
     font-size: 28px;
@@ -240,43 +244,43 @@ footer > div > div {
     color: var(--brown-primary);
 }
 
-#content > .cards > div > span.center {
+.cards > div > span.center {
     text-align: center;
 }
 
-#content > .cards > div > img {
+.cards > div > img {
     display: block;
     height: 96px;
     margin: auto;
     margin-bottom: 24px;
 }
 
-#content > .cards > div > p {
+.cards > div > p {
     text-align: center;
     color: white;
 }
 
-#content > .cards > div > ul {
+.cards > div > ul {
     margin: 16px 0px 8px 0px;
 }
 
-#content > .cards > div > ul > li {
+.cards > div > ul > li {
     margin-bottom: 16px;
     color: #e0e0e0;
 }
 
-#content > .cards > div.link > a {
+.cards > div.link > a {
     margin-top: 24px;
     float: right;
     font-weight: bold;
 }
 
-#content > .cards > div.right {
+.cards > div.right {
     width: 100%;
     left: 0%;
 }
 
-#content > .cards > div.left {
+.cards > div.left {
     width: 100%;
 }
 
@@ -297,12 +301,12 @@ footer > div > div {
         width: 200px;
     }
 
-    #content > .cards > div.right {
+    .cards > div.right {
         width: 90%;
         left: 10%;
     }
 
-    #content > .cards > div.left {
+    .cards > div.left {
         width: 90%;
     }
     
@@ -318,12 +322,12 @@ footer > div > div {
         max-width: 240px;
     }
 
-    #content > .cards > div.right {
+    .cards > div.right {
         width: 80%;
         left: 20%;
     }
     
-    #content > .cards > div.left {
+    .cards > div.left {
         width: 80%;
     }
 
@@ -352,7 +356,7 @@ footer > div > div {
         padding: 0% 5%;
     }
 
-    #content > .cards > div {
+    .cards > div {
         margin-bottom: 64px;
     }
 
@@ -372,7 +376,7 @@ footer > div > div {
         padding: 0% 15%;
     }
 
-    #content > .cards > div {
+    .cards > div {
         margin-bottom: 96px;
     }
 
@@ -390,6 +394,25 @@ footer > div > div {
 
     #content {
         padding: 0% 25%;
+    }
+
+}
+
+@media (min-width: 1921px) {
+
+    #container {
+        width: 1920px;
+        margin: auto;
+    }
+
+}
+
+@media (min-width: 2160px) {
+
+    body > .bg {
+        background-image: url(../img/clouds.svg);
+        background-size: cover;
+        background-origin: border-box;
     }
 
 }
