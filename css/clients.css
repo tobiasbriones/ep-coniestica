@@ -70,12 +70,20 @@
 }
 
 #content > .cards > div {
-    width: 200px;
+    width: 128px;
     padding: 16px 8px;
     margin: 16px;
 }
 
-@media (min-width: 1024px) {
+#content > .cards > div > span {
+    font-size: 18px;
+}
+
+#content > .cards > div > img {
+    height: 64px;
+}
+
+@media (min-width: 1600px) {
 
     #content {
         padding: 3% 5% 10% 5%;
@@ -92,4 +100,12 @@
         margin: 16px;
     }
 
+    #content > .cards > div > span {
+        font-size: 28px;
+    }
+    
+    #content > .cards > div > img {
+        height: 96px;
+    }
+    
 }
