@@ -82,7 +82,7 @@ const COMPANY_VISION_CARD_HTML = `
 const COMPANY_OBJECTIVES_CARD_HTML = `
 <div class="center">
     <span>Objetivos</span>
-    <p>
+    <p class='center'>
         Objetivos generales
         <ul>
             <li>Expandirse por todo el mundo</li>
@@ -92,7 +92,7 @@ const COMPANY_OBJECTIVES_CARD_HTML = `
             <li>Crear 100 nuevos empleos en la zona norte de Honduras</li>
         </ul>
     </p>
-    <p class='margin'>
+    <p class='margin center'>
         Objetivos específicos
         <ul>
             <li>Aumentar el número de trabajadores de 10 a 12 en un mes</li>
