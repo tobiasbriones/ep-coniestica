@@ -84,21 +84,21 @@ const COMPANY_OBJECTIVES_CARD_HTML = `
     <span>Objetivos</span>
     <p>
         Objetivos generales
-        <ol>
+        <ul>
             <li>Expandirse por todo el mundo</li>
             <li>Ser una marca líder en el mercado</li>
             <li>Aumentar el número de activos</li>
             <li>Ser una marca reconocida en el mercado</li>
             <li>Crear 100 nuevos empleos en la zona norte de Honduras</li>
-        </ol>
+        </ul>
     </p>
     <p class='margin'>
         Objetivos específicos
-        <ol>
+        <ul>
             <li>Aumentar el número de trabajadores de 10 a 12 en un mes</li>
             <li>Aumentar la eficiencia de la comunicación con el cliente en un 20% para el próximo año</li>
             <li>Abrir 3 nuevos locales comerciales en España para el primer trimestre del próximo año</li>
-        </ol>
+        </ul>
     </p>
 </div>
 `;
