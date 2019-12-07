@@ -1,0 +1,102 @@
+/*
+ * This file is part of example.programming.web.coniestica = Coniestica.
+ *
+ * Coniestica is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * Coniestica is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with Coniestica.  If not, see <https://www.gnu.org/licenses/>.
+ */
+
+/*
+ * Copyright (c) 2019 Tobias Briones
+ */
+
+/** For this page is also required the clients.css sheet **/
+
+/* --------------------------------------------- URL TILES WITH DESCRIPTION --------------------------------------------- */
+#container {
+    max-height: none;
+}
+
+#content > .cards > div.desc {
+    min-width: 240px;
+    padding-bottom: 96px;
+    cursor: pointer;
+}
+
+#content > .cards > div.desc > span.desc {
+    position: absolute;
+    display: block;
+    width: 100%;
+    max-height: 56px;
+    left: 0px;
+    bottom: 46px;
+    padding: 16px;
+    padding-bottom: 4px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6);
+    font-size: 14px;
+    overflow-y: hidden;
+}
+
+#content > .cards > div.desc > span.src {
+    position: absolute;
+    display: block;
+    width: 100%;
+    left: 0px;
+    bottom: 0px;
+    padding: 16px;
+    padding-right: 32px;
+    color: var(--blue-accent);
+    background-color: rgba(0, 0, 0, 0.6);
+    font-size: 12px;
+    text-align: right;
+}
+
+@media (min-width: 960px) {
+
+    #content > .cards > div.desc > span.src {
+        padding-top: 16px;
+        font-size: 12px;
+    }
+    
+}
+
+@media (min-width: 1024px) {
+
+    #content > .cards > div.desc {
+        padding-bottom: 96px;
+        margin-bottom: 48px;
+        cursor: pointer;
+    }
+
+    #content > .cards > div.desc > span.desc {
+        padding: 16px 24px;
+        font-size: 16px;
+    }
+    
+    #content > .cards > div.desc > span.src {
+        padding: 16px 24px;
+    }
+
+}
+
+@media (min-width: 1920px) {
+
+    #content > .cards > div.desc > .desc {
+        padding: 16px 36px;
+    }
+
+    #content > .cards > div.desc > .src {
+        padding: 16px 36px;
+    }
+
+}
