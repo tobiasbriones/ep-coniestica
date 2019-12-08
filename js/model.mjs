@@ -43,12 +43,12 @@ const COMPANY_MISSION_CARD_HTML = `
           o personas individuales. Es trabajo nuestro facilitar las vidas de las
           personas y el trabajo de las organizaciones mediante nuestro servicio como
           intermediarios.
-          En nuestra espectativas reside:
+          En nuestra expectativa reside:
 
           <ul>
-              <li><strong>Manejo y organizacion:</strong> Ser transparentes y brindar nuestras soluciones
+              <li><strong>Manejo y organización:</strong> Ser transparentes y brindar nuestras soluciones
                   incorporadas para rastrear los problemas y permitir soluciones inmediatas.</li>
-              <li><strong>Versatilidad:</strong> Manejamos cualquier incoveniente dado de forma rápida y
+              <li><strong>Versatilidad:</strong> Manejamos cualquier inconveniente dado de forma rápida y
                   segura para cumplir con las expectaciones de cualquiera de nuestros clientes.</li>
               <li><strong>Libertad:</strong> Nuestros clientes se sientes satisfechos con nuestros procesos así
                   que no hay necesidad de imponer contratos, sino más bien, de servir con calidad y 
@@ -72,7 +72,7 @@ const COMPANY_VISION_CARD_HTML = `
 
         <ul>
             <li>Crecer mundialmente para alcanzar el liderazgo en servicios de consolidadora de cargas.</li>
-            <li>Desarrollar las mejores estrategias para ser una compañia amigable y económica para la persona individual.</li>
+            <li>Desarrollar las mejores estrategias para ser una compañía amigable y económica para la persona individual.</li>
             <li>Ofrecer a nuestros clientes el máximo valor agregado que necesitan con la mayor sencillez posible.</li>
         </ul>
     </p>
