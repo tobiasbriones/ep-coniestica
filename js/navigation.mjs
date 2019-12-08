@@ -19,56 +19,33 @@
  * Copyright (c) 2019 Tobias Briones
  */
 
-import { NAV_ABOUT_ITEMS, NAV_ABOUT_ITEMS_URLS } from './model.mjs';
+import { ActionDropDownMenu } from './menu/action/dropdown_menu.mjs';
 
 export class NavigationManager {
 
+  dropdownMenu;
   aboutEl;
-  dropDownMenu;
-  aboutDropDownItemsHTML;
 
-  constructor() {}
-
-  getAboutItemsHTML() {
-    let html = '';
-
-    NAV_ABOUT_ITEMS.forEach((item, i) => html += `
-      <a href="${NAV_ABOUT_ITEMS_URLS[i]}">
-        <span>${item}</span>
-      </a>
-    `);
-    return html;
+  constructor() {
+    this.dropdownMenu = new ActionDropDownMenu();
   }
 
   init() {
+    this.dropdownMenu.init();
     this.aboutEl = document.querySelector('nav > div > ul > .about');
-    this.dropDownMenu = document.querySelector('nav > div > ul > .dropdown-menu');
-    this.aboutDropDownItemsHTML = this.getAboutItemsHTML();
-    const aboutEl = document.getElementById('actionAboutUs');
 
-    aboutEl.addEventListener('mouseover', this.onAboutHover);
-    aboutEl.addEventListener('mouseout', this.onAboutHoverOut);
-    this.dropDownMenu.addEventListener('mouseout', this.onAboutHoverOut);
+    this.aboutEl.addEventListener('mouseover', this.onAboutHover);
+    this.aboutEl.addEventListener('mouseout', this.onAboutHoverOut);
   }
 
   onAboutHover = () => {
     const x = this.aboutEl.getClientRects()[0].x;
-    this.dropDownMenu.innerHTML = this.aboutDropDownItemsHTML;
-    this.dropDownMenu.style.transform = `translateX(${x}px)`;
-    this.dropDownMenu.classList.remove('gone');
+    this.dropdownMenu.open('about', x);
   }
 
   onAboutHoverOut = (e) => {
-    const isInBounds = () => {
-      const rect = this.dropDownMenu.getClientRects()[0];
-      
-      if(!rect) {
-        return false;
-      }
-      return e.pageX >= rect.left && e.pageX <= rect.right && e.pageY >= rect.top && e.pageY <= rect.bottom;
-    }
-    if(!isInBounds()) {
-      this.dropDownMenu.classList.add('gone');
+    if(!this.dropdownMenu.isInBounds(e)) {
+      this.dropdownMenu.close();
     }
   }
 
