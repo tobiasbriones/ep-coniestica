@@ -23,6 +23,13 @@ import { NavigationManager } from './navigation.mjs';
 
 const navigationManager = new NavigationManager();
 
+const onSubscribeKeyup = (e) => {
+  if(e.keyCode == 13) {
+    e.preventDefault();
+    document.getElementById('subscribeButton').click();
+  }
+}
+
 const onSubscribeClick = () => {
   const inputEl = document.querySelector('aside.subscribe input');
   const email = inputEl.value;
@@ -39,5 +46,6 @@ const onSubscribeClick = () => {
 
 document.addEventListener('DOMContentLoaded', () => {
   navigationManager.init();
+  document.querySelector('aside.subscribe input').addEventListener('keyup', onSubscribeKeyup)
   document.getElementById('subscribeButton').addEventListener('click', onSubscribeClick);
 });
