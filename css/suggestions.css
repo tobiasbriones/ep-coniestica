@@ -26,13 +26,14 @@
     max-height: none;
 }
 
-#content > .cards > div.desc {
+#content > .page > .cards > div.desc {
     min-width: 240px;
     padding-bottom: 96px;
+    margin-bottom: 24px;
     cursor: pointer;
 }
 
-#content > .cards > div.desc > span.desc {
+#content > .page > .cards > div.desc > span.desc {
     position: absolute;
     display: block;
     width: 100%;
@@ -47,7 +48,7 @@
     overflow-y: hidden;
 }
 
-#content > .cards > div.desc > span.src {
+#content > .page > .cards > div.desc > span.src {
     position: absolute;
     display: block;
     width: 100%;
@@ -61,9 +62,17 @@
     text-align: right;
 }
 
+@media (min-width: 800px) {
+    
+    #content > .page > .bg img {
+        height: 100%;
+    }
+
+}
+
 @media (min-width: 960px) {
 
-    #content > .cards > div.desc > span.src {
+    #content > .page > .cards > div.desc > span.src {
         padding-top: 16px;
         font-size: 12px;
     }
@@ -72,30 +81,34 @@
 
 @media (min-width: 1024px) {
 
-    #content > .cards > div.desc {
+    #content > .page > .cards > div.desc {
         padding-bottom: 96px;
         margin-bottom: 48px;
         cursor: pointer;
     }
 
-    #content > .cards > div.desc > span.desc {
+    #content > .page > .cards > div.desc > span.desc {
         padding: 16px 24px;
         font-size: 16px;
     }
     
-    #content > .cards > div.desc > span.src {
+    #content > .page > .cards > div.desc > span.src {
         padding: 16px 24px;
     }
 
+    #content > .page > .bg img {
+        height: auto;
+    }
+    
 }
 
 @media (min-width: 1920px) {
 
-    #content > .cards > div.desc > .desc {
+    #content > .page > .cards > div.desc > .desc {
         padding: 16px 36px;
     }
 
-    #content > .cards > div.desc > .src {
+    #content > .page > .cards > div.desc > .src {
         padding: 16px 36px;
     }
 

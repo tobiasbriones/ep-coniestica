@@ -71,16 +71,27 @@
         <div class="bg">
             <div id="container">
                 <div id="content">
-                    <div class="cards"></div>
-                    <div class="options">
-                        <div>
-                            <button id="missionButton">Ver la misión de la empresa</button>
+                    <div class="page">
+                        <div class="bg">
+                            <picture>
+                                <source media="(max-width: 480px)" srcset="img/background-480w.jpg">
+                                <source media="(max-width: 800px)" srcset="img/background-800w.jpg">
+                                <source media="(max-width: 1359px)" srcset="img/background-1360w.jpg">
+                                <source media="(min-width: 1360px)" srcset="img/background.jpg">
+                                <img src="img/background.jpg">
+                            </picture>
                         </div>
-                        <div>
-                            <button id="visionButton">Ver la visión de la empresa</button>
-                        </div>
-                        <div>
-                            <button id="objectivesButton">Ver los objetivos de la empresa</button>
+                        <div class="cards"></div>
+                        <div class="options">
+                            <div>
+                                <button id="missionButton">Ver la misión de la empresa</button>
+                            </div>
+                            <div>
+                                <button id="visionButton">Ver la visión de la empresa</button>
+                            </div>
+                            <div>
+                                <button id="objectivesButton">Ver los objetivos de la empresa</button>
+                            </div>
                         </div>
                     </div>
                 </div>

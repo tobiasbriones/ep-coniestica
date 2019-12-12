@@ -51,7 +51,7 @@ const gotoObjectives = () => {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  cardsParentEl = document.querySelector('#content > .cards');
+  cardsParentEl = document.querySelector('#content > .page > .cards');
   const param = getURLParam('v');
 
   navigationManager.init();

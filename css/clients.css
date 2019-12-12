@@ -19,36 +19,34 @@
  * Copyright (c) 2019 Tobias Briones
  */
 
-#container {
-    padding: 0%;
-}
-
 #content {
-    min-height: 600px;
-    height: auto;
-    padding: 3% 0% 10% 0%;
+    padding: 0px;
 }
 
-#content > .cards > div > p.margin {
+#content > .page {
+    padding: 5%;
+}
+
+#content > .page > .cards > div > p.margin {
     margin-top: 24px;
 }
 
-#content > .options > div {
+#content > .page > .options > div {
     margin: auto;
     width: 320px;
 }
 
-#content > .options > div > button {
+#content > .page > .options > div > button {
     display: block;
     width: 320px;
     margin-bottom: 12px;
 }
 
-#content > .title {
-    margin: 16px;
+#content > .page > .title {
+    margin: 16px 16px 32px 16px;
 }
 
-#content > .title > p {
+#content > .page > .title > p {
     display: inline-block;
     left: 50%;
     transform: translateX(-50%);
@@ -62,50 +60,75 @@
     border-bottom-right-radius: 48px;
 }
 
-#content > .cards {
+#content > .page > .cards {
     display: flex;
     justify-content: center;
     align-content: space-around;
     flex-wrap: wrap;
 }
 
-#content > .cards > div {
+#content > .page > .cards > div {
     width: 128px;
-    padding: 16px 8px;
-    margin: 16px;
+    padding: 8px;
+    margin: 8px;
 }
 
-#content > .cards > div > span {
+#content > .page > .cards > div > span {
     font-size: 18px;
 }
 
-#content > .cards > div > img {
+#content > .page > .cards > div > img {
     height: 64px;
+}
+
+#content > .page > .bg img {
+    height: 100%;
+}
+
+@media (min-width: 480px) {
+
+    #content > .page > .cards > div {
+        padding: 16px 8px;
+    }
+
+}
+
+@media (min-width: 800px) {
+    
+    #content > .page > .bg img {
+        height: auto;
+    }
+
 }
 
 @media (min-width: 1600px) {
 
-    #content {
-        padding: 3% 5% 10% 5%;
-    }
-
-    #content > .title > p {
+    #content > .page > .title > p {
         margin-bottom: 24px;
         font-size: 36px;
     }
 
-    #content > .cards > div {
+    #content > .page > .cards > div {
         display: inline-block;
-        width: 400px;
+        width: 320px;
         margin: 16px;
     }
 
-    #content > .cards > div > span {
+    #content > .page > .cards > div > span {
         font-size: 28px;
     }
     
-    #content > .cards > div > img {
+    #content > .page > .cards > div > img {
         height: 96px;
+    }
+    
+}
+
+@media (min-width: 1920px) {
+
+    #content .bg {
+        width: 100%;
+        left: 0%;
     }
     
 }

@@ -27,42 +27,35 @@ aside strong {
     color: white;
 }
 
-/* Temporary, add two backgrounds for 4 and 4 services */
-#container {
-    max-height: none;
-}
-
 #content {
-    min-height: 600px;
-    height: auto;
-    padding: 0% 5% 10% 5%;
+    padding: 0% 5% 0% 5%;
+    background-color: #303030;
 }
 
-#content > .cards > div > p.margin {
+#content > .page > .cards > div > p.margin {
     margin-top: 24px;
 }
 
-#content > .options > div {
+#content > .page > .options > div {
     margin: auto;
     width: 320px;
 }
 
-#content > .options > div > button {
+#content > .page > .options > div > button {
     display: block;
     width: 320px;
     margin-bottom: 12px;
 }
 
-#content > .cards > div.link {
+#content > .page > .cards > div.link {
     display: inline-block;
     width: 100%;
     height: auto;
     left: 0%;
-    margin: 2% 3%;
     vertical-align: top;
 }
 
-#content > .cards > div.link > a {
+#content > .page > .cards > div.link > a {
     position: absolute;
     bottom: 36px;
     right: 64px;
@@ -82,7 +75,7 @@ aside strong {
         margin: 64px 256px;
     }
 
-    #content > .cards > div.link {
+    #content > .page > .cards > div.link {
         width: 43%;
         height: 500px;
         padding-bottom: 36px;
@@ -93,7 +86,7 @@ aside strong {
 
 @media (min-width: 1360px) {
 
-    #content > .cards > div.link {
+    #content > .page > .cards > div.link {
         height: 400px;
     }
     
@@ -106,10 +99,10 @@ aside strong {
     }
 
     #content {
-        padding: 0% 15% 10% 15%;
+        padding: 0% 15% 0% 15%;
     }
 
-    #content > .cards > div.link {
+    #content > .page > .cards > div.link {
         width: 43%;
         height: 400px;
         padding-bottom: 36px;

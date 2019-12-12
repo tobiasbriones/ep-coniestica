@@ -22,48 +22,54 @@
 #content {
     min-height: 600px;
     height: auto;
-    padding-top: 10%;
-    padding-bottom: 10%;
 }
 
-#content > .cards > div > p {
+#content > .page > .cards > div > p {
     text-align: left;
 }
 
-#content > .cards > div > p.center {
+#content > .page > .cards > div > p.center {
     text-align: center;
 }
 
-#content > .cards > div > p.margin {
+#content > .page > .cards > div > p.margin {
     margin-top: 24px;
     margin-bottom: 24px;
 }
 
-#content > .options > div {
+#content > .page > .options > div {
     width: 240px;
     margin: auto;
 }
 
-#content > .options > div > button {
+#content > .page > .options > div > button {
     display: block;
     width: 240px;
     margin-bottom: 12px;
 }
 
-#content > .cards > div > ol > li {
+#content > .page > .cards > div > ol > li {
     margin-bottom: 16px;
     color: #e0e0e0;
 }
 
+#content > .page > .bg img {
+    height: 100%;
+}
+
 @media (min-width: 600px) {
 
-    #content > .options > div {
+    #content > .page > .options > div {
         margin: auto;
         width: 320px;
     }
 
-    #content > .options > div > button {
+    #content > .page > .options > div > button {
         width: 320px;
     }
     
+    #content > .page > .bg img {
+        height: auto;
+    }
+
 }
