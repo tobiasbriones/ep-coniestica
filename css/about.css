@@ -40,17 +40,30 @@
 }
 
 #content > .options > div {
+    width: 240px;
     margin: auto;
-    width: 320px;
 }
 
 #content > .options > div > button {
     display: block;
-    width: 320px;
+    width: 240px;
     margin-bottom: 12px;
 }
 
 #content > .cards > div > ol > li {
     margin-bottom: 16px;
     color: #e0e0e0;
+}
+
+@media (min-width: 600px) {
+
+    #content > .options > div {
+        margin: auto;
+        width: 320px;
+    }
+
+    #content > .options > div > button {
+        width: 320px;
+    }
+    
 }
