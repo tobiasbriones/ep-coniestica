@@ -24,7 +24,7 @@ import { NavigationManager } from './navigation.mjs';
 const navigationManager = new NavigationManager();
 
 const onSubscribeClick = () => {
-  const inputEl = document.querySelector('#container > .email > input');
+  const inputEl = document.querySelector('aside.subscribe input');
   const email = inputEl.value;
   const simpleEmailRegex = new RegExp('[^@]+@[^\.]+\..+');
 

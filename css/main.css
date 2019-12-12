@@ -20,7 +20,7 @@
  */
 
 body {
-    min-width: 480px;
+    min-width: 320px;
 }
 
 /* --------------------------------------------- HEADER --------------------------------------------- */
@@ -113,14 +113,18 @@ header > nav > div > ul > li > a > span {
     padding: 0px 16px;
 }
 
+#actionClients {
+    display: none;
+}
+
 /* --------------------------------------------- FOOTER --------------------------------------------- */
 footer {
-    padding: 16px 8px;
+    padding: 16px 12px;
     background-color: var(--footer-bg);
 }
 
 footer li {
-    max-width: 160px;
+    max-width: 128px;
     padding: 4px 0px;
     list-style: none;
 }
@@ -142,8 +146,38 @@ footer p.title {
 
 footer > div > div {
     display: inline-block;
-    padding: 16px 32px;
+    padding: 16px 8px;
     vertical-align: top;
+}
+
+/* --------------------------------------------- SUBSCRIBE ASIDE --------------------------------------------- */
+aside.subscribe {
+    display: block;
+    width: calc(100% + 32px);
+    left: -16px;
+    background-color: var(--footer-bg);
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+}
+
+aside.subscribe > div {
+    padding: 16px 32px;
+}
+
+aside.subscribe > div > p {
+    margin-bottom: 8px;
+    font-size: 18px;
+    color: white;
+}
+
+aside.subscribe > div > input {
+    width: 50%;
+    color: white;
+}
+
+aside.subscribe > div > button {
+    width: 40%;
+    float: right;
 }
 
 /* --------------------------------------------- LOGO --------------------------------------------- */
@@ -177,31 +211,11 @@ body > .bg {
 
 #container {
     max-height: 1280px;
-    padding: 3% 64px;
+    padding: 3% 16px;
     padding-bottom: 0px;
     background-image: url(../img/background.jpg);
     background-size: cover;
     background-origin: border-box;
-}
-
-#container > .email {
-    display: block;
-    width: 360px;
-    padding: 16px 32px;
-    left: calc(100% - 296px);
-    border-top-left-radius: 8px;
-    background: var(--footer-bg);
-}
-
-#container > .email > p {
-    margin-bottom: 8px;
-    font-size: 18px;
-    color: white;
-}
-
-#container > .email > input {
-    width: 160px;
-    color: white;
 }
 
 #content {
@@ -226,7 +240,7 @@ body > .bg {
 }
 
 .cards > div {
-    padding: 32px 64px;
+    padding: 24px 32px;
     margin: 32px 0px;
     border-radius: 4px;
     background-color: rgba(0, 14, 21, 0.8);
@@ -238,8 +252,8 @@ body > .bg {
 
 .cards > div > span {
     display: block;
-    padding: 0px 0px 24px 0px;
-    font-size: 28px;
+    padding: 0px 0px 16px 0px;
+    font-size: 24px;
     font-weight: bold;
     color: var(--brown-primary);
 }
@@ -291,15 +305,52 @@ body > .bg {
     justify-content: center;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 360px) {
 
-    #container > .email {
-        width: 400px;
-        left: calc(100% - 336px);
+    footer {
+        padding: 16px;
     }
     
-    #container > .email > input {
-        width: 200px;
+    footer li {
+        max-width: 128px;
+    }
+    
+    footer > div > div {
+        padding: 16px;
+    }
+    
+}
+
+@media (min-width: 600px) {
+    
+    footer li {
+        max-width: 160px;
+    }
+    
+    #actionClients {
+        display: block;
+    }
+    
+    #content {
+        padding: 3% 64px;
+    }
+
+    aside.subscribe {
+        border-top-left-radius: 0px;
+        border-top-right-radius: 240px;
+    }
+
+    aside.subscribe > div {
+        width: 400px;
+    }
+
+    .cards > div {
+        padding: 32px 64px;
+    }
+    
+    .cards > div > span {
+        padding: 0px 0px 24px 0px;
+        font-size: 28px;
     }
 
     .cards > div.right {
@@ -344,13 +395,27 @@ body > .bg {
         padding: 16px 64px;
     }
 
-    #container > .email {
-        width: 420px;
-        left: calc(100% - 356px);
+    aside.subscribe {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        background-color: transparent;
+    }
+
+    aside.subscribe > div {
+        width: 468px;
+        padding: 24px 48px;
+        border-top-left-radius: 16px;
+        border-top-right-radius: 64px;
+        background-color: var(--footer-bg);
     }
     
-    #container > .email > input {
+    aside.subscribe > div > input {
         width: 240px;
+    }
+
+    aside.subscribe > div > button {
+        width: 108px;
     }
 
     #content {
