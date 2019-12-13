@@ -549,13 +549,17 @@ body > .bg {
         padding: 0% 25%;
     }
 
-    #content > .page:nth-child(1),
+    #content > .page:nth-child(1) > .bg,
     #content > .page:nth-child(2),
     #content .bg.extended {
         width: 200%;
         left: -50%;
     }
 
+    #content > .page:nth-child(1) > .bg {
+        width: 100%;
+        left: 0%;
+    }
 }
 
 @media (min-width: 1921px) {
@@ -571,6 +575,13 @@ body > .bg {
         left: -50%;
     }
 
+    #content > .page:nth-child(1) > .bg,
+    #content > .page:nth-child(2),
+    #content .bg.extended {
+        width: 200%;
+        left: -50%;
+    }
+    
 }
 
 @media (min-width: 2160px) {

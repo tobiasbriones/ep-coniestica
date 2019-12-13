@@ -111,5 +111,9 @@
     #content > .page > .cards > div.desc > .src {
         padding: 16px 36px;
     }
-
+    
+    #content > .page:nth-child(1) > .bg {
+        width: 100%;
+        left: 0%;
+    }
 }
