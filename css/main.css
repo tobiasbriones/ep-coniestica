@@ -179,6 +179,7 @@ footer p.title {
 aside.subscribe {
     display: block;
     width: 100%;
+    padding: 0px 16px;
     left: -16px;
     background-color: var(--footer-bg);
     border-top-left-radius: 16px;
@@ -374,6 +375,7 @@ body > .bg {
     }
 
     aside.subscribe {
+        padding: 0px;
         border-top-left-radius: 0px;
         border-top-right-radius: 240px;
     }
@@ -445,6 +447,7 @@ body > .bg {
 
     aside.subscribe {
         display: flex;
+        width: calc(100% + 16px);
         flex-direction: column;
         align-items: flex-end;
         background-color: transparent;
