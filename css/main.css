@@ -254,6 +254,10 @@ body > .bg {
     padding-bottom: 96px;
 }
 
+.cards > div.end {
+    margin-bottom: 32px;
+}
+
 .cards > div > span {
     display: block;
     padding: 0px 0px 16px 0px;
@@ -475,6 +479,7 @@ body > .bg {
         width: 200%;
         left: -50%;
     }
+
 }
 
 @media (min-width: 1921px) {

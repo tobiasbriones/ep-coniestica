@@ -179,7 +179,7 @@
         <script>
             
             document.addEventListener('DOMContentLoaded', () => {
-                document.querySelector('#content > .cards').addEventListener('click', e => {
+                document.querySelector('#content > .page > .cards').addEventListener('click', e => {
                     const target = e.target;
                     const url = target.dataset['url'] || target.parentElement.dataset['url'];
                     
