@@ -51,7 +51,7 @@ const gotoTerms = () => {
 document.addEventListener('DOMContentLoaded', () => {
   const param = getURLParam('v');
   titleEl = document.querySelector('section > h1');
-  textEl = document.querySelector('section > p');
+  textEl = document.querySelector('section > div.content');
 
   navigationManager.init();
   switch(param) {
