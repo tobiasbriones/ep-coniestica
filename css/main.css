@@ -19,6 +19,10 @@
  * Copyright (c) 2019 Tobias Briones
  */
 
+:root {
+    --copyright-height: 48px;
+}
+
 body {
     min-width: 320px;
 }
@@ -119,8 +123,35 @@ header > nav > div > ul > li > a > span {
 
 /* --------------------------------------------- FOOTER --------------------------------------------- */
 footer {
-    padding: 16px 12px;
+    padding: 16px 12px 48px 12px;
     background-color: var(--footer-bg);
+}
+
+footer > div > div {
+    display: inline-block;
+    padding: 16px 8px;
+    vertical-align: top;
+}
+
+footer > .copyright {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    height: var(--copyright-height);
+    bottom: 0px;
+    left: 0px;
+    border-top-left-radius: var(--copyright-height);
+    background-color: rgb(0, 10, 26);
+}
+
+footer > .copyright > p {
+    display: block;
+    width: 100%;
+    align-self: center;
+    text-align: center;
+    font-style: italic;
+    font-size: 14px;
+    color: #E0E0E0;
 }
 
 footer li {
@@ -142,12 +173,6 @@ footer p.title {
     margin-bottom: 4px;
     color: white;
     font-size: 16px;
-}
-
-footer > div > div {
-    display: inline-block;
-    padding: 16px 8px;
-    vertical-align: top;
 }
 
 /* --------------------------------------------- SUBSCRIBE ASIDE --------------------------------------------- */
@@ -316,7 +341,7 @@ body > .bg {
 @media (min-width: 360px) {
 
     footer {
-        padding: 16px;
+        padding: 16px 16px 48px 16px;
     }
     
     footer li {
@@ -383,6 +408,12 @@ body > .bg {
         padding: 32px 16px;
     }
 
+    footer > .copyright {
+        width: 60%;
+        left: auto;
+        right: 0px;
+    }
+    
     footer li {
         max-width: 240px;
     }
@@ -402,6 +433,10 @@ body > .bg {
 
     footer {
         padding: 32px 32px;
+    }
+
+    footer > .copyright {
+        width: 40%;
     }
 
     footer > div > div {
@@ -445,6 +480,10 @@ body > .bg {
 
     footer {
         padding: 32px 48px;
+    }
+
+    footer > .copyright {
+        width: 30%;
     }
 
     footer li {
