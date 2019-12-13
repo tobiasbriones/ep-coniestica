@@ -403,8 +403,8 @@ body > .bg {
     }
     
     #content .bg {
-        width: 105%;
-        left: -5%;
+        width: 100%;
+        left: 0%;
     }
 
     aside.subscribe {

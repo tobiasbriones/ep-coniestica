@@ -126,7 +126,7 @@
 
 @media (min-width: 1920px) {
 
-    #content .bg {
+    #content > .page:nth-child(1) > .bg {
         width: 100%;
         left: 0%;
     }
