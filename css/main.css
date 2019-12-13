@@ -605,4 +605,24 @@ body > .bg {
         background-origin: border-box;
     }
 
+    footer {
+        padding: 48px 10%;
+    }
+
+}
+
+@media (min-width: 2600px) {
+
+    footer {
+        padding: 48px 25%;
+    }
+
+}
+
+@media (min-width: 3800px) {
+
+    footer {
+        padding: 48px 35%;
+    }
+
 }
