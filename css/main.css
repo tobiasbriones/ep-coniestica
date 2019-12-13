@@ -597,7 +597,13 @@ body > .bg {
     
 }
 
+/* Notice that better practices for font responsiveness may be used when having the design docs or project predefined UI on hand */
+/* Styles for FHD+ and next are not perfectly supported */
 @media (min-width: 2160px) {
+
+    :root {
+        --copyright-height: 64px;
+    }
 
     body > .bg {
         background-image: url(../img/clouds.svg);
@@ -605,8 +611,99 @@ body > .bg {
         background-origin: border-box;
     }
 
+    header > nav > div > ul > li {
+        height: 64px;
+    }
+
+    header > nav > div > ul > .dropdown-menu {
+        margin-top: -48px;
+    }
+
+    header > nav > div > ul > .dropdown-menu > a {
+        min-width: 364px;
+        height: 96px;
+        line-height: 64px;
+    }
+
+    header > nav > div > ul > li.dropdown > a:last-child {
+        min-width: 360px;
+    }
+
+    header > nav > div > ul > .dropdown-menu {
+        margin-top: -86px;
+    }
+
     footer {
         padding: 48px 10%;
+    }
+
+    nav span,
+    footer a,
+    footer li > span {
+        font-size: 28px;
+    }
+
+    footer p.title {
+        font-size: 36px;
+    }
+
+    footer > .copyright > p {
+        font-size: 24px;
+    }
+
+    aside.subscribe > div {
+        width: 600px;
+    }
+
+    aside.subscribe > div > p {
+        margin-bottom: 32px;
+        font-size: 28px;
+    }
+
+    aside.subscribe > div > button {
+        width: 160px;
+    }
+    
+    aside.subscribe > div > input {
+        width: 320px;
+        font-size: 28px;
+    }
+
+    button {
+        font-size: 28px;
+    }
+
+    #content a {
+        font-size: 28px;
+    }
+
+    #content > .page {
+        padding: 5% 0%;
+    }
+
+    #content > .page:nth-child(3) {
+        padding: 10% 0%;
+    }
+
+    #logo > h1 {
+        padding: 16px 0px;
+        font-size: 36px;
+    }
+
+    #logo > a > img {
+        height: 108px;
+    }
+
+    .cards > div > span {
+        font-size: 36px;
+    }
+
+    .cards > div > p {
+        font-size: 28px;
+    }
+
+    .cards > div.link {
+        padding-bottom: 160px;
     }
 
 }
@@ -614,7 +711,7 @@ body > .bg {
 @media (min-width: 2600px) {
 
     footer {
-        padding: 48px 25%;
+        padding: 48px 15%;
     }
 
 }
@@ -622,7 +719,7 @@ body > .bg {
 @media (min-width: 3800px) {
 
     footer {
-        padding: 48px 35%;
+        padding: 48px 25%;
     }
 
 }

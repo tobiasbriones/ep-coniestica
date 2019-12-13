@@ -109,3 +109,11 @@ aside strong {
     }
     
 }
+
+@media (min-width: 2160px) {
+
+    #content > .page > .cards > div.link {
+        height: 600px;
+    }
+
+}

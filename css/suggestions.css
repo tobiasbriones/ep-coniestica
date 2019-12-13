@@ -117,3 +117,25 @@
         left: 0%;
     }
 }
+
+@media (min-width: 2160px) {
+
+    #content > .page > .cards > div > span {
+        font-size: 36px;
+    }
+
+    #content > .page > .cards > div.desc > span.desc {
+        padding: 16px 24px;
+        font-size: 22px;
+    }
+
+    #content > .page > .cards > div.desc > span.desc {
+        max-height: 72px;
+    }
+
+    #content > .page > .cards > div.desc > span.src {
+        padding: 14px 24px;
+        font-size: 16px;
+    }
+
+}

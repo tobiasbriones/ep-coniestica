@@ -141,5 +141,58 @@
         padding: 5% 15%;
     }
 
+}
+
+
+@media (min-width: 2160px) {
+    
+    #content {
+        padding: 0% 15%;
+    }
+
+    #content > .page {
+        padding: 5% 0%;
+    }
+
+    #content > .page > .options > div > button {
+        width: 600px;
+    }
+
+    .cards > div {
+        padding: 64px 96px;
+    }
+
+    .cards li {
+        font-size: 28px;
+    }
+
+    .project-about > h1 {
+        margin: 0px 0px 32px 0px;
+        font-size: 36px;
+    }
+
+    .project-about > section > p {
+        margin: 32px 0px;
+        font-size: 28px;
+    }
+
+    .project-about li,
+    .project-about strong {
+        padding: 16px 0px;
+        font-size: 28px;
+    }
+
+    .project-about > section.disclaimer::before {
+        font-size: 18px;
+    }
+
+    .project-about a > img {
+        height: 36px;
+        left: 4px;
+    }
+
+    .project-about a {
+        padding: 8px 8px 8px 48px !important;
+    }
 
 }

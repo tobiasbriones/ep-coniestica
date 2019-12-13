@@ -63,3 +63,18 @@ section > .content > p {
     }
 
 }
+
+@media (min-width: 2160px) {
+
+    section > h1 {
+        font-size: 36px;
+        margin: 0px 0px 32px 0px;
+    }
+
+    section > .content > p,
+    section li {
+        margin: 16px 0px;
+        font-size: 28px;
+    }
+
+}

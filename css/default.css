@@ -78,3 +78,11 @@ input {
     }
 
 }
+
+@media (min-width: 2160px) {
+
+    :root {
+        --nav-height: 148px;
+    }
+
+}
