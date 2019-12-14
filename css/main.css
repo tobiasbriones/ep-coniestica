@@ -264,6 +264,10 @@ body > .bg {
     position: fixed;
 }
 
+#content .bg.parallax img {
+    height: 100%;
+}
+
 #content .bg.extended {
     overflow: inherit;
 }
