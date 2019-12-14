@@ -23,28 +23,28 @@ body > .bg {
     background: none;
 }
 
-ul {
-    margin: 16px;
-    list-style: none;
-}
-
-li {
-    padding: 8px 0px;
-    color: rgba(0, 0, 0, 0.6);
-}
-
 #content {
     padding: 5% 32px;
     margin-bottom: 64px;
     background-color: white;
 }
 
-section > h1 {
+#content ul {
+    margin: 16px;
+    list-style: none;
+}
+
+#content li {
+    padding: 8px 0px;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+#content section > h1 {
     font-size: 24px;
     margin: 0px 0px 16px 0px;
 }
 
-section > .content > p {
+#content section > .content > p {
     margin: 16px 0px;
 }
 
