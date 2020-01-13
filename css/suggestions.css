@@ -23,119 +23,110 @@
 
 /* --------------------------------------------- URL TILES WITH DESCRIPTION --------------------------------------------- */
 #container {
-    max-height: none;
+  max-height: none;
 }
 
 #content > .page > .cards > div.desc {
-    min-width: 240px;
-    padding-bottom: 96px;
-    margin-bottom: 24px;
-    cursor: pointer;
+  min-width: 240px;
+  padding-bottom: 96px;
+  margin-bottom: 24px;
+  cursor: pointer;
 }
 
 #content > .page > .cards > div.desc > span.desc {
-    position: absolute;
-    display: block;
-    width: 100%;
-    max-height: 56px;
-    left: 0px;
-    bottom: 46px;
-    padding: 16px;
-    padding-bottom: 4px;
-    color: white;
-    background-color: rgba(0, 0, 0, 0.6);
-    font-size: 14px;
-    overflow-y: hidden;
+  position: absolute;
+  display: block;
+  width: 100%;
+  max-height: 56px;
+  left: 0px;
+  bottom: 46px;
+  padding: 16px;
+  padding-bottom: 4px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.6);
+  font-size: 14px;
+  overflow-y: hidden;
 }
 
 #content > .page > .cards > div.desc > span.src {
-    position: absolute;
-    display: block;
-    width: 100%;
-    left: 0px;
-    bottom: 0px;
-    padding: 16px;
-    padding-right: 32px;
-    color: var(--blue-accent);
-    background-color: rgba(0, 0, 0, 0.6);
-    font-size: 12px;
-    text-align: right;
+  position: absolute;
+  display: block;
+  width: 100%;
+  left: 0px;
+  bottom: 0px;
+  padding: 16px;
+  padding-right: 32px;
+  color: var(--blue-accent);
+  background-color: rgba(0, 0, 0, 0.6);
+  font-size: 12px;
+  text-align: right;
 }
 
 @media (min-width: 800px) {
-    
-    #content > .page > .bg img {
-        height: 100%;
-    }
-
+  #content > .page > .bg img {
+    height: 100%;
+  }
 }
 
 @media (min-width: 960px) {
-
-    #content > .page > .cards > div.desc > span.src {
-        padding-top: 16px;
-        font-size: 12px;
-    }
-    
+  #content > .page > .cards > div.desc > span.src {
+    padding-top: 16px;
+    font-size: 12px;
+  }
 }
 
 @media (min-width: 1024px) {
+  #content > .page > .cards > div.desc {
+    padding-bottom: 96px;
+    margin-bottom: 48px;
+    cursor: pointer;
+  }
 
-    #content > .page > .cards > div.desc {
-        padding-bottom: 96px;
-        margin-bottom: 48px;
-        cursor: pointer;
-    }
+  #content > .page > .cards > div.desc > span.desc {
+    padding: 16px 24px;
+    font-size: 16px;
+  }
 
-    #content > .page > .cards > div.desc > span.desc {
-        padding: 16px 24px;
-        font-size: 16px;
-    }
-    
-    #content > .page > .cards > div.desc > span.src {
-        padding: 16px 24px;
-    }
+  #content > .page > .cards > div.desc > span.src {
+    padding: 16px 24px;
+  }
 
-    #content > .page > .bg img {
-        height: auto;
-    }
-    
+  #content > .page > .bg img {
+    height: auto;
+  }
 }
 
 @media (min-width: 1920px) {
+  #content > .page > .cards > div.desc > .desc {
+    padding: 16px 36px;
+  }
 
-    #content > .page > .cards > div.desc > .desc {
-        padding: 16px 36px;
-    }
+  #content > .page > .cards > div.desc > .src {
+    padding: 16px 36px;
+  }
 
-    #content > .page > .cards > div.desc > .src {
-        padding: 16px 36px;
-    }
-    
-    #content > .page:nth-child(1) > .bg {
-        width: 100%;
-        left: 0%;
-    }
+  #content > .page:nth-child(1) > .bg {
+    width: 100%;
+    left: 0%;
+  }
 }
 
 @media (min-width: 2160px) {
+  #content > .page > .cards > div > span {
+    font-size: 36px;
+  }
 
-    #content > .page > .cards > div > span {
-        font-size: 36px;
-    }
+  #content > .page > .cards > div.desc > span.desc {
+    padding: 16px 24px;
+    font-size: 22px;
+  }
 
-    #content > .page > .cards > div.desc > span.desc {
-        padding: 16px 24px;
-        font-size: 22px;
-    }
+  #content > .page > .cards > div.desc > span.desc {
+    max-height: 72px;
+  }
 
-    #content > .page > .cards > div.desc > span.desc {
-        max-height: 72px;
-    }
-
-    #content > .page > .cards > div.desc > span.src {
-        padding: 14px 24px;
-        font-size: 16px;
-    }
-
+  #content > .page > .cards > div.desc > span.src {
+    padding: 14px 24px;
+    font-size: 16px;
+  }
 }

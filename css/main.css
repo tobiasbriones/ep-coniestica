@@ -20,710 +20,691 @@
  */
 
 :root {
-    --copyright-height: 48px;
+  --copyright-height: 48px;
 }
 
 body {
-    min-width: 320px;
+  min-width: 320px;
 }
 
 /* --------------------------------------------- HEADER --------------------------------------------- */
 header {
-    width: 100%;
-    background-color: white;
-    z-index: 10000;
+  width: 100%;
+  background-color: white;
+  z-index: 10000;
 }
 
 header > nav {
-    display: flex;
-    width: 100%;
-    height: var(--nav-height);
+  display: flex;
+  width: 100%;
+  height: var(--nav-height);
 }
 
 header > nav > div {
-    width: 100%;
-    align-self: center;
+  width: 100%;
+  align-self: center;
 }
 
 header > nav > div > ul > .dropdown-menu {
-    position: absolute;
-    top: var(--nav-height);
-    margin-top: -32px;
-    background-color: rgba(0, 0, 0, 0.6);
-    z-index: 10000;
+  position: absolute;
+  top: var(--nav-height);
+  margin-top: -32px;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 10000;
 }
 
 header > nav > div > ul > .dropdown-menu > a {
-    display: block;
-    min-width: 164px;
-    height: 56px;
-    padding-right: 4px;
-    line-height: 24px;
-    border: 4px solid transparent;
-    text-decoration: none;
-    text-align: left;
-    transition: border 200ms;
+  display: block;
+  min-width: 164px;
+  height: 56px;
+  padding-right: 4px;
+  line-height: 24px;
+  border: 4px solid transparent;
+  text-decoration: none;
+  text-align: left;
+  transition: border 200ms;
 }
 
 header > nav > div > ul > .dropdown-menu > a:hover {
-    border-left: 4px solid rgba(237, 169, 119, 0.6);
+  border-left: 4px solid rgba(237, 169, 119, 0.6);
 }
 
 header > nav > div > ul > .dropdown-menu > a:active {
-    background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
 header > nav > div > ul > .dropdown-menu > a > span {
-    display: block;
-    height: 100%;
-    padding: 16px 32px;
-    color: white;
+  display: block;
+  height: 100%;
+  padding: 16px 32px;
+  color: white;
 }
 
 header > nav > div > ul > li {
-    display: block;
-    height: 64px;
-    float: right;
-    transition: border 400ms;
+  display: block;
+  height: 64px;
+  float: right;
+  transition: border 400ms;
 }
 
 header > nav > div > ul > li:hover {
-    border-bottom: 2px solid var(--brown-primary);
+  border-bottom: 2px solid var(--brown-primary);
 }
 
 header > nav > div > ul > li.dropdown {
-    border-left: 4px solid transparent;
+  border-left: 4px solid transparent;
 }
 
 header > nav > div > ul > li.dropdown:hover {
-    border-bottom: none;
-    border-left: 4px solid var(--brown-primary);
+  border-bottom: none;
+  border-left: 4px solid var(--brown-primary);
 }
 
 header > nav > div > ul > li > a {
-    display: block;
-    min-width: 96px;
-    height: 100%;
-    line-height: 64px;
-    text-align: center;
+  display: block;
+  min-width: 96px;
+  height: 100%;
+  line-height: 64px;
+  text-align: center;
 }
 
 header > nav > div > ul > li.dropdown > a {
-    min-width: 160px;
+  min-width: 160px;
 }
 
 header > nav > div > ul > li > a > span {
-    display: block;
-    height: 100%;
-    padding: 0px 16px;
+  display: block;
+  height: 100%;
+  padding: 0px 16px;
 }
 
 #actionClients {
-    display: none;
+  display: none;
 }
 
 /* --------------------------------------------- FOOTER --------------------------------------------- */
 footer {
-    padding: 16px 12px 48px 12px;
-    background-color: var(--footer-bg);
+  padding: 16px 12px 48px 12px;
+  background-color: var(--footer-bg);
 }
 
 footer > div > div {
-    display: inline-block;
-    padding: 16px 8px;
-    vertical-align: top;
+  display: inline-block;
+  padding: 16px 8px;
+  vertical-align: top;
 }
 
 footer > div > .social > a {
-    display: inline-block;
-    width: 36px;
-    height: 36px;
-    margin: 16px 4px;
-    text-decoration: none;
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  margin: 16px 4px;
+  text-decoration: none;
 }
 
 footer > div > .social > a > img {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 footer > .copyright {
-    position: absolute;
-    display: flex;
-    width: 100%;
-    height: var(--copyright-height);
-    bottom: 0px;
-    left: 0px;
-    border-top-left-radius: var(--copyright-height);
-    background-color: rgb(0, 10, 26);
+  position: absolute;
+  display: flex;
+  width: 100%;
+  height: var(--copyright-height);
+  bottom: 0px;
+  left: 0px;
+  border-top-left-radius: var(--copyright-height);
+  background-color: rgb(0, 10, 26);
 }
 
 footer > .copyright > p {
-    display: block;
-    width: 100%;
-    align-self: center;
-    text-align: center;
-    font-style: italic;
-    font-size: 14px;
-    color: #E0E0E0;
+  display: block;
+  width: 100%;
+  align-self: center;
+  text-align: center;
+  font-style: italic;
+  font-size: 14px;
+  color: #e0e0e0;
 }
 
 footer li {
-    max-width: 128px;
-    padding: 4px 0px;
-    list-style: none;
+  max-width: 128px;
+  padding: 4px 0px;
+  list-style: none;
 }
 
 footer a {
-    color: #e0e0e0;
-    text-decoration: underline;
+  color: #e0e0e0;
+  text-decoration: underline;
 }
 
 footer span {
-    color: #e0e0e0;
+  color: #e0e0e0;
 }
 
 footer p.title {
-    margin-bottom: 4px;
-    color: white;
-    font-size: 16px;
+  margin-bottom: 4px;
+  color: white;
+  font-size: 16px;
 }
 
 /* --------------------------------------------- SUBSCRIBE ASIDE --------------------------------------------- */
 aside.subscribe {
-    display: block;
-    width: 100%;
-    background-color: var(--footer-bg);
-    border-top-left-radius: 16px;
-    border-top-right-radius: 16px;
+  display: block;
+  width: 100%;
+  background-color: var(--footer-bg);
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
 }
 
 aside.subscribe > div {
-    padding: 16px 32px;
+  padding: 16px 32px;
 }
 
 aside.subscribe > div > p {
-    margin-bottom: 8px;
-    font-size: 18px;
-    color: white;
+  margin-bottom: 8px;
+  font-size: 18px;
+  color: white;
 }
 
 aside.subscribe > div > input {
-    width: 50%;
-    color: white;
+  width: 50%;
+  color: white;
 }
 
 aside.subscribe > div > button {
-    width: 40%;
-    float: right;
+  width: 40%;
+  float: right;
 }
 
 /* --------------------------------------------- LOGO --------------------------------------------- */
 #logo {
-    width: 100%;
-    padding: 16px 0px;
+  width: 100%;
+  padding: 16px 0px;
 }
 
 #logo > a {
-    width: 74px;
-    margin: auto;
+  width: 74px;
+  margin: auto;
 }
 
 #logo > a > img {
-    display: block;
-    width: auto;
-    height: 64px;
-    margin: auto;
+  display: block;
+  width: auto;
+  height: 64px;
+  margin: auto;
 }
 
 #logo > h1 {
-    padding: 8px 0px;
-    font-size: 28px;
-    text-align: center;
+  padding: 8px 0px;
+  font-size: 28px;
+  text-align: center;
 }
 
 /* --------------------------------------------- CONTENTS --------------------------------------------- */
 body > .bg {
-    background-color: #141414;
+  background-color: #141414;
 }
 
 #content > .page {
-    padding: 3%;
+  padding: 3%;
 }
 
 #content .bg {
-    position: absolute;
-    width: 103%;
-    height: 100%;
-    top: 0%;
-    left: -3%;
-    overflow: hidden;
+  position: absolute;
+  width: 103%;
+  height: 100%;
+  top: 0%;
+  left: -3%;
+  overflow: hidden;
 }
 
 #content .bg.parallax {
-    position: fixed;
+  position: fixed;
 }
 
 #content .bg.parallax img {
-    height: 100%;
+  height: 100%;
 }
 
 #content .bg.extended {
-    overflow: inherit;
+  overflow: inherit;
 }
 
 #content .bg.extended img {
-    max-height: 115%;
+  max-height: 115%;
 }
 
 #content .bg img {
-    width: 100%;
+  width: 100%;
 }
 
 #content > .page:nth-child(2) > .bg {
-    background-color: var(--footer-bg);
+  background-color: var(--footer-bg);
 }
 
 #content strong,
 #content a {
-    color: white;
+  color: white;
 }
 
 #content a {
-    display: inline-block;
-    padding: 8px 16px;
-    border-radius: 8px;
-    border: 2px solid transparent;
-    background-color: #546E7A;
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: 2px solid transparent;
+  background-color: #546e7a;
 }
 
 #content a:active {
-    border: 2px solid var(--brown-primary);
+  border: 2px solid var(--brown-primary);
 }
 
 #video {
-    width: 100%;
-    min-height: 320px;
+  width: 100%;
+  min-height: 320px;
 }
 
 .cards > div {
-    padding: 24px 32px;
-    margin: 32px 0px;
-    border-radius: 4px;
-    background-color: rgba(0, 14, 21, 0.8);
+  padding: 24px 32px;
+  margin: 32px 0px;
+  border-radius: 4px;
+  background-color: rgba(0, 14, 21, 0.8);
 }
 
 .cards > div.link {
-    padding-bottom: 96px;
+  padding-bottom: 96px;
 }
 
 .cards > div.end {
-    margin-bottom: 32px;
+  margin-bottom: 32px;
 }
 
 .cards > div > span {
-    display: block;
-    padding: 0px 0px 16px 0px;
-    font-size: 24px;
-    font-weight: bold;
-    color: var(--brown-primary);
+  display: block;
+  padding: 0px 0px 16px 0px;
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--brown-primary);
 }
 
 .cards > div > span.center {
-    text-align: center;
+  text-align: center;
 }
 
 .cards > div > img {
-    display: block;
-    height: 96px;
-    margin: auto;
-    margin-bottom: 24px;
+  display: block;
+  height: 96px;
+  margin: auto;
+  margin-bottom: 24px;
 }
 
 .cards > div > p {
-    text-align: center;
-    color: white;
+  text-align: center;
+  color: white;
 }
 
 .cards > div > ul {
-    margin: 16px 0px 8px 0px;
+  margin: 16px 0px 8px 0px;
 }
 
 .cards > div > ul > li {
-    margin-bottom: 16px;
-    color: #e0e0e0;
+  margin-bottom: 16px;
+  color: #e0e0e0;
 }
 
 .cards > div.link > a {
-    margin-top: 24px;
-    float: right;
-    font-weight: bold;
+  margin-top: 24px;
+  float: right;
+  font-weight: bold;
 }
 
 .cards > div.right {
-    width: 100%;
-    left: 0%;
+  width: 100%;
+  left: 0%;
 }
 
 .cards > div.left {
-    width: 100%;
+  width: 100%;
 }
 
 .links {
-    display: flex;
-    margin: 32px;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  margin: 32px;
+  align-items: center;
+  justify-content: center;
 }
 
 @media (min-width: 360px) {
+  footer {
+    padding: 16px 16px 48px 16px;
+  }
 
-    footer {
-        padding: 16px 16px 48px 16px;
-    }
-    
-    footer li {
-        max-width: 128px;
-    }
-    
-    footer > div > div {
-        padding: 16px;
-    }
-    
+  footer li {
+    max-width: 128px;
+  }
+
+  footer > div > div {
+    padding: 16px;
+  }
 }
 
 @media (min-width: 600px) {
-    
-    footer li {
-        max-width: 160px;
-    }
-    
-    #actionClients {
-        display: block;
-    }
-    
-    #content > .page {
-        padding: 3% 5%;
-    }
-    
-    #content .bg {
-        width: 100%;
-        left: 0%;
-    }
+  footer li {
+    max-width: 160px;
+  }
 
-    aside.subscribe {
-        padding: 0px;
-        border-top-left-radius: 0px;
-        border-top-right-radius: 240px;
-    }
+  #actionClients {
+    display: block;
+  }
 
-    aside.subscribe > div {
-        width: 400px;
-    }
+  #content > .page {
+    padding: 3% 5%;
+  }
 
-    .cards > div {
-        padding: 32px 64px;
-    }
-    
-    .cards > div > span {
-        padding: 0px 0px 24px 0px;
-        font-size: 28px;
-    }
+  #content .bg {
+    width: 100%;
+    left: 0%;
+  }
 
-    .cards > div.right {
-        width: 90%;
-        left: 10%;
-    }
+  aside.subscribe {
+    padding: 0px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 240px;
+  }
 
-    .cards > div.left {
-        width: 90%;
-    }
-    
+  aside.subscribe > div {
+    width: 400px;
+  }
+
+  .cards > div {
+    padding: 32px 64px;
+  }
+
+  .cards > div > span {
+    padding: 0px 0px 24px 0px;
+    font-size: 28px;
+  }
+
+  .cards > div.right {
+    width: 90%;
+    left: 10%;
+  }
+
+  .cards > div.left {
+    width: 90%;
+  }
 }
 
 @media (min-width: 800px) {
+  footer {
+    padding: 32px 16px;
+  }
 
-    footer {
-        padding: 32px 16px;
-    }
+  footer > .copyright {
+    width: 60%;
+    left: auto;
+    right: 0px;
+  }
 
-    footer > .copyright {
-        width: 60%;
-        left: auto;
-        right: 0px;
-    }
-    
-    footer li {
-        max-width: 240px;
-    }
+  footer li {
+    max-width: 240px;
+  }
 
-    #content .bg.extended img {
-        height: 115%;
-    }
+  #content .bg.extended img {
+    height: 115%;
+  }
 
-    .cards > div.right {
-        width: 80%;
-        left: 20%;
-    }
-    
-    .cards > div.left {
-        width: 80%;
-    }
+  .cards > div.right {
+    width: 80%;
+    left: 20%;
+  }
 
+  .cards > div.left {
+    width: 80%;
+  }
 }
 
 @media (min-width: 1024px) {
+  footer {
+    padding: 32px 32px;
+  }
 
-    footer {
-        padding: 32px 32px;
-    }
+  footer > .copyright {
+    width: 40%;
+  }
 
-    footer > .copyright {
-        width: 40%;
-    }
+  footer > div > div {
+    padding: 16px 64px;
+  }
 
-    footer > div > div {
-        padding: 16px 64px;
-    }
+  aside.subscribe {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-end;
+    background-color: transparent;
+  }
 
-    aside.subscribe {
-        display: flex;
-        width: 100%;
-        flex-direction: column;
-        align-items: flex-end;
-        background-color: transparent;
-    }
+  aside.subscribe > div {
+    width: 468px;
+    padding: 24px 48px;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 64px;
+    background-color: var(--footer-bg);
+  }
 
-    aside.subscribe > div {
-        width: 468px;
-        padding: 24px 48px;
-        border-top-left-radius: 16px;
-        border-top-right-radius: 64px;
-        background-color: var(--footer-bg);
-    }
-    
-    aside.subscribe > div > input {
-        width: 240px;
-    }
+  aside.subscribe > div > input {
+    width: 240px;
+  }
 
-    aside.subscribe > div > button {
-        width: 108px;
-    }
+  aside.subscribe > div > button {
+    width: 108px;
+  }
 
-    #content > .page {
-        padding: 5%;
-    }
-    
-    #video {
-        min-height: 480px;
-    }
+  #content > .page {
+    padding: 5%;
+  }
 
-    .cards > div {
-        margin-bottom: 64px;
-    }
+  #video {
+    min-height: 480px;
+  }
 
+  .cards > div {
+    margin-bottom: 64px;
+  }
 }
 
 @media (min-width: 1360px) {
+  footer {
+    padding: 32px 48px;
+  }
 
-    footer {
-        padding: 32px 48px;
-    }
+  footer > .copyright {
+    width: 30%;
+  }
 
-    footer > .copyright {
-        width: 30%;
-    }
+  footer li {
+    max-width: 360px;
+  }
 
-    footer li {
-        max-width: 360px;
-    }
+  #content > .page {
+    padding: 5% 15%;
+  }
 
-    #content > .page {
-        padding: 5% 15%;
-    }
+  #content > .page:nth-child(3) {
+    padding: 5%;
+  }
 
-    #content > .page:nth-child(3) {
-        padding: 5%;
-    }
-
-    .cards > div {
-        margin-bottom: 96px;
-    }
-
+  .cards > div {
+    margin-bottom: 96px;
+  }
 }
 
 @media (min-width: 1920px) {
+  footer {
+    padding: 48px 160px;
+  }
 
-    footer {
-        padding: 48px 160px;
-    }
+  footer li {
+    max-width: 600px;
+  }
 
-    footer li {
-        max-width: 600px;
-    }
+  #content {
+    padding: 0% 25%;
+  }
 
-    #content {
-        padding: 0% 25%;
-    }
+  #content > .page:nth-child(1) > .bg,
+  #content > .page:nth-child(2),
+  #content .bg.extended {
+    width: 200%;
+    left: -50%;
+  }
 
-    #content > .page:nth-child(1) > .bg,
-    #content > .page:nth-child(2),
-    #content .bg.extended {
-        width: 200%;
-        left: -50%;
-    }
-
-    #content > .page:nth-child(1) > .bg {
-        width: 100%;
-        left: 0%;
-    }
+  #content > .page:nth-child(1) > .bg {
+    width: 100%;
+    left: 0%;
+  }
 }
 
 @media (min-width: 1921px) {
+  #container {
+    width: 1920px;
+    margin: auto;
+  }
 
-    #container {
-        width: 1920px;
-        margin: auto;
-    }
+  #content .bg.parallax {
+    position: absolute;
+    width: 200%;
+    left: -50%;
+  }
 
-    #content .bg.parallax {
-        position: absolute;
-        width: 200%;
-        left: -50%;
-    }
-
-    #content > .page:nth-child(1) > .bg,
-    #content > .page:nth-child(2),
-    #content .bg.extended {
-        width: 200%;
-        left: -50%;
-    }
-    
+  #content > .page:nth-child(1) > .bg,
+  #content > .page:nth-child(2),
+  #content .bg.extended {
+    width: 200%;
+    left: -50%;
+  }
 }
 
 /* Notice that better practices for font responsiveness may be used when having the design docs or project predefined UI on hand */
 /* Styles for FHD+ and next are not perfectly supported */
 @media (min-width: 2160px) {
+  :root {
+    --copyright-height: 64px;
+  }
 
-    :root {
-        --copyright-height: 64px;
-    }
+  body > .bg {
+    background-image: url(../img/clouds.svg);
+    background-size: cover;
+    background-origin: border-box;
+  }
 
-    body > .bg {
-        background-image: url(../img/clouds.svg);
-        background-size: cover;
-        background-origin: border-box;
-    }
+  header > nav > div > ul > li {
+    height: 64px;
+  }
 
-    header > nav > div > ul > li {
-        height: 64px;
-    }
+  header > nav > div > ul > .dropdown-menu {
+    margin-top: -48px;
+  }
 
-    header > nav > div > ul > .dropdown-menu {
-        margin-top: -48px;
-    }
+  header > nav > div > ul > .dropdown-menu > a {
+    min-width: 364px;
+    height: 96px;
+    line-height: 64px;
+  }
 
-    header > nav > div > ul > .dropdown-menu > a {
-        min-width: 364px;
-        height: 96px;
-        line-height: 64px;
-    }
+  header > nav > div > ul > li.dropdown > a:last-child {
+    min-width: 360px;
+  }
 
-    header > nav > div > ul > li.dropdown > a:last-child {
-        min-width: 360px;
-    }
+  header > nav > div > ul > .dropdown-menu {
+    margin-top: -86px;
+  }
 
-    header > nav > div > ul > .dropdown-menu {
-        margin-top: -86px;
-    }
+  footer {
+    padding: 48px 10%;
+  }
 
-    footer {
-        padding: 48px 10%;
-    }
+  nav span,
+  footer a,
+  footer li > span {
+    font-size: 28px;
+  }
 
-    nav span,
-    footer a,
-    footer li > span {
-        font-size: 28px;
-    }
+  footer p.title {
+    font-size: 36px;
+  }
 
-    footer p.title {
-        font-size: 36px;
-    }
+  footer > .copyright > p {
+    font-size: 24px;
+  }
 
-    footer > .copyright > p {
-        font-size: 24px;
-    }
+  aside.subscribe > div {
+    width: 600px;
+  }
 
-    aside.subscribe > div {
-        width: 600px;
-    }
+  aside.subscribe > div > p {
+    margin-bottom: 32px;
+    font-size: 28px;
+  }
 
-    aside.subscribe > div > p {
-        margin-bottom: 32px;
-        font-size: 28px;
-    }
+  aside.subscribe > div > button {
+    width: 160px;
+  }
 
-    aside.subscribe > div > button {
-        width: 160px;
-    }
-    
-    aside.subscribe > div > input {
-        width: 320px;
-        font-size: 28px;
-    }
+  aside.subscribe > div > input {
+    width: 320px;
+    font-size: 28px;
+  }
 
-    button {
-        font-size: 28px;
-    }
+  button {
+    font-size: 28px;
+  }
 
-    #content a {
-        font-size: 28px;
-    }
+  #content a {
+    font-size: 28px;
+  }
 
-    #content > .page {
-        padding: 5% 0%;
-    }
+  #content > .page {
+    padding: 5% 0%;
+  }
 
-    #content > .page:nth-child(3) {
-        padding: 10% 0%;
-    }
+  #content > .page:nth-child(3) {
+    padding: 10% 0%;
+  }
 
-    #logo > h1 {
-        padding: 16px 0px;
-        font-size: 36px;
-    }
+  #logo > h1 {
+    padding: 16px 0px;
+    font-size: 36px;
+  }
 
-    #logo > a > img {
-        height: 108px;
-    }
+  #logo > a > img {
+    height: 108px;
+  }
 
-    .cards > div > span {
-        font-size: 36px;
-    }
+  .cards > div > span {
+    font-size: 36px;
+  }
 
-    .cards > div > p {
-        font-size: 28px;
-    }
+  .cards > div > p {
+    font-size: 28px;
+  }
 
-    .cards > div.link {
-        padding-bottom: 160px;
-    }
-
+  .cards > div.link {
+    padding-bottom: 160px;
+  }
 }
 
 @media (min-width: 2600px) {
-
-    footer {
-        padding: 48px 15%;
-    }
-
+  footer {
+    padding: 48px 15%;
+  }
 }
 
 @media (min-width: 3800px) {
-
-    footer {
-        padding: 48px 25%;
-    }
-
+  footer {
+    padding: 48px 25%;
+  }
 }

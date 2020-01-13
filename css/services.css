@@ -20,100 +20,90 @@
  */
 
 aside {
-    margin: 16px;
+  margin: 16px;
 }
 
 aside strong {
-    color: white;
+  color: white;
 }
 
 #content {
-    padding: 0% 5% 0% 5%;
-    background-color: #303030;
+  padding: 0% 5% 0% 5%;
+  background-color: #303030;
 }
 
 #content > .page > .cards > div > p.margin {
-    margin-top: 24px;
+  margin-top: 24px;
 }
 
 #content > .page > .options > div {
-    margin: auto;
-    width: 320px;
+  margin: auto;
+  width: 320px;
 }
 
 #content > .page > .options > div > button {
-    display: block;
-    width: 320px;
-    margin-bottom: 12px;
+  display: block;
+  width: 320px;
+  margin-bottom: 12px;
 }
 
 #content > .page > .cards > div.link {
-    display: inline-block;
-    width: 100%;
-    height: auto;
-    left: 0%;
-    vertical-align: top;
+  display: inline-block;
+  width: 100%;
+  height: auto;
+  left: 0%;
+  vertical-align: top;
 }
 
 #content > .page > .cards > div.link > a {
-    position: absolute;
-    bottom: 36px;
-    right: 64px;
+  position: absolute;
+  bottom: 36px;
+  right: 64px;
 }
 
 @media (min-width: 600px) {
-
-    aside {
-        margin: 64px;
-    }
-    
+  aside {
+    margin: 64px;
+  }
 }
 
 @media (min-width: 960px) {
+  aside {
+    margin: 64px 256px;
+  }
 
-    aside {
-        margin: 64px 256px;
-    }
-
-    #content > .page > .cards > div.link {
-        width: 43%;
-        height: 500px;
-        padding-bottom: 36px;
-        margin: 2% 3%;
-    }
-    
+  #content > .page > .cards > div.link {
+    width: 43%;
+    height: 500px;
+    padding-bottom: 36px;
+    margin: 2% 3%;
+  }
 }
 
 @media (min-width: 1360px) {
-
-    #content > .page > .cards > div.link {
-        height: 400px;
-    }
-    
+  #content > .page > .cards > div.link {
+    height: 400px;
+  }
 }
 
 @media (min-width: 1920px) {
-    
-    aside {
-        margin: 64px 25%;
-    }
+  aside {
+    margin: 64px 25%;
+  }
 
-    #content {
-        padding: 0% 15% 0% 15%;
-    }
+  #content {
+    padding: 0% 15% 0% 15%;
+  }
 
-    #content > .page > .cards > div.link {
-        width: 43%;
-        height: 400px;
-        padding-bottom: 36px;
-    }
-    
+  #content > .page > .cards > div.link {
+    width: 43%;
+    height: 400px;
+    padding-bottom: 36px;
+  }
 }
 
 @media (min-width: 2160px) {
-
-    #content > .page > .cards > div.link {
-        height: 600px;
-    }
-
+  #content > .page > .cards > div.link {
+    height: 600px;
+  }
 }
