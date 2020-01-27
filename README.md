@@ -10,4 +10,4 @@ Example project for a simple company information front-end website made in pure 
 ## License
 This software is licensed under the [GNU General Public License v3.0 License](https://github.com/TobiasBriones/example.programming.web.coniestica/blob/master/LICENSE).
 
-Images and/or icons are provided by [Pixabay](https://pixabay.com/) see NOTICE for more details.
+Images and/or icons are provided by [Pixabay](https://pixabay.com/) see the NOTICE file for more details.
