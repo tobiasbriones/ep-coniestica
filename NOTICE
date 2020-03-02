@@ -1,5 +1,5 @@
-example.programming.web.coniestica
-Copyright (C) Tobias Briones
+example.programming.web.coniestica, Coniestica
+Copyright (C) 2019 Tobias Briones. All rights reserved.
 
 --------------------------------------------------------------------------------
 This software contains images provided by Pixabay (https://pixabay.com/),
@@ -31,30 +31,37 @@ where some of these images have been modified; the complete list of images is li
   from https://pixabay.com/vectors/manuscript-newspaper-article-paper-149606/
   by   https://pixabay.com/users/openclipart-vectors-30363/
 
+- /_project/img/ic_images.jpg:
+  from https://pixabay.com/photos/brush-color-paint-play-watercolor-96240/
+  by   https://pixabay.com/users/weinstock-25534/
+  
+- /_project/img/ic_services.png:
+  from https://pixabay.com/vectors/website-internet-internet-page-1778529/
+  by   https://pixabay.com/users/janjf93-3084263/
+
 - /_project/img/ic_services_customs.png:
   from https://pixabay.com/vectors/customs-service-travel-customer-44004/
   by   https://pixabay.com/users/clker-free-vector-images-3736/
 
-- /_project/img/ic_services_legal:
-  from https://pixabay.com/vectors/scales-law-justice-balance-weight-303434/
-  by   https://pixabay.com/users/clker-free-vector-images-3736/
-
-- /_project/img/ic_services_transport:
-  from https://pixabay.com/illustrations/truck-vehicles-transport-lead-1918551/
-  by   https://pixabay.com/users/superbea-4052665/
-
-- /_project/img/ic_services_storage:
-  from https://pixabay.com/vectors/forklift-merchandise-storage-160284/
-  by   https://pixabay.com/users/openclipart-vectors-30363/
-
-- /_project/img/ic_services_label:
+- /_project/img/ic_services_label.png:
   from https://pixabay.com/vectors/icon-batch-mark-label-157357/
   by   https://pixabay.com/users/openclipart-vectors-30363/
 
-- /_project/img/:
-  from 
-  by   
+- /_project/img/ic_services_legal.png:
+  from https://pixabay.com/vectors/scales-law-justice-balance-weight-303434/
+  by   https://pixabay.com/users/clker-free-vector-images-3736/
+  
+- /_project/img/ic_services_storage.png:
+  from https://pixabay.com/vectors/forklift-merchandise-storage-160284/
+  by   https://pixabay.com/users/openclipart-vectors-30363/
 
+- /_project/img/ic_services_transport.png:
+  from https://pixabay.com/illustrations/truck-vehicles-transport-lead-1918551/
+  by   https://pixabay.com/users/superbea-4052665/
+
+- /_project/img/ic_vector.png:
+  from https://pixabay.com/vectors/gradient-mesh-bakery-products-bake-1264214/
+  by   https://pixabay.com/users/deviser-1919446/
 
 Copies of the listed images are also present in the /img/ folder.
 
