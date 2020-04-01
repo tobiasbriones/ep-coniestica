@@ -33,14 +33,14 @@
   height: 96px;
   margin-top: 24px;
   float: right;
-  border-radius: 50%;
-  background-color: var(--blue-accent);
-  transition: border 100ms;
   cursor: pointer;
-  -webkit-user-select: none; /* Safari 3.1+ */
   -moz-user-select: none; /* Firefox 2+ */
   -ms-user-select: none; /* IE 10+ */
+  -webkit-user-select: none; /* Safari 3.1+ */
   user-select: none; /* Standard syntax */
+  transition: border 100ms;
+  border-radius: 50%;
+  background-color: var(--blue-accent);
 }
 
 #content > .page > .cards > div.chat > div:active {
@@ -49,16 +49,16 @@
 
 #content > .page > .cards > div.chat > div > span {
   position: absolute;
-  left: 50%;
   top: 50%;
+  left: 50%;
+  font-weight: bold;
   transform: translate(-50%, -50%);
   color: white;
-  font-weight: bold;
 }
 
 #content > .page > .options > div {
-  margin: auto;
   width: 320px;
+  margin: auto;
 }
 
 #content > .page > .options > div > button {
@@ -106,31 +106,31 @@
 
 @media (min-width: 1920px) {
   #content {
-    padding: 0%;
+    padding: 0;
   }
-
+  
   #content > .page {
-    padding-left: 45%;
     padding-right: 5%;
+    padding-left: 45%;
   }
-
+  
   #content > .page > .bg {
     width: 100%;
   }
-
+  
   #map {
     position: absolute;
     width: 600px;
     height: 400px;
+    margin: 0;
     top: 8%;
     left: 5%;
-    margin: 0px;
   }
 }
 
 @media (min-width: 1920px) {
   #content > .page:nth-child(1) > .bg {
     width: 100%;
-    left: 0px;
+    left: 0;
   }
 }

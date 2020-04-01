@@ -17,8 +17,8 @@
  */
 
 #content {
-  min-height: 600px;
   height: auto;
+  min-height: 600px;
 }
 
 #content > .page > .cards > div > p {
@@ -47,7 +47,7 @@
 
 #content > .page > .cards > div > ol > li {
   margin-bottom: 16px;
-  color: #e0e0e0;
+  color: #E0E0E0;
 }
 
 #content > .page > .bg img {
@@ -60,13 +60,13 @@
 }
 
 .project-about > h1 {
-  margin: 0px 0px 16px 0px;
-  text-align: center;
+  margin: 0 0 16px 0;
   font-size: 24px;
+  text-align: center;
 }
 
 .project-about > section > p {
-  margin: 16px 0px;
+  margin: 16px 0;
   color: #737373;
 }
 
@@ -89,7 +89,7 @@
 }
 
 .project-about li {
-  padding: 8px 0px;
+  padding: 8px 0;
   color: #737373;
 }
 
@@ -107,13 +107,13 @@
   position: absolute;
   height: 24px;
   top: 4px;
-  left: 0px;
+  left: 0;
 }
 
 @media (min-width: 600px) {
   #content > .page > .options > div {
-    margin: auto;
     width: 320px;
+    margin: auto;
   }
 
   #content > .page > .options > div > button {
@@ -139,16 +139,16 @@
 
 @media (min-width: 2160px) {
   #content {
-    padding: 0% 15%;
+    padding: 0 15%;
   }
 
   #content > .page {
-    padding: 5% 0%;
+    padding: 5% 0;
   }
 
   #content > .page > .bg.parallax {
     width: 100%;
-    left: 0%;
+    left: 0;
   }
 
   #content > .page > .bg img {
@@ -169,22 +169,22 @@
 
   .project-about {
     width: 100%;
-    left: 0%;
+    left: 0;
   }
 
   .project-about > h1 {
-    margin: 0px 0px 32px 0px;
+    margin: 0 0 32px 0;
     font-size: 36px;
   }
 
   .project-about > section > p {
-    margin: 32px 0px;
+    margin: 32px 0;
     font-size: 28px;
   }
 
   .project-about li,
   .project-about strong {
-    padding: 16px 0px;
+    padding: 16px 0;
     font-size: 28px;
   }
 

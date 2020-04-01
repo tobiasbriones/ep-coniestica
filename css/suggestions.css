@@ -18,7 +18,7 @@
 
 /** For this page it is also required the clients.css sheet **/
 
-/* --------------------------------------------- URL TILES WITH DESCRIPTION --------------------------------------------- */
+/* ----------------------  URL TILES WITH DESCRIPTION  ---------------------- */
 #container {
   max-height: none;
 }
@@ -35,27 +35,25 @@
   display: block;
   width: 100%;
   max-height: 56px;
-  left: 0px;
+  padding: 16px 16px 4px;
   bottom: 46px;
-  padding: 16px;
-  padding-bottom: 4px;
-  color: white;
-  background-color: rgba(0, 0, 0, 0.6);
+  left: 0;
   font-size: 14px;
   overflow-y: hidden;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
 #content > .page > .cards > div.desc > span.src {
   position: absolute;
   display: block;
   width: 100%;
-  left: 0px;
-  bottom: 0px;
-  padding: 16px;
-  padding-right: 32px;
+  padding: 16px 32px 16px 16px;
+  bottom: 0;
+  left: 0;
+  font-size: 12px;
   color: var(--blue-accent);
   background-color: rgba(0, 0, 0, 0.6);
-  font-size: 12px;
   text-align: right;
 }
 
@@ -104,7 +102,7 @@
 
   #content > .page:nth-child(1) > .bg {
     width: 100%;
-    left: 0%;
+    left: 0;
   }
 }
 

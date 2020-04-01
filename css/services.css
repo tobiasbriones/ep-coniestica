@@ -25,7 +25,7 @@ aside strong {
 }
 
 #content {
-  padding: 0% 5% 0% 5%;
+  padding: 0 5% 0 5%;
   background-color: #303030;
 }
 
@@ -34,8 +34,8 @@ aside strong {
 }
 
 #content > .page > .options > div {
-  margin: auto;
   width: 320px;
+  margin: auto;
 }
 
 #content > .page > .options > div > button {
@@ -48,14 +48,14 @@ aside strong {
   display: inline-block;
   width: 100%;
   height: auto;
-  left: 0%;
+  left: 0;
   vertical-align: top;
 }
 
 #content > .page > .cards > div.link > a {
   position: absolute;
-  bottom: 36px;
   right: 64px;
+  bottom: 36px;
 }
 
 @media (min-width: 600px) {
@@ -93,7 +93,7 @@ aside strong {
   }
 
   #content {
-    padding: 0% 15% 0% 15%;
+    padding: 0 15% 0 15%;
   }
 
   #content > .page > .cards > div.link {

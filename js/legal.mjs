@@ -20,8 +20,8 @@ import { NavigationManager } from './navigation.mjs';
 import { LEGAL_PRIVACY, LEGAL_TERMS_AND_CONDITIONS } from './model.mjs';
 
 const navigationManager = new NavigationManager();
-var titleEl;
-var textEl;
+let titleEl;
+let textEl;
 
 const getURLParam = paramName => {
   const urlStr = window.location.href;
@@ -47,7 +47,7 @@ const gotoTerms = () => {
   history.pushState(
     {},
     'Coniestica - Visión de la empresa',
-    getPathName() + '?v=terms_and_conditions'
+    getPathName() + '?v=terms-and-conditions'
   );
   titleEl.innerHTML = 'Términos y Condiciones de Uso';
   textEl.innerHTML = LEGAL_TERMS_AND_CONDITIONS;
@@ -57,17 +57,17 @@ document.addEventListener('DOMContentLoaded', () => {
   const param = getURLParam('v');
   titleEl = document.querySelector('section > h1');
   textEl = document.querySelector('section > div.content');
-
+  
   navigationManager.init();
   switch (param) {
     case 'privacy':
       gotoPrivacy();
       break;
-
-    case 'terms_and_conditions':
+    
+    case 'terms-and-conditions':
       gotoTerms();
       break;
-
+    
     default:
       gotoPrivacy();
       break;

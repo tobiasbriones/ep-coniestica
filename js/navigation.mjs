@@ -21,24 +21,24 @@ import { ActionDropDownMenu } from './menu/action/dropdown_menu.mjs';
 export class NavigationManager {
   dropdownMenu;
   aboutEl;
-
+  
   constructor() {
     this.dropdownMenu = new ActionDropDownMenu();
   }
-
+  
   init() {
     this.dropdownMenu.init();
     this.aboutEl = document.querySelector('nav > div > ul > .about');
-
+    
     this.aboutEl.addEventListener('mouseover', this.onAboutHover);
     this.aboutEl.addEventListener('mouseout', this.onAboutHoverOut);
   }
-
+  
   onAboutHover = () => {
     const x = this.aboutEl.getClientRects()[0].x;
     this.dropdownMenu.open('about', x);
   };
-
+  
   onAboutHoverOut = e => {
     if (!this.dropdownMenu.isInBounds(e)) {
       this.dropdownMenu.close();

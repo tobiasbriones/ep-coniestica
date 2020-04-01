@@ -17,7 +17,7 @@
  */
 
 #content {
-  padding: 0px;
+  padding: 0;
 }
 
 #content > .page {
@@ -29,8 +29,8 @@
 }
 
 #content > .page > .options > div {
-  margin: auto;
   width: 320px;
+  margin: auto;
 }
 
 #content > .page > .options > div > button {
@@ -45,23 +45,23 @@
 
 #content > .page > .title > p {
   display: inline-block;
-  left: 50%;
-  transform: translateX(-50%);
   padding: 16px 32px;
-  align-self: center;
+  left: 50%;
   font-size: 24px;
   font-weight: bold;
-  text-align: center;
-  background: var(--brown-primary);
+  align-self: center;
+  transform: translateX(-50%);
   color: rgba(0, 0, 0, 0.89);
   border-bottom-right-radius: 48px;
+  background: var(--brown-primary);
+  text-align: center;
 }
 
 #content > .page > .cards {
   display: flex;
-  justify-content: center;
   align-content: space-around;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 #content > .page > .cards > div {
@@ -118,6 +118,6 @@
 @media (min-width: 1920px) {
   #content > .page:nth-child(1) > .bg {
     width: 100%;
-    left: 0%;
+    left: 0;
   }
 }

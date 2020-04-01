@@ -24,11 +24,11 @@ body {
   min-width: 320px;
 }
 
-/* --------------------------------------------- HEADER --------------------------------------------- */
+/* --------------------------------  HEADER  -------------------------------- */
 header {
   width: 100%;
-  background-color: white;
   z-index: 10000;
+  background-color: white;
 }
 
 header > nav {
@@ -44,10 +44,10 @@ header > nav > div {
 
 header > nav > div > ul > .dropdown-menu {
   position: absolute;
-  top: var(--nav-height);
   margin-top: -32px;
-  background-color: rgba(0, 0, 0, 0.6);
+  top: var(--nav-height);
   z-index: 10000;
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
 header > nav > div > ul > .dropdown-menu > a {
@@ -56,10 +56,10 @@ header > nav > div > ul > .dropdown-menu > a {
   height: 56px;
   padding-right: 4px;
   line-height: 24px;
-  border: 4px solid transparent;
-  text-decoration: none;
-  text-align: left;
   transition: border 200ms;
+  border: 4px solid transparent;
+  text-align: left;
+  text-decoration: none;
 }
 
 header > nav > div > ul > .dropdown-menu > a:hover {
@@ -112,14 +112,14 @@ header > nav > div > ul > li.dropdown > a {
 header > nav > div > ul > li > a > span {
   display: block;
   height: 100%;
-  padding: 0px 16px;
+  padding: 0 16px;
 }
 
 #actionClients {
   display: none;
 }
 
-/* --------------------------------------------- FOOTER --------------------------------------------- */
+/* --------------------------------  FOOTER  -------------------------------- */
 footer {
   padding: 16px 12px 48px 12px;
   background-color: var(--footer-bg);
@@ -149,8 +149,8 @@ footer > .copyright {
   display: flex;
   width: 100%;
   height: var(--copyright-height);
-  bottom: 0px;
-  left: 0px;
+  bottom: 0;
+  left: 0;
   border-top-left-radius: var(--copyright-height);
   background-color: rgb(0, 10, 26);
 }
@@ -158,41 +158,41 @@ footer > .copyright {
 footer > .copyright > p {
   display: block;
   width: 100%;
-  align-self: center;
-  text-align: center;
-  font-style: italic;
   font-size: 14px;
-  color: #e0e0e0;
+  font-style: italic;
+  align-self: center;
+  color: #E0E0E0;
+  text-align: center;
 }
 
 footer li {
   max-width: 128px;
-  padding: 4px 0px;
+  padding: 4px 0;
   list-style: none;
 }
 
 footer a {
-  color: #e0e0e0;
+  color: #E0E0E0;
   text-decoration: underline;
 }
 
 footer span {
-  color: #e0e0e0;
+  color: #E0E0E0;
 }
 
 footer p.title {
   margin-bottom: 4px;
-  color: white;
   font-size: 16px;
+  color: white;
 }
 
-/* --------------------------------------------- SUBSCRIBE ASIDE --------------------------------------------- */
+/* ---------------------------  SUBSCRIBE ASIDE  ---------------------------- */
 aside.subscribe {
   display: block;
   width: 100%;
-  background-color: var(--footer-bg);
   border-top-left-radius: 16px;
   border-top-right-radius: 16px;
+  background-color: var(--footer-bg);
 }
 
 aside.subscribe > div {
@@ -215,10 +215,15 @@ aside.subscribe > div > button {
   float: right;
 }
 
-/* --------------------------------------------- LOGO --------------------------------------------- */
+/* --------------------------------  VIDEO  --------------------------------- */
+iframe {
+  border: 0;
+}
+
+/* ---------------------------------  LOGO  --------------------------------- */
 #logo {
   width: 100%;
-  padding: 16px 0px;
+  padding: 16px 0;
 }
 
 #logo > a {
@@ -234,12 +239,12 @@ aside.subscribe > div > button {
 }
 
 #logo > h1 {
-  padding: 8px 0px;
+  padding: 8px 0;
   font-size: 28px;
   text-align: center;
 }
 
-/* --------------------------------------------- CONTENTS --------------------------------------------- */
+/* -------------------------------  CONTENTS  ------------------------------- */
 body > .bg {
   background-color: #141414;
 }
@@ -252,7 +257,7 @@ body > .bg {
   position: absolute;
   width: 103%;
   height: 100%;
-  top: 0%;
+  top: 0;
   left: -3%;
   overflow: hidden;
 }
@@ -289,9 +294,9 @@ body > .bg {
 #content a {
   display: inline-block;
   padding: 8px 16px;
-  border-radius: 8px;
   border: 2px solid transparent;
-  background-color: #546e7a;
+  border-radius: 8px;
+  background-color: #546E7A;
 }
 
 #content a:active {
@@ -305,7 +310,7 @@ body > .bg {
 
 .cards > div {
   padding: 24px 32px;
-  margin: 32px 0px;
+  margin: 32px 0;
   border-radius: 4px;
   background-color: rgba(0, 14, 21, 0.8);
 }
@@ -320,7 +325,7 @@ body > .bg {
 
 .cards > div > span {
   display: block;
-  padding: 0px 0px 16px 0px;
+  padding: 0 0 16px 0;
   font-size: 24px;
   font-weight: bold;
   color: var(--brown-primary);
@@ -333,22 +338,21 @@ body > .bg {
 .cards > div > img {
   display: block;
   height: 96px;
-  margin: auto;
-  margin-bottom: 24px;
+  margin: auto auto 24px;
 }
 
 .cards > div > p {
-  text-align: center;
   color: white;
+  text-align: center;
 }
 
 .cards > div > ul {
-  margin: 16px 0px 8px 0px;
+  margin: 16px 0 8px 0;
 }
 
 .cards > div > ul > li {
   margin-bottom: 16px;
-  color: #e0e0e0;
+  color: #E0E0E0;
 }
 
 .cards > div.link > a {
@@ -359,7 +363,7 @@ body > .bg {
 
 .cards > div.right {
   width: 100%;
-  left: 0%;
+  left: 0;
 }
 
 .cards > div.left {
@@ -377,11 +381,11 @@ body > .bg {
   footer {
     padding: 16px 16px 48px 16px;
   }
-
+  
   footer li {
     max-width: 128px;
   }
-
+  
   footer > div > div {
     padding: 16px;
   }
@@ -391,44 +395,44 @@ body > .bg {
   footer li {
     max-width: 160px;
   }
-
+  
   #actionClients {
     display: block;
   }
-
+  
   #content > .page {
     padding: 3% 5%;
   }
-
+  
   #content .bg {
     width: 100%;
-    left: 0%;
+    left: 0;
   }
-
+  
   aside.subscribe {
-    padding: 0px;
-    border-top-left-radius: 0px;
+    padding: 0;
+    border-top-left-radius: 0;
     border-top-right-radius: 240px;
   }
-
+  
   aside.subscribe > div {
     width: 400px;
   }
-
+  
   .cards > div {
     padding: 32px 64px;
   }
-
+  
   .cards > div > span {
-    padding: 0px 0px 24px 0px;
+    padding: 0 0 24px 0;
     font-size: 28px;
   }
-
+  
   .cards > div.right {
     width: 90%;
     left: 10%;
   }
-
+  
   .cards > div.left {
     width: 90%;
   }
@@ -438,26 +442,26 @@ body > .bg {
   footer {
     padding: 32px 16px;
   }
-
+  
   footer > .copyright {
     width: 60%;
+    right: 0;
     left: auto;
-    right: 0px;
   }
-
+  
   footer li {
     max-width: 240px;
   }
-
+  
   #content .bg.extended img {
     height: 115%;
   }
-
+  
   .cards > div.right {
     width: 80%;
     left: 20%;
   }
-
+  
   .cards > div.left {
     width: 80%;
   }
@@ -467,23 +471,23 @@ body > .bg {
   footer {
     padding: 32px 32px;
   }
-
+  
   footer > .copyright {
     width: 40%;
   }
-
+  
   footer > div > div {
     padding: 16px 64px;
   }
-
+  
   aside.subscribe {
     display: flex;
     width: 100%;
-    flex-direction: column;
     align-items: flex-end;
+    flex-direction: column;
     background-color: transparent;
   }
-
+  
   aside.subscribe > div {
     width: 468px;
     padding: 24px 48px;
@@ -491,23 +495,23 @@ body > .bg {
     border-top-right-radius: 64px;
     background-color: var(--footer-bg);
   }
-
+  
   aside.subscribe > div > input {
     width: 240px;
   }
-
+  
   aside.subscribe > div > button {
     width: 108px;
   }
-
+  
   #content > .page {
     padding: 5%;
   }
-
+  
   #video {
     min-height: 480px;
   }
-
+  
   .cards > div {
     margin-bottom: 64px;
   }
@@ -517,23 +521,23 @@ body > .bg {
   footer {
     padding: 32px 48px;
   }
-
+  
   footer > .copyright {
     width: 30%;
   }
-
+  
   footer li {
     max-width: 360px;
   }
-
+  
   #content > .page {
     padding: 5% 15%;
   }
-
+  
   #content > .page:nth-child(3) {
     padding: 5%;
   }
-
+  
   .cards > div {
     margin-bottom: 96px;
   }
@@ -543,15 +547,15 @@ body > .bg {
   footer {
     padding: 48px 160px;
   }
-
+  
   footer li {
     max-width: 600px;
   }
-
+  
   #content {
-    padding: 0% 25%;
+    padding: 0 25%;
   }
-
+  
   #content > .page:nth-child(1) > .bg,
   #content > .page:nth-child(2),
   #content .bg.extended {
@@ -565,13 +569,13 @@ body > .bg {
     width: 1920px;
     margin: auto;
   }
-
+  
   #content .bg.parallax {
     position: absolute;
     width: 200%;
     left: -50%;
   }
-
+  
   #content > .page:nth-child(1) > .bg,
   #content > .page:nth-child(2),
   #content .bg.extended {
@@ -580,110 +584,113 @@ body > .bg {
   }
 }
 
-/* Notice that better practices for font responsiveness may be used when having the design docs or project predefined UI on hand */
-/* Styles for FHD+ and next are not perfectly supported */
+/*
+ * Notice that better practices for font responsiveness may be used when having
+ * the design docs or project predefined UI on hand.
+ * Styles for FHD+ and next are not perfectly supported
+ */
 @media (min-width: 2160px) {
   :root {
     --copyright-height: 64px;
   }
-
+  
   body > .bg {
     background-image: url(../img/clouds.svg);
-    background-size: cover;
     background-origin: border-box;
+    background-size: cover;
   }
-
+  
   header > nav > div > ul > li {
     height: 64px;
   }
-
+  
   header > nav > div > ul > .dropdown-menu {
     margin-top: -48px;
   }
-
+  
   header > nav > div > ul > .dropdown-menu > a {
     min-width: 364px;
     height: 96px;
     line-height: 64px;
   }
-
+  
   header > nav > div > ul > li.dropdown > a:last-child {
     min-width: 360px;
   }
-
+  
   header > nav > div > ul > .dropdown-menu {
     margin-top: -86px;
   }
-
+  
   footer {
     padding: 48px 10%;
   }
-
+  
   nav span,
   footer a,
   footer li > span {
     font-size: 28px;
   }
-
+  
   footer p.title {
     font-size: 36px;
   }
-
+  
   footer > .copyright > p {
     font-size: 24px;
   }
-
+  
   aside.subscribe > div {
     width: 600px;
   }
-
+  
   aside.subscribe > div > p {
     margin-bottom: 32px;
     font-size: 28px;
   }
-
+  
   aside.subscribe > div > button {
     width: 160px;
   }
-
+  
   aside.subscribe > div > input {
     width: 320px;
     font-size: 28px;
   }
-
+  
   button {
     font-size: 28px;
   }
-
+  
   #content a {
     font-size: 28px;
   }
-
+  
   #content > .page {
-    padding: 5% 0%;
+    padding: 5% 0;
   }
-
+  
   #content > .page:nth-child(3) {
-    padding: 10% 0%;
+    padding: 10% 0;
   }
-
+  
   #logo > h1 {
-    padding: 16px 0px;
+    padding: 16px 0;
     font-size: 36px;
   }
-
+  
   #logo > a > img {
     height: 108px;
   }
-
+  
   .cards > div > span {
     font-size: 36px;
   }
-
+  
   .cards > div > p {
     font-size: 28px;
   }
-
+  
   .cards > div.link {
     padding-bottom: 160px;
   }

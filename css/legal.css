@@ -32,17 +32,17 @@ body > .bg {
 }
 
 #content li {
-  padding: 8px 0px;
+  padding: 8px 0;
   color: rgba(0, 0, 0, 0.6);
 }
 
 #content section > h1 {
+  margin: 0 0 16px 0;
   font-size: 24px;
-  margin: 0px 0px 16px 0px;
 }
 
 #content section > .content > p {
-  margin: 16px 0px;
+  margin: 16px 0;
 }
 
 @media (min-width: 600px) {
@@ -59,13 +59,13 @@ body > .bg {
 
 @media (min-width: 2160px) {
   section > h1 {
+    margin: 0 0 32px 0;
     font-size: 36px;
-    margin: 0px 0px 32px 0px;
   }
 
   section > .content > p,
   section li {
-    margin: 16px 0px;
+    margin: 16px 0;
     font-size: 28px;
   }
 }
