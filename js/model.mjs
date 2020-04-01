@@ -1,30 +1,22 @@
 /*
- * This file is part of example.programming.web.coniestica = Coniestica.
+ * This file is part of example.programming.web.coniestica = Coniestica
+ * Copyright (C) 2019 Tobias Briones
  *
- * Coniestica is free software: you can redistribute it and/or modify
+ * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  *
- * Coniestica is distributed in the hope that it will be useful,
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with Coniestica.  If not, see <https://www.gnu.org/licenses/>.
+ * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-/*
- * Copyright (c) 2019 Tobias Briones
- */
-
-const NAV_ABOUT_ITEMS = [
-  'Misión',
-  'Visión',
-  'Objetivos',
-  'Contacto'
-];
+const NAV_ABOUT_ITEMS = ['Misión', 'Visión', 'Objetivos', 'Contacto'];
 
 const NAV_ABOUT_ITEMS_URLS = [
   'about.html?v=mission',
@@ -138,7 +130,7 @@ const LEGAL_TERMS_AND_CONDITIONS = `
 <p>Mauris aliquet neque et ligula pellentesque, vel placerat erat faucibus. Proin dignissim mauris a est rutrum iaculis. Duis mollis tellus ut nisi porta fermentum. Nam sit amet purus vestibulum dolor vestibulum efficitur. Vestibulum in dui placerat, posuere arcu ac, vehicula metus. Nulla vehicula nunc nec lectus efficitur, sit amet sollicitudin urna ullamcorper. Suspendisse nec magna arcu. Vivamus purus lacus, viverra id felis et, tristique pharetra lorem.</p>
 `;
 
-export { 
+export {
   NAV_ABOUT_ITEMS,
   NAV_ABOUT_ITEMS_URLS,
   COMPANY_MISSION_CARD_HTML,
@@ -146,4 +138,4 @@ export {
   COMPANY_OBJECTIVES_CARD_HTML,
   LEGAL_PRIVACY,
   LEGAL_TERMS_AND_CONDITIONS
-}
+};

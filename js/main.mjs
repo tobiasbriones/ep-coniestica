@@ -1,51 +1,52 @@
 /*
- * This file is part of example.programming.web.coniestica = Coniestica.
+ * This file is part of example.programming.web.coniestica = Coniestica
+ * Copyright (C) 2019 Tobias Briones
  *
- * Coniestica is free software: you can redistribute it and/or modify
+ * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  *
- * Coniestica is distributed in the hope that it will be useful,
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with Coniestica.  If not, see <https://www.gnu.org/licenses/>.
- */
-
-/*
- * Copyright (c) 2019 Tobias Briones
+ * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
 import { NavigationManager } from './navigation.mjs';
 
 const navigationManager = new NavigationManager();
 
-const onSubscribeKeyup = (e) => {
-  if(e.keyCode == 13) {
+const onSubscribeKeyup = e => {
+  if (e.keyCode == 13) {
     e.preventDefault();
     document.getElementById('subscribeButton').click();
   }
-}
+};
 
 const onSubscribeClick = () => {
   const inputEl = document.querySelector('aside.subscribe input');
   const email = inputEl.value;
-  const simpleEmailRegex = new RegExp('[^@]+@[^\.]+\..+');
+  const simpleEmailRegex = new RegExp('[^@]+@[^.]+..+');
 
-  if(!simpleEmailRegex.test(email)) {
+  if (!simpleEmailRegex.test(email)) {
     alert('Porfavor ingrese correctamente su correo');
     return;
   }
   inputEl.value = '';
   // ...
   alert('Se ha suscrito a nosotros!');
-}
+};
 
 document.addEventListener('DOMContentLoaded', () => {
   navigationManager.init();
-  document.querySelector('aside.subscribe input').addEventListener('keyup', onSubscribeKeyup)
-  document.getElementById('subscribeButton').addEventListener('click', onSubscribeClick);
+  document
+    .querySelector('aside.subscribe input')
+    .addEventListener('keyup', onSubscribeKeyup);
+  document
+    .getElementById('subscribeButton')
+    .addEventListener('click', onSubscribeClick);
 });
