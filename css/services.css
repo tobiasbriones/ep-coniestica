@@ -81,6 +81,10 @@ aside strong {
 }
 
 @media (min-width: 1360px) {
+  #content > .page {
+    padding: 5% 10%;
+  }
+
   #content > .page > .cards > div.link {
     height: 400px;
   }

@@ -149,8 +149,17 @@
     padding: 5% 0%;
   }
 
-  #content > .page > .options > div > button {
-    width: 600px;
+  #content > .page > .bg.parallax {
+    width: 100%;
+    left: 0%;
+  }
+
+  #content > .page > .bg img {
+    height: 100%;
+  }
+
+  #content > .page > .cards {
+    padding: 0 160px;
   }
 
   .cards > div {
@@ -159,6 +168,11 @@
 
   .cards li {
     font-size: 28px;
+  }
+
+  .project-about {
+    width: 100%;
+    left: 0%;
   }
 
   .project-about > h1 {
