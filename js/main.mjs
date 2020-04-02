@@ -1,6 +1,6 @@
 /*
  * This file is part of example.programming.web.coniestica = Coniestica
- * Copyright (C) 2019 Tobias Briones
+ * Copyright (C) 2019-2020 Tobias Briones
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -17,8 +17,15 @@
  */
 
 import { NavigationManager } from './navigation.mjs';
+import { Strings } from './values/strings.mjs';
 
 const navigationManager = new NavigationManager();
+
+const init = () => {
+  document.querySelectorAll('[data-str]').forEach(el => {
+    el.innerHTML = Strings[el.dataset['str']];
+  });
+};
 
 const onSubscribeKeyup = e => {
   if (e.key === 'Enter') {
@@ -33,15 +40,16 @@ const onSubscribeClick = () => {
   const simpleEmailRegex = new RegExp('[^@]+@[^.]+..+');
   
   if (!simpleEmailRegex.test(email)) {
-    alert('Porfavor ingrese correctamente su correo');
+    alert(Strings.ENTER_CORRECT_EMAIL_MSG);
     return;
   }
   inputEl.value = '';
   // ...
-  alert('Se ha suscrito a nosotros!');
+  alert(Strings.SUCCESSFULLY_SUBSCRIBE_MSG);
 };
 
 document.addEventListener('DOMContentLoaded', () => {
+  init();
   navigationManager.init();
   document.querySelector('aside.subscribe input')
           .addEventListener('keyup', onSubscribeKeyup);

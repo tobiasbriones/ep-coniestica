@@ -1,6 +1,6 @@
 <!--
   -- This file is part of example.programming.web.coniestica = Coniestica
-  -- Copyright (C) 2019 Tobias Briones
+  -- Copyright (C) 2019-2020 Tobias Briones
   --
   -- This program is free software: you can redistribute it and/or modify
   -- it under the terms of the GNU General Public License as published by
@@ -38,17 +38,17 @@
           <ul>
             <li class="dropdown about">
               <a id="actionAboutUs" href="#">
-                <span>Nosotros</span>
+                <span data-str="L_US"></span>
               </a>
             </li>
             <li>
               <a id="actionServices" href="services.html">
-                <span>Servicios</span>
+                <span data-str="L_SERVICES"></span>
               </a>
             </li>
             <li>
               <a id="actionClients" href="clients.html">
-                <span>Clientes</span>
+                <span data-str="L_CLIENTS"></span>
               </a>
             </li>
             <div class="dropdown-menu gone"></div>
@@ -59,7 +59,7 @@
         <a href="#">
           <img src="img/coniestica.png" alt="Coniestica">
         </a>
-        <h1>Coniestica, S.A.</h1>
+        <h1 data-str="CONIESTICA_SA"></h1>
       </div>
     </header>
     
@@ -71,32 +71,25 @@
           <div class="page">
             <div class="cards">
               <div>
-                <span class="center">Coniestica</span>
+                <span class="center" data-str="APP_NAME"></span>
                 <p>
-                  <strong>Coniestica</strong> significa
-                  <strong>Consolidadora Internacional Importación Exportación y Servicios de Logística</strong>.
-                                              En nuestro sitio web puede encontrar la información sobre los servicios
-                                              que ofrecemos y ponerse en contacto con nosotros.
+                  <strong data-str="APP_NAME"></strong> <span data-str="L_MEANS"></span>
+                  <strong data-str="CONIESTICA_MEANING"></strong>
+                  <span data-str="WEBSITE_INFO"></span>
                 </p>
               </div>
               <div class="right link end">
-                <span>Nuestros servicios</span>
+                <span data-str="L_OUR_SERVICES"></span>
                 <img src="img/ic_services.png" alt="Servicios">
-                <p>
-                  Nos dedicamos a manejar profesionalmente todos los procesos de Importación
-                  y Exportación de carga para todo tipo de usuario desde paquetes personales
-                  hasta cargas para grandes organizaciones. Deje las complejas tareas
-                  de logística a los profesionales y enfóquese en su negocio para ser más
-                  productivo.
-                </p>
-                <a href="services.html">Saber más</a>
+                <p data-str="OUR_SERVICES_INFO"></p>
+                <a href="services.html" data-str="L_LEARN_MORE"></a>
               </div>
             </div>
           </div>
           <div class="page">
             <div class="bg"></div>
             <div class="links">
-              <a href="suggestions.html">Enlaces de interés</a>
+              <a href="suggestions.html" data-str="L_RECOMMENDED_LINKS"></a>
             </div>
           </div>
           <div class="page">
@@ -111,16 +104,14 @@
             </div>
             <div class="cards">
               <div>
-                <span class="center">Estándares de seguridad</span>
+                <span class="center" data-str="L_SECURITY_STANDARDS"></span>
                 <p>
-                  <strong>Coniestica</strong> está certificada bajo las normas OHSAS 18001 y ISO 22301 lo cual
-                                              garantiza el bien común de nuestros trabajadores y la funcionalidad
-                                              continua de la empresa para
-                                              proveer constantemente el servicio a todos nuestros clientes.
+                  <strong data-str="APP_NAME"></strong>
+                  <span data-str="CONIESTICA_IS_CERTIFIED_INFO"></span>
                 </p>
               </div>
               <div class="right end">
-                <span>Transporte de carga especializado</span>
+                <span data-str="TRANSPORT_TITLE"></span>
                 <iframe id="video"
                         src="https://www.youtube.com/embed/6z9qws7M8q8"
                         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
@@ -132,9 +123,9 @@
         </div>
         <aside class="subscribe">
           <div>
-            <p>Suscríbase para mantenerse informado</p>
+            <p data-str="SUBSCRIBE_INFO"></p>
             <input type="text" placeholder="Suscribirse">
-            <button id="subscribeButton">Enviar</button>
+            <button id="subscribeButton" data-str="L_SEND"></button>
           </div>
         </aside>
       </div>
@@ -143,58 +134,59 @@
     <footer>
       <div>
         <div>
-          <p class="title">Coniestica</p>
+          <p class="title" data-str="APP_NAME"></p>
           <ul>
             <li>
-              <a href="about.html">Empresa</a>
+              <a href="about.html" data-str="L_COMPANY"></a>
             </li>
             <li>
-              <a href="services.html">Servicios</a>
+              <a href="services.html" data-str="L_SERVICES"></a>
             </li>
             <li>
-              <a href="clients.html">Clientes</a>
+              <a href="clients.html" data-str="L_CLIENTS"></a>
             </li>
             <li>
-              <a href="contact.html">Contacto</a>
+              <a href="contact.html" data-str="L_CONTACTS"></a>
             </li>
             <li>
-              <span>
-                  Coniestica, S.A. Col. TheSmiths, 2 Calle. 18-19 Ave. S.E. No.1044, San Pedro Sula, Honduras
-              </span>
+              <span data-str="CONIESTICA_ADDRESS"></span>
             </li>
           </ul>
         </div>
         <div>
-          <p class="title">Legal</p>
+          <p class="title" data-str="L_LEGAL"></p>
           <ul>
             <li>
-              <a href="legal.html?v=privacy">Privacidad</a>
+              <a href="legal.html?v=privacy" data-str="L_PRIVACY"></a>
             </li>
             <li>
-              <a href="legal.html?v=terms-and-conditions">Términos y condiciones</a>
+              <a href="legal.html?v=terms-and-conditions" data-str="L_TERMS_AND_CONDITIONS"></a>
             </li>
           </ul>
         </div>
         <div>
-          <p class="title">Enlaces de interés</p>
+          <p class="title" data-str="L_RECOMMENDED_LINKS"></p>
           <ul>
             <li>
-              <a href="https://www.shiplilly.com/es/blog/debe-hacer-sus-envios-con-una-empresa-consolidadora-de-carga/">Artículo
-                                                                                                                        externo</a>
+              <a href="https://www.shiplilly.com/es/blog/debe-hacer-sus-envios-con-una-empresa-consolidadora-de-carga/"
+                 data-str="L_EXTERNAL_ARTICLE"></a>
             </li>
             <li>
-              <a href="https://pixabay.com/">Pixabay imágenes</a>
+              <a href="https://pixabay.com/"
+                 data-str="L_PIXABAY_IMAGES"></a>
             </li>
             <li>
-              <a href="https://github.com/TobiasBriones/example.programming.web.coniestica">GitHub</a>
+              <a href="https://github.com/TobiasBriones/example.programming.web.coniestica"
+                 data-str="L_GITHUB"></a>
             </li>
             <li>
-              <a href="suggestions.html">Más</a>
+              <a href="suggestions.html"
+                 data-str="L_MORE"></a>
             </li>
           </ul>
         </div>
         <div class="social">
-          <p class="title">Redes sociales</p>
+          <p class="title" data-str="L_SOCIAL_NETWORKS"></p>
           <a href="https://facebook.com">
             <img src="img/ic_social_facebook.png" alt="facebook">
           </a>
@@ -210,7 +202,7 @@
         </div>
       </div>
       <div class="copyright">
-        <p>© 2019 Coniestica, S.A.</p>
+        <p data-str="CONIESTICA_COPYRIGHT_NOTICE"></p>
       </div>
     </footer>
     

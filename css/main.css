@@ -362,6 +362,10 @@ body > .bg.parallax img {
   text-align: center;
 }
 
+.cards > div > p > span {
+  color: white;
+}
+
 .cards > div > ul {
   margin: 16px 0 8px 0;
 }
