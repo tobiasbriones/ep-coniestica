@@ -10,7 +10,7 @@ Example project for a simple company information front-end website made in pure 
 ## License
 Example Project - Coniestica
 
-Copyright © 2019 Tobias Briones. All rights reserved.
+Copyright © 2019-2020 Tobias Briones. All rights reserved.
 
 This software is licensed under the [GNU General Public License v3.0 License](https://github.com/TobiasBriones/example.programming.web.coniestica/blob/master/LICENSE).
 
