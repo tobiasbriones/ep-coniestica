@@ -16,15 +16,37 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
+import StringES from './values/strings_ES.mjs';
+import { Properties } from './config/properties.mjs';
 import { NavigationManager } from './navigation.mjs';
-import { Strings } from './values/strings.mjs';
 
 const navigationManager = new NavigationManager();
+let str = null;
 
-const init = () => {
+const loadStrings = async () => {
+  const langCode = Properties.loadLanguageCode();
+  
+  try {
+    const module = await import(`./values/strings_${ langCode }.mjs`);
+    return module.default;
+  }
+  catch (e) {
+    console.error(`Couldn't load strings. ${ e }`);
+  }
+  return StringES;
+};
+
+const init = async () => {
+  str = await loadStrings();
+  
   document.querySelectorAll('[data-str]').forEach(el => {
-    el.innerHTML = Strings[el.dataset['str']];
+    el.innerHTML = str[el.dataset['str']];
   });
+};
+
+const changeLanguage = async (newLangCode) => {
+  Properties.putLanguageCode(newLangCode);
+  await init();
 };
 
 const onSubscribeKeyup = e => {
@@ -40,19 +62,23 @@ const onSubscribeClick = () => {
   const simpleEmailRegex = new RegExp('[^@]+@[^.]+..+');
   
   if (!simpleEmailRegex.test(email)) {
-    alert(Strings.ENTER_CORRECT_EMAIL_MSG);
+    alert(str.ENTER_CORRECT_EMAIL_MSG);
     return;
   }
   inputEl.value = '';
   // ...
-  alert(Strings.SUCCESSFULLY_SUBSCRIBE_MSG);
+  alert(str.SUCCESSFULLY_SUBSCRIBE_MSG);
 };
 
-document.addEventListener('DOMContentLoaded', () => {
-  init();
+document.addEventListener('DOMContentLoaded', async () => {
+  await init();
   navigationManager.init();
   document.querySelector('aside.subscribe input')
           .addEventListener('keyup', onSubscribeKeyup);
   document.getElementById('subscribeButton')
           .addEventListener('click', onSubscribeClick);
+  document.getElementById('lang-es-button')
+          .addEventListener('click', () => changeLanguage(Properties.LANG_CODES.SPANISH));
+  document.getElementById('lang-en-button')
+          .addEventListener('click', () => changeLanguage(Properties.LANG_CODES.ENGLISH));
 });

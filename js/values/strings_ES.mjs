@@ -16,7 +16,7 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-export const Strings = {
+export default {
   APP_NAME: 'Coniestica',
   L_MEANS: 'significa',
   L_OUR_SERVICES: 'Nuestros servicios',
@@ -35,7 +35,7 @@ export const Strings = {
   L_PIXABAY_IMAGES: 'Pixabay imágenes',
   L_GITHUB: 'GitHub',
   L_MORE: 'Más',
-  L_US: 'Nosotros',
+  L_ABOUT: 'Nosotros',
   L_SOCIAL_NETWORKS: 'Redes sociales',
   CONIESTICA_MEANING: 'Consolidadora Internacional Importación Exportación y Servicios de Logística.',
   TRANSPORT_TITLE: 'Transporte de carga especializado',
