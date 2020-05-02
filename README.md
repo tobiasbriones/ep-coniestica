@@ -16,4 +16,4 @@ This software is licensed under the [GNU General Public License v3.0 License](ht
 
 ***
 
-This software includes images from Pixabay and icons, see the [NOTICE](https://github.com/TobiasBriones/example.programming.web.coniestica/blob/master/NOTICE) file for more details.
+This project includes images from Pixabay and icons, see the [NOTICE](https://github.com/TobiasBriones/example.programming.web.coniestica/blob/master/NOTICE) file for more details.
