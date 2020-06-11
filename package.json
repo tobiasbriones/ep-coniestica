@@ -1,0 +1,31 @@
+{
+  "name": "example.programming.web.coniestica",
+  "version": "1.1.1",
+  "description": "Example project for a simple company information front-end website made in pure JS without any JS/CSS library or framework.",
+  "main": "js/main.mjs",
+  "scripts": {
+    "build": "webpack --config webpack.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TobiasBriones/example.programming.web.coniestica.git"
+  },
+  "keywords": [
+    "example-project",
+    "website",
+    "front-end",
+    "css",
+    "company-site",
+    "pure-javascript"
+  ],
+  "author": "Tobias Briones <tobiasbriones.dev@gmail.com>",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/TobiasBriones/example.programming.web.coniestica/issues"
+  },
+  "homepage": "https://github.com/TobiasBriones/example.programming.web.coniestica#readme",
+  "devDependencies": {
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11"
+  }
+}
