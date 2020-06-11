@@ -19,62 +19,65 @@
 import { NAV_ABOUT_ITEMS, NAV_ABOUT_ITEMS_URLS } from './../../model.mjs';
 
 export class ActionDropDownMenu {
-  dropDownMenuEl;
-  aboutDropdownItemsHTML;
-  closeOnMouseOut;
-  isMenuOpened;
-  
   constructor() {
+    this.dropDownMenuEl = null;
+    this.aboutDropdownItemsHTML = null;
+    this.closeOnMouseOut = false;
+    this.isMenuOpened = false;
   }
-  
+
   init() {
     const getAboutItemsHTML = () => {
       let html = '';
-      
-      NAV_ABOUT_ITEMS.forEach((item, i) => (
-        html += `
-                  <a href="${ NAV_ABOUT_ITEMS_URLS[i] }">
-                    <span>${ item }</span>
+
+      NAV_ABOUT_ITEMS.forEach(
+        (item, i) =>
+          (html += `
+                  <a href="${NAV_ABOUT_ITEMS_URLS[i]}">
+                    <span>${item}</span>
                   </a>
-      `));
+      `)
+      );
       return html;
     };
-    this.dropDownMenuEl = document.querySelector('nav > div > ul > .dropdown-menu');
+    this.dropDownMenuEl = document.querySelector(
+      'nav > div > ul > .dropdown-menu'
+    );
     this.aboutDropdownItemsHTML = getAboutItemsHTML();
     this.closeOnMouseOut = true;
     this.isMenuOpened = false;
-    
+
     this.dropDownMenuEl.addEventListener('mouseout', e => {
       if (!this.isInBounds(e)) {
         this.close();
       }
     });
   }
-  
+
   open(menu, x) {
     let menuHTML = '';
-    
+
     switch (menu) {
       case 'about':
         menuHTML = this.aboutDropdownItemsHTML;
         break;
     }
     this.dropDownMenuEl.innerHTML = menuHTML;
-    this.dropDownMenuEl.style.transform = `translateX(${ x }px)`;
-    
+    this.dropDownMenuEl.style.transform = `translateX(${x}px)`;
+
     this.dropDownMenuEl.classList.remove('gone');
     this.isMenuOpened = true;
   }
-  
+
   close() {
     this.dropDownMenuEl.classList.add('gone');
     this.isMenuOpened = false;
   }
-  
+
   isInBounds(e) {
     if (!this.isMenuOpened) return false;
     const rect = this.dropDownMenuEl.getClientRects()[0];
-    
+
     return (
       e.pageX >= rect.left &&
       e.pageX <= rect.right &&

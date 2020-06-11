@@ -17,30 +17,28 @@
  */
 
 const LANG_KEY = 'lang';
+const LANG_CODES = {
+  SPANISH: 'ES',
+  ENGLISH: 'EN',
+};
 
-export class Properties {
-  static LANG_CODES = {
-    SPANISH: 'ES',
-    ENGLISH: 'EN'
-  };
-  
-  static putLanguageCode = (langCode) => {
-    if (!Object.values(Properties.LANG_CODES).includes(langCode)) {
+export default {
+  LANG_CODES: LANG_CODES,
+  putLanguageCode: langCode => {
+    if (!Object.values(LANG_CODES).includes(langCode)) {
       console.error('Invalid language code');
       return false;
     }
     try {
       localStorage.setItem(LANG_KEY, langCode);
       return true;
-    }
-    catch (e) {
-      console.error(`Error when saving language. ${ e }`);
+    } catch (e) {
+      console.error(`Error when saving language. ${e}`);
     }
     return false;
-  };
-  
-  static loadLanguageCode = () => {
+  },
+  loadLanguageCode: () => {
     const lsLangCode = localStorage.getItem(LANG_KEY);
-    return lsLangCode || Properties.LANG_CODES.SPANISH;
-  };
-}
+    return lsLangCode || LANG_CODES.SPANISH;
+  },
+};
