@@ -20,12 +20,11 @@
 <html lang="es">
   
   <head>
-    <title>Coniestica - Enlaces de interés</title>
+    <title>Coniestica - Contacto</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto&display=swap">
-    <link rel="stylesheet" href="css/default.css">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/clients.css">
-    <link rel="stylesheet" href="css/suggestions.css">
+    <!-- <link rel="stylesheet" href="css/default.css"> -->
+    <!-- <link rel="stylesheet" href="css/main.css"> -->
+    <!-- <link rel="stylesheet" href="css/contact.css"> -->
     <link rel="icon" type="image/x-icon" href="favicon.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -47,6 +46,7 @@
               <a id="actionServices" href="services.html">
                 <span>Servicios</span>
               </a>
+            </li>
             </li>
             <li>
               <a id="actionClients" href="clients.html">
@@ -75,46 +75,46 @@
                 <source media="(max-width: 800px)" srcset="img/background-800w.jpg">
                 <source media="(max-width: 1359px)" srcset="img/background-1360w.jpg">
                 <source media="(min-width: 1360px)" srcset="img/background.jpg">
-                <img src="img/background.jpg" alt="Background">
+                <img src="img/background.jpg">
               </picture>
             </div>
-            <div class="title">
-              <p>Sitios interesantes para visitar</p>
-            </div>
             <div class="cards">
-              <div class="desc"
-                   data-url="https://www.shiplilly.com/es/blog/debe-hacer-sus-envios-con-una-empresa-consolidadora-de-carga/">
-                <span class="center">Artículo</span>
-                <img src="img/ic_article.png" alt="Link">
-                <span class="desc">Artículo sobre empresas consolidadoras de carga</span>
-                <span class="src">https://www.shiplilly.com/</span>
+              <div>
+                <span class="center">Dirección de nuestro cuartel general</span>
+                <p>
+                  Col. TheSmiths, 2 Calle. 18-19 Ave. S.E. No.1044, San Pedro Sula, Honduras
+                </p>
               </div>
-              <div class="desc" data-url="https://pixabay.com/">
-                <span class="center">Imágenes</span>
-                <img src="img/ic_images.png" alt="Link">
-                <span class="desc">Imágenes de calidad gratis sin atribución</span>
-                <span class="src">https://pixabay.com/</span>
+              <div class="right">
+                <span>Contacto telefónico</span>
+                <p>
+                  Nuestros call centers están disponibles 24/7 para asistirle en cualquier consulta
+                </p>
+                <ul>
+                  <li>+504 355-85000</li>
+                  <li>+504 355-85001</li>
+                  <li>+504 355-85002</li>
+                </ul>
               </div>
-              <div class="desc" data-url="https://publicdomainvectors.org/">
-                <span class="center">Vectores</span>
-                <img src="img/ic_vector.png" alt="Link">
-                <span class="desc">Vectores de dominio público</span>
-                <span class="src">https://publicdomainvectors.org/</span>
+              <div class="left link">
+                <span>Correo electrónico</span>
+                <p>
+                  Nos pondremos en contacto con usted
+                </p>
+                <a href="mailto:support@coniestica.com">support@coniestica.com</a>
               </div>
-              <div class="desc" data-url="https://tobiasbriones.github.io/example.programming.web.coniestica/">
-                <span class="center">Esta página web</span>
-                <img src="img/coniestica.png" alt="Link">
-                <span class="desc">La versión en internet de Coniestica</span>
-                <span class="src">https://tobiasbriones.github.io/</span>
-              </div>
-              <div class="desc" data-url="https://github.com/TobiasBriones/example.programming.web.coniestica">
-                <span class="center">GitHub</span>
-                <img src="img/ic_github.png" alt="Link">
-                <span class="desc">Repositorio de Coniestica en GitHub ♥</span>
-                <span class="src">https://github.com/</span>
+              <div class="right chat">
+                <span>Iniciar chat en vivo</span>
+                <p>
+                  Comuníquese en tiempo real con nuestros agentes disponibles 24/7 para darle soporte inmediato
+                </p>
+                <div>
+                  <span>CHAT</span>
+                </div>
               </div>
             </div>
           </div>
+          <div id="map"></div>
         </div>
       </div>
     </div>
@@ -134,7 +134,7 @@
               <a href="clients.html">Clientes</a>
             </li>
             <li>
-              <a href="contact.html">Contacto</a>
+              <a href="#">Contacto</a>
             </li>
             <li>
               <span>
@@ -195,17 +195,19 @@
     </footer>
     
     <noscript>Please enable JavaScript to continue using this application.</noscript>
-    <script type="module" src="js/services.mjs"></script>
+    <!-- <script type="module" src="js/contact.mjs"></script> -->
     <script>
-      document.addEventListener('DOMContentLoaded', () => {
-        document.querySelector('#content > .page > .cards').addEventListener('click', e => {
-          const target = e.target;
-          const url = target.dataset['url'] || target.parentElement.dataset['url'];
-          
-          if (!url) return;
-          window.open(url, '_blank');
-        });
-      });
+      // Initialize and add the map
+      function initMap() {
+        const uluru = { lat: -25.344, lng: 131.036 };
+        const mapEl = document.getElementById('map');
+        const map = new google.maps.Map(mapEl, { zoom: 4, center: uluru });
+        // The marker, positioned at Uluru
+        const marker = new google.maps.Marker({ position: uluru, map: map });
+      }
+    </script>
+    <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD9etw_aibbX2lP4hURqOZBQUxT10xqhI0&callback=initMap">
     </script>
   
   </body>

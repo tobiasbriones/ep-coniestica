@@ -20,11 +20,11 @@
 <html lang="es">
   
   <head>
-    <title>Coniestica - Contacto</title>
+    <title>Coniestica - Consolidadora de cargas</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto&display=swap">
-    <link rel="stylesheet" href="css/default.css">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/contact.css">
+    <!-- <link rel="stylesheet" href="css/default.css"> -->
+    <!-- <link rel="stylesheet" href="css/main.css"> -->
+    <!-- <link rel="stylesheet" href="css/about.css"> -->
     <link rel="icon" type="image/x-icon" href="favicon.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -47,7 +47,6 @@
                 <span>Servicios</span>
               </a>
             </li>
-            </li>
             <li>
               <a id="actionClients" href="clients.html">
                 <span>Clientes</span>
@@ -61,7 +60,7 @@
         <a href="index.html">
           <img src="img/coniestica.png" alt="Coniestica">
         </a>
-        <h1>Coniestica, S.A.</h1>
+        <h1>Coniestica S.A.</h1>
       </div>
     </header>
     
@@ -69,52 +68,75 @@
       <div id="container">
         <div id="content">
           <div class="page">
-            <div class="bg">
+            <div class="bg parallax">
               <picture>
                 <source media="(max-width: 480px)" srcset="img/background-480w.jpg">
                 <source media="(max-width: 800px)" srcset="img/background-800w.jpg">
                 <source media="(max-width: 1359px)" srcset="img/background-1360w.jpg">
                 <source media="(min-width: 1360px)" srcset="img/background.jpg">
-                <img src="img/background.jpg">
+                <img src="img/background.jpg" alt="background">
               </picture>
             </div>
-            <div class="cards">
+            <div class="cards"></div>
+            <div class="options">
               <div>
-                <span class="center">Dirección de nuestro cuartel general</span>
-                <p>
-                  Col. TheSmiths, 2 Calle. 18-19 Ave. S.E. No.1044, San Pedro Sula, Honduras
-                </p>
+                <button id="missionButton">Ver la misión de la empresa</button>
               </div>
-              <div class="right">
-                <span>Contacto telefónico</span>
-                <p>
-                  Nuestros call centers están disponibles 24/7 para asistirle en cualquier consulta
-                </p>
-                <ul>
-                  <li>+504 355-85000</li>
-                  <li>+504 355-85001</li>
-                  <li>+504 355-85002</li>
-                </ul>
+              <div>
+                <button id="visionButton">Ver la visión de la empresa</button>
               </div>
-              <div class="left link">
-                <span>Correo electrónico</span>
-                <p>
-                  Nos pondremos en contacto con usted
-                </p>
-                <a href="mailto:support@coniestica.com">support@coniestica.com</a>
-              </div>
-              <div class="right chat">
-                <span>Iniciar chat en vivo</span>
-                <p>
-                  Comuníquese en tiempo real con nuestros agentes disponibles 24/7 para darle soporte inmediato
-                </p>
-                <div>
-                  <span>CHAT</span>
-                </div>
+              <div>
+                <button id="objectivesButton">Ver los objetivos de la empresa</button>
               </div>
             </div>
           </div>
-          <div id="map"></div>
+          <div class="project-about">
+            <h1>Sobre Coniestica</h1>
+            <section>
+              <p>
+                Coniestica - Consolidadora internacional importación exportación y servicio de logística.
+              </p>
+              <p>
+                Coniestica es un proyecto de ejemplo para un sitio web informativo de una empresa hecho en JavaScript
+                puro sin librerías o frameworks JS/CSS.
+              </p>
+              <div>
+                <strong>
+                  Este proyecto contiene recursos/derivados de terceros:
+                </strong>
+                <ul>
+                  <li>
+                    Imágenes de Pixabay bajo la licencia de Pixabay.
+                    <a href="https://pixabay.com/">https://pixabay.com/</a>
+                  </li>
+                </ul>
+              </div>
+            </section>
+            <section class="disclaimer">
+              <ul>
+                <li>
+                  Coniestica es una empresa ficticia
+                </li>
+                <li>
+                  La información de esta sección en blanco si es real
+                </li>
+              </ul>
+            </section>
+            <section>
+              <p>
+                Coniestica es open source bajo la licencia GPL-3.0
+                <a href="https://github.com/TobiasBriones/example.programming.web.coniestica">
+                  <img src="img/ic_github.png" alt="GitHub">
+                  GitHub
+                </a>
+              </p>
+              <p>
+                <i>
+                  © 2019-2020 Tobias Briones
+                </i>
+              </p>
+            </section>
+          </div>
         </div>
       </div>
     </div>
@@ -134,7 +156,7 @@
               <a href="clients.html">Clientes</a>
             </li>
             <li>
-              <a href="#">Contacto</a>
+              <a href="contact.html">Contacto</a>
             </li>
             <li>
               <span>
@@ -195,20 +217,7 @@
     </footer>
     
     <noscript>Please enable JavaScript to continue using this application.</noscript>
-    <script type="module" src="js/contact.mjs"></script>
-    <script>
-      // Initialize and add the map
-      function initMap() {
-        const uluru = { lat: -25.344, lng: 131.036 };
-        const mapEl = document.getElementById('map');
-        const map = new google.maps.Map(mapEl, { zoom: 4, center: uluru });
-        // The marker, positioned at Uluru
-        const marker = new google.maps.Marker({ position: uluru, map: map });
-      }
-    </script>
-    <script async defer
-            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD9etw_aibbX2lP4hURqOZBQUxT10xqhI0&callback=initMap">
-    </script>
+    <!-- <script type="module" src="js/about.mjs"></script> -->
   
   </body>
 

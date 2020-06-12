@@ -16,6 +16,10 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
+import '../contact.html';
+import '../css/default.css';
+import '../css/main.css';
+import '../css/contact.css';
 import { NavigationManager } from './navigation.mjs';
 
 const navigationManager = new NavigationManager();

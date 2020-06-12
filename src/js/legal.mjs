@@ -16,11 +16,16 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
+import '../legal.html';
+import '../css/default.css';
+import '../css/main.css';
+import '../css/legal.css';
 import { NavigationManager } from './navigation.mjs';
-import { COMPANY_MISSION_CARD_HTML, COMPANY_OBJECTIVES_CARD_HTML, COMPANY_VISION_CARD_HTML } from './model.mjs';
+import { LEGAL_PRIVACY, LEGAL_TERMS_AND_CONDITIONS } from './model.mjs';
 
 const navigationManager = new NavigationManager();
-let cardsParentEl;
+let titleEl;
+let textEl;
 
 const getURLParam = paramName => {
   const urlStr = window.location.href;
@@ -32,56 +37,43 @@ const getPathName = () => {
   return document.location.pathname;
 };
 
-const gotoMission = () => {
+const gotoPrivacy = () => {
   history.pushState(
     {},
     'Coniestica - Misión de la empresa',
-    getPathName() + '?v=mission'
+    getPathName() + '?v=privacy'
   );
-  cardsParentEl.innerHTML = COMPANY_MISSION_CARD_HTML;
+  titleEl.innerHTML = 'Términos de privacidad';
+  textEl.innerHTML = LEGAL_PRIVACY;
 };
 
-const gotoVision = () => {
+const gotoTerms = () => {
   history.pushState(
     {},
     'Coniestica - Visión de la empresa',
-    getPathName() + '?v=vision'
+    getPathName() + '?v=terms-and-conditions'
   );
-  cardsParentEl.innerHTML = COMPANY_VISION_CARD_HTML;
-};
-
-const gotoObjectives = () => {
-  history.pushState(
-    {},
-    'Coniestica - Objetivos de la empresa',
-    getPathName() + '?v=objectives'
-  );
-  cardsParentEl.innerHTML = COMPANY_OBJECTIVES_CARD_HTML;
+  titleEl.innerHTML = 'Términos y Condiciones de Uso';
+  textEl.innerHTML = LEGAL_TERMS_AND_CONDITIONS;
 };
 
 document.addEventListener('DOMContentLoaded', () => {
-  cardsParentEl = document.querySelector('#content > .page > .cards');
   const param = getURLParam('v');
-  
+  titleEl = document.querySelector('section > h1');
+  textEl = document.querySelector('section > div.content');
+
   navigationManager.init();
-  document.getElementById('missionButton')
-          .addEventListener('click', gotoMission);
-  document.getElementById('visionButton')
-          .addEventListener('click', gotoVision);
-  document.getElementById('objectivesButton')
-          .addEventListener('click', gotoObjectives);
-  
   switch (param) {
-    case 'vision':
-      gotoVision();
+    case 'privacy':
+      gotoPrivacy();
       break;
-    
-    case 'objectives':
-      gotoObjectives();
+
+    case 'terms-and-conditions':
+      gotoTerms();
       break;
-    
+
     default:
-      gotoMission();
+      gotoPrivacy();
       break;
   }
 });

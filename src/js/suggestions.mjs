@@ -16,6 +16,11 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
+import '../suggestions.html';
+import '../css/default.css';
+import '../css/main.css';
+import '../css/clients.css';
+import '../css/suggestions.css';
 import { NavigationManager } from './navigation.mjs';
 
 const navigationManager = new NavigationManager();

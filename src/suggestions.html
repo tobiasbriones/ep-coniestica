@@ -20,11 +20,12 @@
 <html lang="es">
   
   <head>
-    <title>Coniestica - Consolidadora de cargas</title>
+    <title>Coniestica - Enlaces de interés</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto&display=swap">
-    <link rel="stylesheet" href="css/default.css">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/about.css">
+    <!-- <link rel="stylesheet" href="css/default.css"> -->
+    <!-- <link rel="stylesheet" href="css/main.css"> -->
+    <!-- <link rel="stylesheet" href="css/clients.css"> -->
+    <!-- <link rel="stylesheet" href="css/suggestions.css"> -->
     <link rel="icon" type="image/x-icon" href="favicon.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -60,7 +61,7 @@
         <a href="index.html">
           <img src="img/coniestica.png" alt="Coniestica">
         </a>
-        <h1>Coniestica S.A.</h1>
+        <h1>Coniestica, S.A.</h1>
       </div>
     </header>
     
@@ -68,74 +69,51 @@
       <div id="container">
         <div id="content">
           <div class="page">
-            <div class="bg parallax">
+            <div class="bg">
               <picture>
                 <source media="(max-width: 480px)" srcset="img/background-480w.jpg">
                 <source media="(max-width: 800px)" srcset="img/background-800w.jpg">
                 <source media="(max-width: 1359px)" srcset="img/background-1360w.jpg">
                 <source media="(min-width: 1360px)" srcset="img/background.jpg">
-                <img src="img/background.jpg" alt="background">
+                <img src="img/background.jpg" alt="Background">
               </picture>
             </div>
-            <div class="cards"></div>
-            <div class="options">
-              <div>
-                <button id="missionButton">Ver la misión de la empresa</button>
+            <div class="title">
+              <p>Sitios interesantes para visitar</p>
+            </div>
+            <div class="cards">
+              <div class="desc"
+                   data-url="https://www.shiplilly.com/es/blog/debe-hacer-sus-envios-con-una-empresa-consolidadora-de-carga/">
+                <span class="center">Artículo</span>
+                <img src="img/ic_article.png" alt="Link">
+                <span class="desc">Artículo sobre empresas consolidadoras de carga</span>
+                <span class="src">https://www.shiplilly.com/</span>
               </div>
-              <div>
-                <button id="visionButton">Ver la visión de la empresa</button>
+              <div class="desc" data-url="https://pixabay.com/">
+                <span class="center">Imágenes</span>
+                <img src="img/ic_images.png" alt="Link">
+                <span class="desc">Imágenes de calidad gratis sin atribución</span>
+                <span class="src">https://pixabay.com/</span>
               </div>
-              <div>
-                <button id="objectivesButton">Ver los objetivos de la empresa</button>
+              <div class="desc" data-url="https://publicdomainvectors.org/">
+                <span class="center">Vectores</span>
+                <img src="img/ic_vector.png" alt="Link">
+                <span class="desc">Vectores de dominio público</span>
+                <span class="src">https://publicdomainvectors.org/</span>
+              </div>
+              <div class="desc" data-url="https://tobiasbriones.github.io/example.programming.web.coniestica/">
+                <span class="center">Esta página web</span>
+                <img src="img/coniestica.png" alt="Link">
+                <span class="desc">La versión en internet de Coniestica</span>
+                <span class="src">https://tobiasbriones.github.io/</span>
+              </div>
+              <div class="desc" data-url="https://github.com/TobiasBriones/example.programming.web.coniestica">
+                <span class="center">GitHub</span>
+                <img src="img/ic_github.png" alt="Link">
+                <span class="desc">Repositorio de Coniestica en GitHub ♥</span>
+                <span class="src">https://github.com/</span>
               </div>
             </div>
-          </div>
-          <div class="project-about">
-            <h1>Sobre Coniestica</h1>
-            <section>
-              <p>
-                Coniestica - Consolidadora internacional importación exportación y servicio de logística.
-              </p>
-              <p>
-                Coniestica es un proyecto de ejemplo para un sitio web informativo de una empresa hecho en JavaScript
-                puro sin librerías o frameworks JS/CSS.
-              </p>
-              <div>
-                <strong>
-                  Este proyecto contiene recursos/derivados de terceros:
-                </strong>
-                <ul>
-                  <li>
-                    Imágenes de Pixabay bajo la licencia de Pixabay.
-                    <a href="https://pixabay.com/">https://pixabay.com/</a>
-                  </li>
-                </ul>
-              </div>
-            </section>
-            <section class="disclaimer">
-              <ul>
-                <li>
-                  Coniestica es una empresa ficticia
-                </li>
-                <li>
-                  La información de esta sección en blanco si es real
-                </li>
-              </ul>
-            </section>
-            <section>
-              <p>
-                Coniestica es open source bajo la licencia GPL-3.0
-                <a href="https://github.com/TobiasBriones/example.programming.web.coniestica">
-                  <img src="img/ic_github.png" alt="GitHub">
-                  GitHub
-                </a>
-              </p>
-              <p>
-                <i>
-                  © 2019-2020 Tobias Briones
-                </i>
-              </p>
-            </section>
           </div>
         </div>
       </div>
@@ -217,7 +195,18 @@
     </footer>
     
     <noscript>Please enable JavaScript to continue using this application.</noscript>
-    <script type="module" src="js/about.mjs"></script>
+    <!-- <script type="module" src="js/services.mjs"></script> -->
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        document.querySelector('#content > .page > .cards').addEventListener('click', e => {
+          const target = e.target;
+          const url = target.dataset['url'] || target.parentElement.dataset['url'];
+          
+          if (!url) return;
+          window.open(url, '_blank');
+        });
+      });
+    </script>
   
   </body>
 

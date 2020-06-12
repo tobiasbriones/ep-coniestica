@@ -1,10 +1,11 @@
 example.programming.web.coniestica, Coniestica
-Copyright (C) 2019 Tobias Briones. All rights reserved.
+Copyright (C) 2019-2020 Tobias Briones. All rights reserved.
 
 --------------------------------------------------------------------------------
 This software contains images provided by Pixabay (https://pixabay.com/),
 available under the Pixabay License (https://pixabay.com/service/license/),
-where some of these images have been modified; the complete list of images is listed next:
+where some of these images have been modified; the complete list of images is 
+listed next:
 
 - /_project/img/background.jpg:
   from https://pixabay.com/photos/skyscraper-singapore-sky-blue-3184798/
@@ -71,7 +72,7 @@ where some of these images have been modified; the complete list of images is li
   from https://pixabay.com/vectors/flag-spain-spanish-banner-35697/
   by   https://pixabay.com/users/clker-free-vector-images-3736/
 
-Copies of the listed images are also present in the /img/ folder.
+Copies of the listed images are also present in the /src/img/ folder.
 
 --------------------------------------------------------------------------------
 Social icons are taken from the corresponding company brand resources.

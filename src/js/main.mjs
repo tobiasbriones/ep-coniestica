@@ -16,6 +16,9 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
+import '../index.html';
+import '../css/default.css';
+import '../css/main.css';
 import StringES from './values/strings_ES.mjs';
 import properties from './config/properties.mjs';
 import { NavigationManager } from './navigation.mjs';
