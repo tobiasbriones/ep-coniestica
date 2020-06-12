@@ -3,6 +3,16 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const FixStyleOnlyEntriesPlugin = require('webpack-fix-style-only-entries');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const webpack = require('webpack');
+const copyrightHeader = `
+  Example Project - Coniestica
+  Copyright (C) 2019-2020 Tobias Briones <tobiasbriones.dev@gmail.com>. All rights reserved.
+  Licensed under the GNU General Public License v3.0 License. 
+  
+  Source code published at https://github.com/TobiasBriones/example.programming.web.coniestica.
+  This project includes images and icons, see the NOTICE file at the root of the
+  source code for more details.
+`;
 
 module.exports = {
   mode: 'production',
@@ -20,11 +30,18 @@ module.exports = {
     filename: '[name].bundle.js',
     publicPath: './',
   },
+  devServer: {
+    contentBase: path.join(__dirname, 'dist'),
+    compress: true,
+    port: 9000,
+  },
   plugins: [
+    new webpack.BannerPlugin(copyrightHeader),
     new HtmlWebpackPlugin({
       template: './src/index.html',
       filename: 'index.html',
       chunks: ['main'],
+      favicon: './src/favicon.png',
     }),
     new HtmlWebpackPlugin({
       template: './src/about.html',
