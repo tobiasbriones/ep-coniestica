@@ -22,10 +22,6 @@
   <head>
     <title>Coniestica - Contacto</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto&display=swap">
-    <!-- <link rel="stylesheet" href="css/default.css"> -->
-    <!-- <link rel="stylesheet" href="css/main.css"> -->
-    <!-- <link rel="stylesheet" href="css/contact.css"> -->
-    <link rel="icon" type="image/x-icon" href="favicon.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#455A64">
@@ -195,7 +191,14 @@
     </footer>
     
     <noscript>Please enable JavaScript to continue using this application.</noscript>
-    <!-- <script type="module" src="js/contact.mjs"></script> -->
+    <!--  Add nomodule script for supporting legacy browsers.
+          It's added here this way because the html webpack plugin doesn't 
+          bundle the two scripts (legacy and ESM).
+    -->
+    <script nomodule
+            defer 
+            src="https://tobiasbriones.github.io/example.programming.web.coniestica/contact.bundle.js">
+    </script>
     <script>
       // Initialize and add the map
       function initMap() {

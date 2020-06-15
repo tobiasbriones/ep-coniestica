@@ -162,7 +162,7 @@ footer > .copyright > p {
   font-size: 14px;
   font-style: italic;
   align-self: center;
-  color: #E0E0E0;
+  color: #e0e0e0;
   text-align: center;
 }
 
@@ -173,12 +173,12 @@ footer li {
 }
 
 footer a {
-  color: #E0E0E0;
+  color: #e0e0e0;
   text-decoration: underline;
 }
 
 footer span {
-  color: #E0E0E0;
+  color: #e0e0e0;
 }
 
 footer p.title {
@@ -209,7 +209,7 @@ footer .lang > div > img {
 }
 
 /* Apply this to make it visible with the footer dark background */
-footer .social img[alt=github] {
+footer .social img[alt='github'] {
   background: white;
   border-radius: 50%;
 }
@@ -339,7 +339,7 @@ body > .bg.parallax img {
   padding: 8px 16px;
   border: 2px solid transparent;
   border-radius: 8px;
-  background-color: #546E7A;
+  background-color: #546e7a;
 }
 
 #content a:active {
@@ -399,7 +399,7 @@ body > .bg.parallax img {
 
 .cards > div > ul > li {
   margin-bottom: 16px;
-  color: #E0E0E0;
+  color: #e0e0e0;
 }
 
 .cards > div.link > a {
@@ -428,11 +428,11 @@ body > .bg.parallax img {
   footer {
     padding: 16px 16px 48px 16px;
   }
-  
+
   footer li {
     max-width: 128px;
   }
-  
+
   footer > div > div {
     padding: 16px;
   }
@@ -449,44 +449,44 @@ body > .bg.parallax img {
   footer li {
     max-width: 160px;
   }
-  
+
   #actionClients {
     display: block;
   }
-  
+
   #content > .page {
     padding: 3% 5%;
   }
-  
+
   #content .bg {
     width: 100%;
     left: 0;
   }
-  
+
   aside.subscribe {
     padding: 0;
     border-top-left-radius: 0;
     border-top-right-radius: 240px;
   }
-  
+
   aside.subscribe > div {
     width: 400px;
   }
-  
+
   .cards > div {
     padding: 32px 64px;
   }
-  
+
   .cards > div > span {
     padding: 0 0 24px 0;
     font-size: 28px;
   }
-  
+
   .cards > div.right {
     width: 90%;
     left: 10%;
   }
-  
+
   .cards > div.left {
     width: 90%;
   }
@@ -497,30 +497,30 @@ body > .bg.parallax img {
     background: url('../img/background-1360w.jpg') no-repeat fixed center;
     background-size: cover;
   }
-  
+
   footer {
     padding: 32px 16px;
   }
-  
+
   footer > .copyright {
     width: 60%;
     right: 0;
     left: auto;
   }
-  
+
   footer li {
     max-width: 240px;
   }
-  
+
   #content .bg.extended img {
     height: 115%;
   }
-  
+
   .cards > div.right {
     width: 80%;
     left: 20%;
   }
-  
+
   .cards > div.left {
     width: 80%;
   }
@@ -530,19 +530,19 @@ body > .bg.parallax img {
   footer {
     padding: 32px 32px;
   }
-  
+
   footer > .copyright {
     width: 40%;
   }
-  
+
   footer > div > div {
     padding: 16px 64px;
   }
-  
+
   footer .lang {
     padding: 16px 64px;
   }
-  
+
   aside.subscribe {
     display: flex;
     width: 100%;
@@ -550,7 +550,7 @@ body > .bg.parallax img {
     flex-direction: column;
     background-color: transparent;
   }
-  
+
   aside.subscribe > div {
     width: 468px;
     padding: 24px 48px;
@@ -558,23 +558,23 @@ body > .bg.parallax img {
     border-top-right-radius: 64px;
     background-color: var(--footer-bg);
   }
-  
+
   aside.subscribe > div > input {
     width: 240px;
   }
-  
+
   aside.subscribe > div > button {
     width: 108px;
   }
-  
+
   #content > .page {
     padding: 5%;
   }
-  
+
   #video {
     min-height: 480px;
   }
-  
+
   .cards > div {
     margin-bottom: 64px;
   }
@@ -585,27 +585,27 @@ body > .bg.parallax img {
     background: url('../img/background.jpg') no-repeat fixed center;
     background-size: cover;
   }
-  
+
   footer {
     padding: 32px 48px;
   }
-  
+
   footer > .copyright {
     width: 30%;
   }
-  
+
   footer li {
     max-width: 360px;
   }
-  
+
   #content > .page {
     padding: 5% 15%;
   }
-  
+
   #content > .page:nth-child(3) {
     padding: 5%;
   }
-  
+
   .cards > div {
     margin-bottom: 96px;
   }
@@ -615,15 +615,15 @@ body > .bg.parallax img {
   footer {
     padding: 48px 160px;
   }
-  
+
   footer li {
     max-width: 600px;
   }
-  
+
   #content {
     padding: 0 25%;
   }
-  
+
   #content > .page:nth-child(1) > .bg,
   #content > .page:nth-child(2),
   #content .bg.extended {
@@ -638,12 +638,12 @@ body > .bg.parallax img {
     left: 50%;
     margin-left: -960px;
   }
-  
+
   #container {
     width: 1920px;
     margin: auto;
   }
-  
+
   #content > .page:nth-child(1) > .bg,
   #content > .page:nth-child(2),
   #content .bg.extended {
@@ -661,104 +661,104 @@ body > .bg.parallax img {
   :root {
     --copyright-height: 64px;
   }
-  
+
   body > .bg {
     background-image: url(../img/clouds.svg);
     background-origin: border-box;
     background-size: cover;
   }
-  
+
   header > nav > div > ul > li {
     height: 64px;
   }
-  
+
   header > nav > div > ul > .dropdown-menu {
     margin-top: -48px;
   }
-  
+
   header > nav > div > ul > .dropdown-menu > a {
     min-width: 364px;
     height: 96px;
     line-height: 64px;
   }
-  
+
   header > nav > div > ul > li.dropdown > a:last-child {
     min-width: 360px;
   }
-  
+
   header > nav > div > ul > .dropdown-menu {
     margin-top: -86px;
   }
-  
+
   footer {
     padding: 48px 10%;
   }
-  
+
   nav span,
   footer a,
   footer li > span {
     font-size: 28px;
   }
-  
+
   footer p.title {
     font-size: 36px;
   }
-  
+
   footer > .copyright > p {
     font-size: 24px;
   }
-  
+
   aside.subscribe > div {
     width: 600px;
   }
-  
+
   aside.subscribe > div > p {
     margin-bottom: 32px;
     font-size: 28px;
   }
-  
+
   aside.subscribe > div > button {
     width: 160px;
   }
-  
+
   aside.subscribe > div > input {
     width: 320px;
     font-size: 28px;
   }
-  
+
   button {
     font-size: 28px;
   }
-  
+
   #content a {
     font-size: 28px;
   }
-  
+
   #content > .page {
     padding: 5% 0;
   }
-  
+
   #content > .page:nth-child(3) {
     padding: 10% 0;
   }
-  
+
   #logo > h1 {
     padding: 16px 0;
     font-size: 36px;
   }
-  
+
   #logo > a > img {
     height: 108px;
   }
-  
+
   .cards > div > span {
     font-size: 36px;
   }
-  
+
   .cards > div > p {
     font-size: 28px;
   }
-  
+
   .cards > div.link {
     padding-bottom: 160px;
   }
