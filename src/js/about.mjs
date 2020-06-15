@@ -27,8 +27,7 @@ import {
   COMPANY_VISION_CARD_HTML,
 } from './model.mjs';
 
-const navigationManager = new NavigationManager();
-let cardsParentEl;
+const cardsParentEl = document.querySelector('#content > .page > .cards');
 
 const getURLParam = paramName => {
   const urlStr = window.location.href;
@@ -67,30 +66,28 @@ const gotoObjectives = () => {
   cardsParentEl.innerHTML = COMPANY_OBJECTIVES_CARD_HTML;
 };
 
-document.addEventListener('DOMContentLoaded', () => {
-  cardsParentEl = document.querySelector('#content > .page > .cards');
-  const param = getURLParam('v');
+// --------------------------------  SCRIPT  -------------------------------- //
 
-  navigationManager.init();
-  document
-    .getElementById('missionButton')
-    .addEventListener('click', gotoMission);
-  document.getElementById('visionButton').addEventListener('click', gotoVision);
-  document
-    .getElementById('objectivesButton')
-    .addEventListener('click', gotoObjectives);
+const navigationManager = new NavigationManager();
+const param = getURLParam('v');
 
-  switch (param) {
-    case 'vision':
-      gotoVision();
-      break;
+navigationManager.init();
+document.getElementById('missionButton').addEventListener('click', gotoMission);
+document.getElementById('visionButton').addEventListener('click', gotoVision);
+document
+  .getElementById('objectivesButton')
+  .addEventListener('click', gotoObjectives);
 
-    case 'objectives':
-      gotoObjectives();
-      break;
+switch (param) {
+  case 'vision':
+    gotoVision();
+    break;
 
-    default:
-      gotoMission();
-      break;
-  }
-});
+  case 'objectives':
+    gotoObjectives();
+    break;
+
+  default:
+    gotoMission();
+    break;
+}

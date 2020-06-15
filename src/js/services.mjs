@@ -24,6 +24,4 @@ import { NavigationManager } from './navigation.mjs';
 
 const navigationManager = new NavigationManager();
 
-document.addEventListener('DOMContentLoaded', () => {
-  navigationManager.init();
-});
+navigationManager.init();

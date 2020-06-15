@@ -23,9 +23,8 @@ import '../css/legal.css';
 import { NavigationManager } from './navigation.mjs';
 import { LEGAL_PRIVACY, LEGAL_TERMS_AND_CONDITIONS } from './model.mjs';
 
-const navigationManager = new NavigationManager();
-let titleEl;
-let textEl;
+const titleEl = document.querySelector('section > h1');
+const textEl = document.querySelector('section > div.content');
 
 const getURLParam = paramName => {
   const urlStr = window.location.href;
@@ -57,23 +56,22 @@ const gotoTerms = () => {
   textEl.innerHTML = LEGAL_TERMS_AND_CONDITIONS;
 };
 
-document.addEventListener('DOMContentLoaded', () => {
-  const param = getURLParam('v');
-  titleEl = document.querySelector('section > h1');
-  textEl = document.querySelector('section > div.content');
+// --------------------------------  SCRIPT  -------------------------------- //
 
-  navigationManager.init();
-  switch (param) {
-    case 'privacy':
-      gotoPrivacy();
-      break;
+const navigationManager = new NavigationManager();
+const param = getURLParam('v');
 
-    case 'terms-and-conditions':
-      gotoTerms();
-      break;
+navigationManager.init();
+switch (param) {
+  case 'privacy':
+    gotoPrivacy();
+    break;
 
-    default:
-      gotoPrivacy();
-      break;
-  }
-});
+  case 'terms-and-conditions':
+    gotoTerms();
+    break;
+
+  default:
+    gotoPrivacy();
+    break;
+}

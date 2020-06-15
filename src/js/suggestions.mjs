@@ -25,15 +25,13 @@ import { NavigationManager } from './navigation.mjs';
 
 const navigationManager = new NavigationManager();
 
-document.addEventListener('DOMContentLoaded', () => {
-  navigationManager.init();
-  document
-    .querySelector('#content > .page > .cards')
-    .addEventListener('click', e => {
-      const target = e.target;
-      const url = target.dataset['url'] || target.parentElement.dataset['url'];
+navigationManager.init();
+document
+  .querySelector('#content > .page > .cards')
+  .addEventListener('click', e => {
+    const target = e.target;
+    const url = target.dataset['url'] || target.parentElement.dataset['url'];
 
-      if (!url) return;
-      window.open(url, '_blank');
-    });
-});
+    if (!url) return;
+    window.open(url, '_blank');
+  });

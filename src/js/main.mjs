@@ -72,23 +72,23 @@ const onSubscribeClick = () => {
   alert(str.SUCCESSFULLY_SUBSCRIBE_MSG);
 };
 
-document.addEventListener('DOMContentLoaded', async () => {
-  await init();
-  navigationManager.init();
-  document
-    .querySelector('aside.subscribe input')
-    .addEventListener('keyup', onSubscribeKeyup);
-  document
-    .getElementById('subscribeButton')
-    .addEventListener('click', onSubscribeClick);
-  document
-    .getElementById('lang-es-button')
-    .addEventListener('click', () =>
-      changeLanguage(properties.LANG_CODES.SPANISH)
-    );
-  document
-    .getElementById('lang-en-button')
-    .addEventListener('click', () =>
-      changeLanguage(properties.LANG_CODES.ENGLISH)
-    );
-});
+// --------------------------------  SCRIPT  -------------------------------- //
+
+init();
+navigationManager.init();
+document
+  .querySelector('aside.subscribe input')
+  .addEventListener('keyup', onSubscribeKeyup);
+document
+  .getElementById('subscribeButton')
+  .addEventListener('click', onSubscribeClick);
+document
+  .getElementById('lang-es-button')
+  .addEventListener('click', () =>
+    changeLanguage(properties.LANG_CODES.SPANISH)
+  );
+document
+  .getElementById('lang-en-button')
+  .addEventListener('click', () =>
+    changeLanguage(properties.LANG_CODES.ENGLISH)
+  );
