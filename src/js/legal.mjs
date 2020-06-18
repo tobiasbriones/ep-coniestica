@@ -20,8 +20,8 @@ import '../legal.html';
 import '../css/default.css';
 import '../css/main.css';
 import '../css/legal.css';
-import { NavigationManager } from './navigation.mjs';
-import { LEGAL_PRIVACY, LEGAL_TERMS_AND_CONDITIONS } from './model.mjs';
+import NavigationManager from './ui/menu/NavigationManager.mjs';
+import { LEGAL_PRIVACY, LEGAL_TERMS_AND_CONDITIONS } from './values/model.mjs';
 
 const titleEl = document.querySelector('section > h1');
 const textEl = document.querySelector('section > div.content');
@@ -66,11 +66,11 @@ switch (param) {
   case 'privacy':
     gotoPrivacy();
     break;
-
+  
   case 'terms-and-conditions':
     gotoTerms();
     break;
-
+  
   default:
     gotoPrivacy();
     break;

@@ -16,27 +16,29 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-import { ActionDropDownMenu } from './menu/action/dropdown_menu.mjs';
+import DropdownMenu from './action/DropdownMenu.mjs';
 
-export class NavigationManager {
+const NAV_ABOUT_SEL = 'nav > div > ul > .about';
+
+export default class NavigationManager {
   constructor() {
-    this.dropdownMenu = new ActionDropDownMenu();
+    this.dropdownMenu = new DropdownMenu();
     this.aboutEl = null;
   }
-
+  
   init() {
     this.dropdownMenu.init();
-    this.aboutEl = document.querySelector('nav > div > ul > .about');
-
+    this.aboutEl = document.querySelector(NAV_ABOUT_SEL);
+    
     this.aboutEl.addEventListener('mouseover', () => this.onAboutHover());
     this.aboutEl.addEventListener('mouseout', e => this.onAboutHoverOut(e));
   }
-
+  
   onAboutHover() {
     const x = this.aboutEl.getClientRects()[0].x;
     this.dropdownMenu.open('about', x);
   }
-
+  
   onAboutHoverOut(e) {
     if (!this.dropdownMenu.isInBounds(e)) {
       this.dropdownMenu.close();

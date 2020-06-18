@@ -20,7 +20,7 @@ import '../services.html';
 import '../css/default.css';
 import '../css/main.css';
 import '../css/services.css';
-import { NavigationManager } from './navigation.mjs';
+import NavigationManager from './ui/menu/NavigationManager.mjs';
 
 const navigationManager = new NavigationManager();
 

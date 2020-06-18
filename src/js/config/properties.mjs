@@ -19,7 +19,7 @@
 const LANG_KEY = 'lang';
 const LANG_CODES = {
   SPANISH: 'ES',
-  ENGLISH: 'EN',
+  ENGLISH: 'EN'
 };
 
 export default {
@@ -32,13 +32,14 @@ export default {
     try {
       localStorage.setItem(LANG_KEY, langCode);
       return true;
-    } catch (e) {
-      console.error(`Error when saving language. ${e}`);
+    }
+    catch (e) {
+      console.error(`Error when saving language. ${ e }`);
     }
     return false;
   },
   loadLanguageCode: () => {
     const lsLangCode = localStorage.getItem(LANG_KEY);
     return lsLangCode || LANG_CODES.SPANISH;
-  },
+  }
 };

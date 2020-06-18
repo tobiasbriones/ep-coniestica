@@ -21,29 +21,35 @@ import '../css/default.css';
 import '../css/main.css';
 import StringES from './values/strings_ES.mjs';
 import properties from './config/properties.mjs';
-import { NavigationManager } from './navigation.mjs';
+import NavigationManager from './ui/menu/NavigationManager.mjs';
 
 const navigationManager = new NavigationManager();
 let str = null;
 
 const loadStrings = async () => {
   const langCode = properties.loadLanguageCode();
-
+  
   try {
-    const module = await import(`./values/strings_${langCode}.mjs`);
+    const module = await import(`./values/strings_${ langCode }.mjs`);
     return module.default;
-  } catch (e) {
-    console.error(`Couldn't load strings. ${e}`);
+  }
+  catch (e) {
+    console.error(`Couldn't load strings. ${ e }`);
   }
   return StringES;
 };
 
 const init = async () => {
   str = await loadStrings();
-
+  
   document.querySelectorAll('[data-str]').forEach(el => {
     el.innerHTML = str[el.dataset['str']];
   });
+};
+
+const callInit = () => {
+  init().then(() => 0)
+        .catch(reason => console.error(reason));
 };
 
 const changeLanguage = async newLangCode => {
@@ -62,7 +68,7 @@ const onSubscribeClick = () => {
   const inputEl = document.querySelector('aside.subscribe input');
   const email = inputEl.value;
   const simpleEmailRegex = new RegExp('[^@]+@[^.]+..+');
-
+  
   if (!simpleEmailRegex.test(email)) {
     alert(str.ENTER_CORRECT_EMAIL_MSG);
     return;
@@ -74,21 +80,18 @@ const onSubscribeClick = () => {
 
 // --------------------------------  SCRIPT  -------------------------------- //
 
-init();
+callInit();
 navigationManager.init();
-document
-  .querySelector('aside.subscribe input')
-  .addEventListener('keyup', onSubscribeKeyup);
-document
-  .getElementById('subscribeButton')
-  .addEventListener('click', onSubscribeClick);
-document
-  .getElementById('lang-es-button')
-  .addEventListener('click', () =>
-    changeLanguage(properties.LANG_CODES.SPANISH)
-  );
-document
-  .getElementById('lang-en-button')
-  .addEventListener('click', () =>
-    changeLanguage(properties.LANG_CODES.ENGLISH)
-  );
+
+document.querySelector('aside.subscribe input')
+        .addEventListener('keyup', onSubscribeKeyup);
+document.getElementById('subscribeButton')
+        .addEventListener('click', onSubscribeClick);
+document.getElementById('lang-es-button')
+        .addEventListener('click', () =>
+          changeLanguage(properties.LANG_CODES.SPANISH)
+        );
+document.getElementById('lang-en-button')
+        .addEventListener('click', () =>
+          changeLanguage(properties.LANG_CODES.ENGLISH)
+        );

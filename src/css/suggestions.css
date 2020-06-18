@@ -76,16 +76,16 @@
     margin-bottom: 48px;
     cursor: pointer;
   }
-
+  
   #content > .page > .cards > div.desc > span.desc {
     padding: 16px 24px;
     font-size: 16px;
   }
-
+  
   #content > .page > .cards > div.desc > span.src {
     padding: 16px 24px;
   }
-
+  
   #content > .page > .bg img {
     height: auto;
   }
@@ -95,11 +95,11 @@
   #content > .page > .cards > div.desc > .desc {
     padding: 16px 36px;
   }
-
+  
   #content > .page > .cards > div.desc > .src {
     padding: 16px 36px;
   }
-
+  
   #content > .page:nth-child(1) > .bg {
     width: 100%;
     left: 0;
@@ -110,16 +110,16 @@
   #content > .page > .cards > div > span {
     font-size: 36px;
   }
-
+  
   #content > .page > .cards > div.desc > span.desc {
     padding: 16px 24px;
     font-size: 22px;
   }
-
+  
   #content > .page > .cards > div.desc > span.desc {
     max-height: 72px;
   }
-
+  
   #content > .page > .cards > div.desc > span.src {
     padding: 14px 24px;
     font-size: 16px;

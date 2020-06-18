@@ -21,17 +21,16 @@ import '../css/default.css';
 import '../css/main.css';
 import '../css/clients.css';
 import '../css/suggestions.css';
-import { NavigationManager } from './navigation.mjs';
+import NavigationManager from './ui/menu/NavigationManager.mjs';
 
 const navigationManager = new NavigationManager();
 
 navigationManager.init();
-document
-  .querySelector('#content > .page > .cards')
-  .addEventListener('click', e => {
-    const target = e.target;
-    const url = target.dataset['url'] || target.parentElement.dataset['url'];
-
-    if (!url) return;
-    window.open(url, '_blank');
-  });
+document.querySelector('#content > .page > .cards')
+        .addEventListener('click', e => {
+          const target = e.target;
+          const url = target.dataset['url'] || target.parentElement.dataset['url'];
+  
+          if (!url) return;
+          window.open(url, '_blank');
+        });
