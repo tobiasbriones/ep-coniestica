@@ -18,7 +18,7 @@
 
 import { NAV_ABOUT_ITEMS, NAV_ABOUT_ITEMS_URLS } from '../../../values/model.mjs';
 
-const DROPDOWN_MENU_SEL = 'nav > div > ul > .dropdown-menu';
+const DROPDOWN_MENU_SEL = 'nav > div > .dropdown-menu';
 
 export default class DropdownMenu {
   constructor() {

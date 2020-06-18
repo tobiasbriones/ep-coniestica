@@ -47,10 +47,8 @@
                 <span data-str="L_CLIENTS"></span>
               </a>
             </li>
-            
-            <!-- This div shouldn't be here, but it's ok for this project -->
-            <div class="dropdown-menu gone"></div>
           </ul>
+          <div class="dropdown-menu gone"></div>
         </div>
       </nav>
       <div id="logo">
@@ -123,7 +121,10 @@
         <aside class="subscribe">
           <div>
             <p data-str="SUBSCRIBE_INFO"></p>
-            <input type="text" placeholder="Suscribirse">
+            <input id="subscribeInput"
+                   type="text"
+                   placeholder="Suscribirse">
+            <label for="subscribeInput"></label>
             <button id="subscribeButton" data-str="L_SEND"></button>
           </div>
         </aside>

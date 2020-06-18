@@ -43,14 +43,13 @@
                 <span>Servicios</span>
               </a>
             </li>
-            </li>
             <li>
               <a id="actionClients" href="clients.html">
                 <span>Clientes</span>
               </a>
             </li>
-            <div class="dropdown-menu gone"></div>
           </ul>
+          <div class="dropdown-menu gone"></div>
         </div>
       </nav>
       <div id="logo">
@@ -71,7 +70,7 @@
                 <source media="(max-width: 800px)" srcset="img/background-800w.jpg">
                 <source media="(max-width: 1359px)" srcset="img/background-1360w.jpg">
                 <source media="(min-width: 1360px)" srcset="img/background.jpg">
-                <img src="img/background.jpg">
+                <img src="img/background.jpg" alt="Background">
               </picture>
             </div>
             <div class="cards">
@@ -205,12 +204,15 @@
         const uluru = { lat: -25.344, lng: 131.036 };
         const mapEl = document.getElementById('map');
         const map = new google.maps.Map(mapEl, { zoom: 4, center: uluru });
+        
         // The marker, positioned at Uluru
-        const marker = new google.maps.Marker({ position: uluru, map: map });
+        new google.maps.Marker({ position: uluru, map: map });
       }
     </script>
-    <script async defer
-            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD9etw_aibbX2lP4hURqOZBQUxT10xqhI0&callback=initMap">
+    <script
+      async
+      defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD9etw_aibbX2lP4hURqOZBQUxT10xqhI0&callback=initMap">
     </script>
   
   </body>

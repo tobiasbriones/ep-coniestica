@@ -42,7 +42,7 @@ header > nav > div {
   align-self: center;
 }
 
-header > nav > div > ul > .dropdown-menu {
+header > nav > div > .dropdown-menu {
   position: absolute;
   margin-top: -32px;
   top: var(--nav-height);
@@ -50,7 +50,7 @@ header > nav > div > ul > .dropdown-menu {
   background-color: rgba(0, 0, 0, 0.6);
 }
 
-header > nav > div > ul > .dropdown-menu > a {
+header > nav > div > .dropdown-menu > a {
   display: block;
   min-width: 164px;
   height: 56px;
@@ -62,15 +62,15 @@ header > nav > div > ul > .dropdown-menu > a {
   text-decoration: none;
 }
 
-header > nav > div > ul > .dropdown-menu > a:hover {
+header > nav > div > .dropdown-menu > a:hover {
   border-left: 4px solid rgba(237, 169, 119, 0.6);
 }
 
-header > nav > div > ul > .dropdown-menu > a:active {
+header > nav > div > .dropdown-menu > a:active {
   background-color: rgba(0, 0, 0, 0.7);
 }
 
-header > nav > div > ul > .dropdown-menu > a > span {
+header > nav > div > .dropdown-menu > a > span {
   display: block;
   height: 100%;
   padding: 16px 32px;
@@ -672,11 +672,11 @@ body > .bg.parallax img {
     height: 64px;
   }
   
-  header > nav > div > ul > .dropdown-menu {
+  header > nav > div > .dropdown-menu {
     margin-top: -48px;
   }
   
-  header > nav > div > ul > .dropdown-menu > a {
+  header > nav > div > .dropdown-menu > a {
     min-width: 364px;
     height: 96px;
     line-height: 64px;
@@ -686,7 +686,7 @@ body > .bg.parallax img {
     min-width: 360px;
   }
   
-  header > nav > div > ul > .dropdown-menu {
+  header > nav > div > .dropdown-menu {
     margin-top: -86px;
   }
   
