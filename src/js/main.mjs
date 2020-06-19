@@ -48,8 +48,9 @@ const init = async () => {
 };
 
 const callInit = () => {
-  init().then(() => 0)
-        .catch(reason => console.error(reason));
+  init()
+  .then(() => 0)
+  .catch(reason => console.error(reason));
 };
 
 const changeLanguage = async newLangCode => {

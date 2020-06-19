@@ -221,9 +221,21 @@
           It's added here this way because the html webpack plugin doesn't 
           bundle the two scripts (legacy and ESM).
     -->
-    <script nomodule
-            defer
-            src="https://tobiasbriones.github.io/example.programming.web.coniestica/js/main.bundle.js">
+    <script nomodule>
+      const raw =
+        'https://raw.githubusercontent.com/TobiasBriones/example.programming.web.coniestica/gh-pages/js/main.bundle.js';
+      const req = new XMLHttpRequest();
+      
+      req.onreadystatechange = function() {
+        if (this.readyState === 4 && this.status === 200) {
+          const script = document.createElement('script');
+          
+          script.innerHTML = this.responseText;
+          document.body.appendChild(script);
+        }
+      };
+      req.open('GET', raw, true);
+      req.send();
     </script>
   
   </body>

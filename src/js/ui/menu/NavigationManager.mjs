@@ -35,7 +35,12 @@ export default class NavigationManager {
   }
   
   onAboutHover() {
-    const x = this.aboutEl.getClientRects()[0].x;
+    let x = this.aboutEl.getClientRects()[0].x;
+    
+    // Fix for legacy browsers
+    if(!x) {
+      x = document.body.offsetWidth - this.aboutEl.offsetWidth;
+    }
     this.dropdownMenu.open('about', x);
   }
   
