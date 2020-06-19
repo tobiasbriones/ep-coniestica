@@ -2,7 +2,7 @@ example.programming.web.coniestica, Coniestica
 Copyright (C) 2019-2020 Tobias Briones. All rights reserved.
 
 --------------------------------------------------------------------------------
-This software contains images provided by Pixabay (https://pixabay.com/),
+This project contains images provided by Pixabay (https://pixabay.com/),
 available under the Pixabay License (https://pixabay.com/service/license/),
 where some of these images have been modified; the complete list of images is 
 listed next:
@@ -73,6 +73,9 @@ listed next:
   by   https://pixabay.com/users/clker-free-vector-images-3736/
 
 Copies of the listed images are also present in the /src/img/ folder.
+
+--------------------------------------------------------------------------------
+Loading css spinner from https://loading.io/css/ licensed under the CC0 License.
 
 --------------------------------------------------------------------------------
 Social icons are taken from the corresponding company brand resources.

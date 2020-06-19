@@ -39,6 +39,11 @@ const loadStrings = async () => {
   return StringES;
 };
 
+const dismissLoadingPane = () => {
+  document.getElementById('loadingPane').classList.add('gone');
+  document.body.style.overflow = 'auto';
+};
+
 const init = async () => {
   str = await loadStrings();
   
@@ -84,6 +89,7 @@ const onSubscribeClick = () => {
 callInit();
 navigationManager.init();
 
+window.addEventListener('load', () => dismissLoadingPane());
 document.querySelector('aside.subscribe input')
         .addEventListener('keyup', onSubscribeKeyup);
 document.getElementById('subscribeButton')
