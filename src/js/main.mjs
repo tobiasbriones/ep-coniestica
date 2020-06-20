@@ -31,7 +31,7 @@ let str = null;
 
 const changeLanguage = async newLangCode => {
   properties.putLanguageCode(newLangCode);
-  await init();
+  await start();
 };
 
 const onSubscribeKeyup = e => {
@@ -56,12 +56,6 @@ const onSubscribeClick = () => {
 };
 
 const init = async () => {
-  str = await stringLoader.loadStrings();
-  
-  document.querySelectorAll('[data-str]').forEach(el => {
-    el.innerHTML = str[el.dataset['str']];
-  });
-  
   // Init Components
   loadingPaneManager.init();
   navigationManager.init();
@@ -80,12 +74,22 @@ const init = async () => {
             changeLanguage(properties.LANG_CODES.ENGLISH)
           );
   
+  // Continue the lifecycle
+  await start();
 };
 
 const callInit = () => {
   init().then(() => 0)
         .catch(reason => console.error(reason));
 };
+
+const start = async () => {
+  str = await stringLoader.loadStrings();
+  
+  document.querySelectorAll('[data-str]').forEach(el => {
+    el.innerHTML = str[el.dataset['str']];
+  });
+}
 
 // --------------------------------  SCRIPT  -------------------------------- //
 

@@ -30,8 +30,10 @@ export default class LoadingPaneManager {
   }
   
   init() {
-    document.body.classList.add('loading');
     window.addEventListener('load', () => this.dismissLoadingPane());
-    setTimeout(this.dismissLoadingPane, 3000);
+    
+    // Run loading pane
+    document.body.classList.add('loading');
+    setTimeout(this.dismissLoadingPane, 3000); // Max. time allowed
   }
 }
