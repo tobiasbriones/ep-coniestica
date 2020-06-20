@@ -68,7 +68,7 @@ aside strong {
   aside {
     margin: 64px 256px;
   }
-
+  
   #content > .page > .cards > div.link {
     width: 43%;
     height: 500px;
@@ -81,7 +81,7 @@ aside strong {
   #content > .page {
     padding: 5% 10%;
   }
-
+  
   #content > .page > .cards > div.link {
     height: 400px;
   }
@@ -91,11 +91,11 @@ aside strong {
   aside {
     margin: 64px 25%;
   }
-
+  
   #content {
     padding: 0 15% 0 15%;
   }
-
+  
   #content > .page > .cards > div.link {
     width: 43%;
     height: 400px;

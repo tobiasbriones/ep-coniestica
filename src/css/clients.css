@@ -99,17 +99,17 @@
     margin-bottom: 24px;
     font-size: 36px;
   }
-
+  
   #content > .page > .cards > div {
     display: inline-block;
     width: 320px;
     margin: 16px;
   }
-
+  
   #content > .page > .cards > div > span {
     font-size: 28px;
   }
-
+  
   #content > .page > .cards > div > img {
     height: 96px;
   }

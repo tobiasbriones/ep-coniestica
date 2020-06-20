@@ -155,11 +155,11 @@
       const raw =
         'https://raw.githubusercontent.com/TobiasBriones/example.programming.web.coniestica/gh-pages/js/legal.bundle.js';
       const req = new XMLHttpRequest();
-    
+      
       req.onreadystatechange = function() {
         if (this.readyState === 4 && this.status === 200) {
           const script = document.createElement('script');
-        
+          
           script.innerHTML = this.responseText;
           document.body.appendChild(script);
         }

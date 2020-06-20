@@ -38,7 +38,7 @@ export default class NavigationManager {
     let x = this.aboutEl.getClientRects()[0].x;
     
     // Fix for legacy browsers
-    if(!x) {
+    if (!x) {
       x = document.body.offsetWidth - this.aboutEl.offsetWidth;
     }
     this.dropdownMenu.open('about', x);

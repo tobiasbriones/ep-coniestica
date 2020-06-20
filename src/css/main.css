@@ -259,9 +259,9 @@ iframe {
   width: 64px;
   height: 64px;
   margin: 8px;
+  animation: lds-circle 2.4s cubic-bezier(0, 0.2, 0.8, 1) infinite;
   border-radius: 50%;
   background: #CCEEFF;
-  animation: lds-circle 2.4s cubic-bezier(0, 0.2, 0.8, 1) infinite;
 }
 
 @keyframes lds-circle {
