@@ -20,6 +20,9 @@ import { NAV_ABOUT_ITEMS, NAV_ABOUT_ITEMS_URLS } from '../../../values/model.mjs
 
 const DROPDOWN_MENU_SEL = 'nav > div > .dropdown-menu';
 
+/**
+ * Defines a dropdown menu component shown in the web page navigation.
+ */
 export default class DropdownMenu {
   constructor() {
     this.dropdownMenuEl = null;

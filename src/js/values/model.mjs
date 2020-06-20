@@ -133,6 +133,10 @@ const LEGAL_TERMS_AND_CONDITIONS = `
   <p>Mauris aliquet neque et ligula pellentesque, vel placerat erat faucibus. Proin dignissim mauris a est rutrum iaculis. Duis mollis tellus ut nisi porta fermentum. Nam sit amet purus vestibulum dolor vestibulum efficitur. Vestibulum in dui placerat, posuere arcu ac, vehicula metus. Nulla vehicula nunc nec lectus efficitur, sit amet sollicitudin urna ullamcorper. Suspendisse nec magna arcu. Vivamus purus lacus, viverra id felis et, tristique pharetra lorem.</p>
 `;
 
+/**
+ * Object to manage the application strings.
+ * @type {{loadStrings: loadStrings}}
+ */
 const stringLoader = (() => {
   const loadStrings = async () => {
     const langCode = properties.loadLanguageCode();

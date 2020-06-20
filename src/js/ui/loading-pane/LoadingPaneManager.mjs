@@ -45,8 +45,7 @@ export default class LoadingPaneManager {
   loaded() {
     if (this.isLoaded) return;
     this.dismissLoadingPane();
-    
-    console.log('loaded');
+    this.isLoaded = true;
   }
   
   windowLoaded() {

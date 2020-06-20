@@ -20,6 +20,9 @@ import DropdownMenu from './action/DropdownMenu.mjs';
 
 const NAV_ABOUT_SEL = 'nav > div > ul > .about';
 
+/**
+ * Manages the web page navigation menu including the dropdown menus.
+ */
 export default class NavigationManager {
   constructor() {
     this.dropdownMenu = new DropdownMenu();
