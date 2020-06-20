@@ -18,6 +18,11 @@
 
 // Creating a LoadingPane object is not required because of its simplicity.
 // Just manage the loading pane here directly.
+
+// This Loading Pane should be specially implemented so that it's shown and able
+// from the mere beginning because the element is shown blank from the mere
+// beginning but the animation and script loads after that. I will leave this
+// implementation this way for this project though.
 export default class LoadingPaneManager {
   constructor() {
     this.isLoaded = false;
