@@ -20,11 +20,6 @@
   --copyright-height: 48px;
 }
 
-body {
-  min-width: 320px;
-  overflow: hidden; /* Allow Loading Pane to appear */
-}
-
 /* --------------------------------  HEADER  -------------------------------- */
 header {
   width: 100%;
@@ -307,44 +302,6 @@ iframe {
   padding: 8px 0;
   font-size: 28px;
   text-align: center;
-}
-
-/* -----------------------------  LOADING PANE  ----------------------------- */
-#loadingPane {
-  position: absolute;
-  display: flex;
-  width: 100%;
-  height: 100vh;
-  top: 0;
-  left: 0;
-  z-index: 10000;
-  background-color: white;
-}
-
-#loadingPane > div {
-  width: 100%;
-  margin: auto;
-}
-
-#loadingPane > div > .lds-circle {
-  display: flex;
-  width: 100%;
-  height: 256px;
-  align-items: center;
-}
-
-#loadingPane > div > .lds-circle > div {
-  width: 128px;
-  height: 128px;
-  margin: auto;
-  background-color: var(--brown-primary);
-}
-
-#loadingPane > div > p {
-  text-align: center;
-  font-size: 36px;
-  font-weight: bolder;
-  color: black;
 }
 
 /* -------------------------------  CONTENTS  ------------------------------- */

@@ -18,11 +18,14 @@
 
 import '../index.html';
 import '../css/default.css';
+import '../css/loading-pane.css';
 import '../css/main.css';
 import StringES from './values/strings_ES.mjs';
 import properties from './config/properties.mjs';
+import LoadingPaneManager from './ui/loading-pane/LoadingPaneManager.mjs';
 import NavigationManager from './ui/menu/NavigationManager.mjs';
 
+const loadingPaneManager = new LoadingPaneManager();
 const navigationManager = new NavigationManager();
 let str = null;
 
@@ -37,25 +40,6 @@ const loadStrings = async () => {
     console.error(`Couldn't load strings. ${ e }`);
   }
   return StringES;
-};
-
-const dismissLoadingPane = () => {
-  document.getElementById('loadingPane').classList.add('gone');
-  document.body.style.overflow = 'auto';
-};
-
-const init = async () => {
-  str = await loadStrings();
-  
-  document.querySelectorAll('[data-str]').forEach(el => {
-    el.innerHTML = str[el.dataset['str']];
-  });
-};
-
-const callInit = () => {
-  init()
-  .then(() => 0)
-  .catch(reason => console.error(reason));
 };
 
 const changeLanguage = async newLangCode => {
@@ -84,21 +68,38 @@ const onSubscribeClick = () => {
   alert(str.SUCCESSFULLY_SUBSCRIBE_MSG);
 };
 
+const init = async () => {
+  str = await loadStrings();
+  
+  document.querySelectorAll('[data-str]').forEach(el => {
+    el.innerHTML = str[el.dataset['str']];
+  });
+  
+  // Init Components
+  loadingPaneManager.init();
+  navigationManager.init();
+  
+  // Add events to the page elements
+  document.querySelector('aside.subscribe input')
+          .addEventListener('keyup', onSubscribeKeyup);
+  document.getElementById('subscribeButton')
+          .addEventListener('click', onSubscribeClick);
+  document.getElementById('lang-es-button')
+          .addEventListener('click', () =>
+            changeLanguage(properties.LANG_CODES.SPANISH)
+          );
+  document.getElementById('lang-en-button')
+          .addEventListener('click', () =>
+            changeLanguage(properties.LANG_CODES.ENGLISH)
+          );
+  
+};
+
+const callInit = () => {
+  init().then(() => 0)
+        .catch(reason => console.error(reason));
+};
+
 // --------------------------------  SCRIPT  -------------------------------- //
 
 callInit();
-navigationManager.init();
-
-window.addEventListener('load', () => dismissLoadingPane());
-document.querySelector('aside.subscribe input')
-        .addEventListener('keyup', onSubscribeKeyup);
-document.getElementById('subscribeButton')
-        .addEventListener('click', onSubscribeClick);
-document.getElementById('lang-es-button')
-        .addEventListener('click', () =>
-          changeLanguage(properties.LANG_CODES.SPANISH)
-        );
-document.getElementById('lang-en-button')
-        .addEventListener('click', () =>
-          changeLanguage(properties.LANG_CODES.ENGLISH)
-        );

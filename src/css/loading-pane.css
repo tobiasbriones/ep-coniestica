@@ -1,0 +1,73 @@
+/*
+ * This file is part of example.programming.web.coniestica = Coniestica
+ * Copyright (C) 2019-2020 Tobias Briones
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <https://www.gnu.org/licenses/>.
+ */
+
+/* Loading pane gone */
+body {
+  overflow: auto;
+}
+
+body #loadingPane {
+  display: none;
+}
+
+/* Loading pane showing */
+body.loading {
+  overflow: hidden; /* Allow the loading pane to appear properly */
+}
+
+body.loading #loadingPane {
+  display: flex;
+}
+
+/* Loading Pane styles */
+#loadingPane {
+  position: fixed;
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 10000;
+  background-color: white;
+}
+
+#loadingPane > div {
+  width: 100%;
+  margin: auto;
+}
+
+#loadingPane > div > .lds-circle {
+  display: flex;
+  width: 100%;
+  height: 256px;
+  align-items: center;
+}
+
+#loadingPane > div > .lds-circle > div {
+  width: 128px;
+  height: 128px;
+  margin: auto;
+  background-color: var(--brown-primary);
+}
+
+#loadingPane > div > p {
+  text-align: center;
+  font-size: 36px;
+  font-weight: bolder;
+  color: black;
+}
