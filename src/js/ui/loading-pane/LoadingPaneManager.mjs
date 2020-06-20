@@ -23,22 +23,56 @@
 // from the mere beginning because the element is shown blank from the mere
 // beginning but the animation and script loads after that. I will leave this
 // implementation this way for this project though.
+
+const MINIMUM_TIME_MS = 800;
+const MAXIMUM_TIME_MS = 3000;
+
+/**
+ * Defines a manager for showing the loading pane once when loading the web
+ * page.
+ */
 export default class LoadingPaneManager {
   constructor() {
     this.isLoaded = false;
+    this.isWindowLoaded = false;
+    this.isMinimumTimeOver = false;
   }
   
   dismissLoadingPane() {
-    if (this.isLoaded) return;
     document.body.classList.remove('loading');
-    this.isLoaded = true;
+  }
+  
+  loaded() {
+    if (this.isLoaded) return;
+    this.dismissLoadingPane();
+    
+    console.log('loaded');
+  }
+  
+  windowLoaded() {
+    this.isWindowLoaded = true;
+    
+    if (!this.isMinimumTimeOver) return;
+    this.loaded();
+  }
+  
+  minimumTimeOver() {
+    this.isMinimumTimeOver = true;
+    
+    if (!this.isWindowLoaded) return;
+    this.loaded();
+  }
+  
+  maximumTimeOver() {
+    this.loaded();
   }
   
   init() {
-    window.addEventListener('load', () => this.dismissLoadingPane());
+    window.addEventListener('load', () => this.windowLoaded());
     
     // Run loading pane
     document.body.classList.add('loading');
-    setTimeout(this.dismissLoadingPane, 3000); // Max. time allowed
+    setTimeout(() => this.minimumTimeOver(), MINIMUM_TIME_MS);
+    setTimeout(() => this.maximumTimeOver(), MAXIMUM_TIME_MS);
   }
 }
