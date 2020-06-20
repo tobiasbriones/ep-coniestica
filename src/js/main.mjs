@@ -20,27 +20,14 @@ import '../index.html';
 import '../css/default.css';
 import '../css/loading-pane.css';
 import '../css/main.css';
-import StringES from './values/strings_ES.mjs';
 import properties from './config/properties.mjs';
 import LoadingPaneManager from './ui/loading-pane/LoadingPaneManager.mjs';
 import NavigationManager from './ui/menu/NavigationManager.mjs';
+import { stringLoader } from './values/model';
 
 const loadingPaneManager = new LoadingPaneManager();
 const navigationManager = new NavigationManager();
 let str = null;
-
-const loadStrings = async () => {
-  const langCode = properties.loadLanguageCode();
-  
-  try {
-    const module = await import(`./values/strings_${ langCode }.mjs`);
-    return module.default;
-  }
-  catch (e) {
-    console.error(`Couldn't load strings. ${ e }`);
-  }
-  return StringES;
-};
 
 const changeLanguage = async newLangCode => {
   properties.putLanguageCode(newLangCode);
@@ -69,7 +56,7 @@ const onSubscribeClick = () => {
 };
 
 const init = async () => {
-  str = await loadStrings();
+  str = await stringLoader.loadStrings();
   
   document.querySelectorAll('[data-str]').forEach(el => {
     el.innerHTML = str[el.dataset['str']];

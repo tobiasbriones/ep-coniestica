@@ -16,6 +16,9 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
+import properties from '../config/properties';
+import StringES from './strings_ES';
+
 const NAV_ABOUT_ITEMS = ['Misión', 'Visión', 'Objetivos', 'Contacto'];
 
 const NAV_ABOUT_ITEMS_URLS = [
@@ -130,6 +133,24 @@ const LEGAL_TERMS_AND_CONDITIONS = `
   <p>Mauris aliquet neque et ligula pellentesque, vel placerat erat faucibus. Proin dignissim mauris a est rutrum iaculis. Duis mollis tellus ut nisi porta fermentum. Nam sit amet purus vestibulum dolor vestibulum efficitur. Vestibulum in dui placerat, posuere arcu ac, vehicula metus. Nulla vehicula nunc nec lectus efficitur, sit amet sollicitudin urna ullamcorper. Suspendisse nec magna arcu. Vivamus purus lacus, viverra id felis et, tristique pharetra lorem.</p>
 `;
 
+const stringLoader = (() => {
+  const loadStrings = async () => {
+    const langCode = properties.loadLanguageCode();
+    
+    try {
+      const module = await import(`./strings_${ langCode }.mjs`);
+      return module.default;
+    }
+    catch (e) {
+      console.error(`Couldn't load strings. ${ e }`);
+    }
+    return StringES;
+  };
+  return {
+    loadStrings: loadStrings
+  };
+})();
+
 export {
   NAV_ABOUT_ITEMS,
   NAV_ABOUT_ITEMS_URLS,
@@ -137,5 +158,6 @@ export {
   COMPANY_VISION_CARD_HTML,
   COMPANY_OBJECTIVES_CARD_HTML,
   LEGAL_PRIVACY,
-  LEGAL_TERMS_AND_CONDITIONS
+  LEGAL_TERMS_AND_CONDITIONS,
+  stringLoader
 };
