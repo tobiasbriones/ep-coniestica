@@ -4,12 +4,12 @@
  */
 
 const webpack = require('webpack');
-const merge = require('webpack-merge');
 const commonConfig = require('./webpack.config.common');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const FixStyleOnlyEntriesPlugin = require('webpack-fix-style-only-entries');
 const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const { merge } = require('webpack-merge');
 
 const copyrightHeader = `
   Example Project - Coniestica
