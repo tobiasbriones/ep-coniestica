@@ -90,7 +90,7 @@ const start = async () => {
   document.querySelectorAll('[data-str]').forEach(el => {
     el.innerHTML = str[el.dataset['str']];
   });
-}
+};
 
 // --------------------------------  SCRIPT  -------------------------------- //
 

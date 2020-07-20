@@ -47,7 +47,7 @@ const onContactSubmit = (e) => {
     alert('Please fill all the fields');
     return;
   }
-  isValidInput &=simpleEmailRegex.test(email)
+  isValidInput &= simpleEmailRegex.test(email);
   
   if (!isValidInput) {
     alert('Enter a valid email address');

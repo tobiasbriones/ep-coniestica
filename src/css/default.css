@@ -61,6 +61,7 @@ button {
 input,
 textarea {
   padding: 8px;
+  transition: border 100ms;
   border: none;
   border-bottom: 2px solid var(--blue-accent);
   outline: none;
@@ -68,7 +69,6 @@ textarea {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  transition: border 100ms;
 }
 
 input:focus,
@@ -81,12 +81,12 @@ input[type=submit] {
   padding: 16px;
   font-size: 16px;
   font-weight: bold;
-  text-transform: uppercase;
+  cursor: pointer;
+  transition: border 200ms;
   border: 1px solid transparent;
   border-radius: 8px;
   background-color: var(--blue-accent);
-  transition: border 200ms;
-  cursor: pointer;
+  text-transform: uppercase;
 }
 
 input[type=submit]:hover {
@@ -110,7 +110,7 @@ form > div > textarea {
 }
 
 form > div > input + label,
-form > div > textarea + label{
+form > div > textarea + label {
   grid-row: 1;
 }
 
