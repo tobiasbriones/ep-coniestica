@@ -77,6 +77,13 @@
   margin: 32px auto;
 }
 
+#contact-form {
+  display: inline-block;
+  padding: 32px;
+  margin: 48px;
+  background-color: white;
+}
+
 @media (min-width: 600px) {
   #map {
     width: 400px;

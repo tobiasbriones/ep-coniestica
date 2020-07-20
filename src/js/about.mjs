@@ -17,6 +17,7 @@
  */
 
 import '../about.html';
+import '../css/default-legacy.css';
 import '../css/default.css';
 import '../css/main.css';
 import '../css/about.css';

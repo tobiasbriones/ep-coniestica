@@ -17,6 +17,7 @@
  */
 
 import '../index.html';
+import '../css/default-legacy.css';
 import '../css/default.css';
 import '../css/loading-pane.css';
 import '../css/main.css';
