@@ -71,17 +71,24 @@
   height: 100%;
 }
 
+#contact-form {
+  display: block;
+  padding: 32px;
+  margin: 48px;
+  background-color: white;
+}
+
+#contact-form > p {
+  padding: 8px;
+  margin-bottom: 8px;
+  text-align: center;
+  font-weight: bold;
+}
+
 #map {
   width: 300px;
   height: 300px;
   margin: 32px auto;
-}
-
-#contact-form {
-  display: inline-block;
-  padding: 32px;
-  margin: 48px;
-  background-color: white;
 }
 
 @media (min-width: 600px) {
@@ -92,6 +99,12 @@
 }
 
 @media (min-width: 800px) {
+  #contact-form {
+    width: 60%;
+    padding: 32px 64px;
+    margin: 48px auto;
+  }
+  
   #map {
     width: 500px;
     height: 400px;
@@ -105,6 +118,12 @@
 }
 
 @media (min-width: 1360px) {
+  #contact-form {
+    width: 40%;
+    padding: 32px 64px;
+    margin: 64px auto;
+  }
+  
   #map {
     width: 800px;
     height: 500px;
@@ -125,13 +144,28 @@
     width: 100%;
   }
   
-  #map {
+  aside {
     position: absolute;
+    top: 64px;
+    left: 5%;
+  }
+  
+  #contact-form {
+    width: 100%;
+    padding: 32px 64px;
+    margin: 64px auto;
+    background-color: white;
+  }
+  
+  #contact-form textarea {
+    min-height: 100px;
+    max-height: 400px;
+    resize: vertical;
+  }
+  
+  #map {
     width: 600px;
     height: 400px;
-    margin: 0;
-    top: 8%;
-    left: 5%;
   }
 }
 
