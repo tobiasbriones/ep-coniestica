@@ -28,25 +28,25 @@ export default class NavigationManager {
     this.dropdownMenu = new DropdownMenu();
     this.aboutEl = null;
   }
-  
+
   init() {
     this.dropdownMenu.init();
     this.aboutEl = document.querySelector(NAV_ABOUT_SEL);
-    
+
     this.aboutEl.addEventListener('mouseover', () => this.onAboutHover());
     this.aboutEl.addEventListener('mouseout', e => this.onAboutHoverOut(e));
   }
-  
+
   onAboutHover() {
     let x = this.aboutEl.getClientRects()[0].x;
-    
-    // Fix for legacy browsers
+
+    // This if statement is a fix for legacy browsers
     if (!x) {
       x = document.body.offsetWidth - this.aboutEl.offsetWidth;
     }
     this.dropdownMenu.open('about', x);
   }
-  
+
   onAboutHoverOut(e) {
     if (!this.dropdownMenu.isInBounds(e)) {
       this.dropdownMenu.close();

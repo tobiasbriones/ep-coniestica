@@ -22,7 +22,11 @@ import '../css/default.css';
 import '../css/main.css';
 import '../css/about.css';
 import NavigationManager from './ui/menu/NavigationManager.mjs';
-import { COMPANY_MISSION_CARD_HTML, COMPANY_OBJECTIVES_CARD_HTML, COMPANY_VISION_CARD_HTML } from './values/model.mjs';
+import {
+  COMPANY_MISSION_CARD_HTML,
+  COMPANY_OBJECTIVES_CARD_HTML,
+  COMPANY_VISION_CARD_HTML
+} from './values/model.mjs';
 
 const cardsParentEl = document.querySelector('#content > .page > .cards');
 
@@ -78,11 +82,11 @@ switch (param) {
   case 'vision':
     gotoVision();
     break;
-  
+
   case 'objectives':
     gotoObjectives();
     break;
-  
+
   default:
     gotoMission();
     break;

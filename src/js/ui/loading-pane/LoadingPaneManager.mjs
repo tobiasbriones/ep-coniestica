@@ -37,38 +37,44 @@ export default class LoadingPaneManager {
     this.isWindowLoaded = false;
     this.isMinimumTimeOver = false;
   }
-  
+
   dismissLoadingPane() {
     document.body.classList.remove('loading');
   }
-  
+
   loaded() {
-    if (this.isLoaded) return;
+    if (this.isLoaded) {
+      return;
+    }
     this.dismissLoadingPane();
     this.isLoaded = true;
   }
-  
+
   windowLoaded() {
     this.isWindowLoaded = true;
-    
-    if (!this.isMinimumTimeOver) return;
+
+    if (!this.isMinimumTimeOver) {
+      return;
+    }
     this.loaded();
   }
-  
+
   minimumTimeOver() {
     this.isMinimumTimeOver = true;
-    
-    if (!this.isWindowLoaded) return;
+
+    if (!this.isWindowLoaded) {
+      return;
+    }
     this.loaded();
   }
-  
+
   maximumTimeOver() {
     this.loaded();
   }
-  
+
   init() {
     window.addEventListener('load', () => this.windowLoaded());
-    
+
     // Run loading pane
     document.body.classList.add('loading');
     setTimeout(() => this.minimumTimeOver(), MINIMUM_TIME_MS);

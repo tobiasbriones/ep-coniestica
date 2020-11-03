@@ -29,11 +29,11 @@ export default class DropdownMenu {
     this.aboutDropdownItemsHTML = null;
     this.isMenuOpened = false;
   }
-  
+
   init() {
     const getAboutItemsHTML = () => {
       let html = '';
-      
+
       NAV_ABOUT_ITEMS.forEach((item, i) => html += `
         <a href="${ NAV_ABOUT_ITEMS_URLS[i] }">
           <span>${ item }</span>
@@ -44,17 +44,17 @@ export default class DropdownMenu {
     this.dropdownMenuEl = document.querySelector(DROPDOWN_MENU_SEL);
     this.aboutDropdownItemsHTML = getAboutItemsHTML();
     this.isMenuOpened = false;
-    
+
     this.dropdownMenuEl.addEventListener('mouseout', e => {
       if (!this.isInBounds(e)) {
         this.close();
       }
     });
   }
-  
+
   open(menu, x) {
     let menuHTML = '';
-    
+
     switch (menu) {
       case 'about':
         menuHTML = this.aboutDropdownItemsHTML;
@@ -62,20 +62,22 @@ export default class DropdownMenu {
     }
     this.dropdownMenuEl.innerHTML = menuHTML;
     this.dropdownMenuEl.style.transform = `translateX(${ x }px)`;
-    
+
     this.dropdownMenuEl.classList.remove('gone');
     this.isMenuOpened = true;
   }
-  
+
   close() {
     this.dropdownMenuEl.classList.add('gone');
     this.isMenuOpened = false;
   }
-  
+
   isInBounds(e) {
-    if (!this.isMenuOpened) return false;
+    if (!this.isMenuOpened) {
+      return false;
+    }
     const rect = this.dropdownMenuEl.getClientRects()[0];
-    
+
     return (
       e.pageX >= rect.left &&
       e.pageX <= rect.right &&

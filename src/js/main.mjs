@@ -46,7 +46,7 @@ const onSubscribeClick = () => {
   const inputEl = document.querySelector('aside.subscribe input');
   const email = inputEl.value;
   const simpleEmailRegex = new RegExp('[^@]+@[^.]+..+');
-  
+
   if (!simpleEmailRegex.test(email)) {
     alert(str.ENTER_CORRECT_EMAIL_MSG);
     return;
@@ -60,7 +60,7 @@ const init = async () => {
   // Init Components
   loadingPaneManager.init();
   navigationManager.init();
-  
+
   // Add events to the page elements
   document.querySelector('aside.subscribe input')
           .addEventListener('keyup', onSubscribeKeyup);
@@ -74,7 +74,7 @@ const init = async () => {
           .addEventListener('click', () =>
             changeLanguage(properties.LANG_CODES.ENGLISH)
           );
-  
+
   // Continue the lifecycle
   await start();
 };
@@ -86,7 +86,7 @@ const callInit = () => {
 
 const start = async () => {
   str = await stringLoader.loadStrings();
-  
+
   document.querySelectorAll('[data-str]').forEach(el => {
     el.innerHTML = str[el.dataset['str']];
   });

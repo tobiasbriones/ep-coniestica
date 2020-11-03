@@ -1,7 +1,7 @@
 {
   "name": "example.programming.web.coniestica",
   "version": "2.0.0",
-  "description": "Example project for a simple company information front-end website made in pure JS without any JS/CSS library or framework.",
+  "description": "Example project for a simple company information front-end website",
   "private": true,
   "scripts": {
     "build:prod": "webpack --env=prod --config webpack.config.js",

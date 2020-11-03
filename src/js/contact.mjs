@@ -35,12 +35,12 @@ const onContactSubmit = (e) => {
   const email = emailEl.value;
   const message = messageEl.value;
   let isValidInput = true;
-  
+
   // Validate
   isValidInput &= name.trim().length > 0;
   isValidInput &= email.trim().length > 0;
   isValidInput &= message.trim().length > 0;
-  
+
   if (!isValidInput) {
     // This would be better done with a css framework to show the message below
     // the corresponding input
@@ -48,15 +48,15 @@ const onContactSubmit = (e) => {
     return;
   }
   isValidInput &= simpleEmailRegex.test(email);
-  
+
   if (!isValidInput) {
     alert('Enter a valid email address');
     return;
   }
-  
+
   // ...
   alert('Great! We\'ll be in touch  with you soon');
-  
+
   // Clean
   nameEl.value = '';
   emailEl.value = '';

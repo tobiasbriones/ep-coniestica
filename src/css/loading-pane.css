@@ -68,6 +68,6 @@ body.loading #loadingPane {
 #loadingPane > div > p {
   font-size: 36px;
   font-weight: bolder;
-  color: black;
   text-align: center;
+  color: black;
 }

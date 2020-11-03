@@ -50,22 +50,22 @@ button {
   padding: 12px 24px;
   margin: 4px 8px;
   font-weight: bold;
-  cursor: pointer;
   color: #EFEFEF;
+  background-color: var(--blue-accent);
   border: none;
   border-radius: 8px;
+  cursor: pointer;
   outline: none;
-  background-color: var(--blue-accent);
 }
 
 input,
 textarea {
   padding: 8px;
-  transition: border 100ms;
+  background-color: transparent;
   border: none;
   border-bottom: 2px solid var(--blue-accent);
+  transition: border 100ms;
   outline: none;
-  background-color: transparent;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -81,12 +81,12 @@ input[type=submit] {
   padding: 16px;
   font-size: 16px;
   font-weight: bold;
-  cursor: pointer;
-  transition: border 200ms;
+  text-transform: uppercase;
+  background-color: var(--blue-accent);
   border: 1px solid transparent;
   border-radius: 8px;
-  background-color: var(--blue-accent);
-  text-transform: uppercase;
+  transition: border 200ms;
+  cursor: pointer;
 }
 
 input[type=submit]:hover {

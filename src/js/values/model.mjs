@@ -140,7 +140,7 @@ const LEGAL_TERMS_AND_CONDITIONS = `
 const stringLoader = (() => {
   const loadStrings = async () => {
     const langCode = properties.loadLanguageCode();
-    
+
     try {
       const module = await import(`./strings_${ langCode }.mjs`);
       return module.default;

@@ -18,7 +18,7 @@
 
 <!DOCTYPE html>
 <html lang="es">
-  
+
   <head>
     <title>Coniestica - Enlaces de interés</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto&display=swap">
@@ -26,9 +26,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#455A64">
   </head>
-  
+
   <body>
-    
+
     <header>
       <nav>
         <div>
@@ -59,7 +59,7 @@
         <h1>Coniestica, S.A.</h1>
       </div>
     </header>
-    
+
     <div class="bg">
       <div id="container">
         <div id="content">
@@ -113,7 +113,7 @@
         </div>
       </div>
     </div>
-    
+
     <footer>
       <div>
         <div>
@@ -188,7 +188,7 @@
         <p>© 2019 Coniestica, S.A.</p>
       </div>
     </footer>
-    
+
     <noscript>Please enable JavaScript to continue using this application.</noscript>
     <!--  Add nomodule script for supporting legacy browsers.
           It's added here this way because the html webpack plugin doesn't 
@@ -198,11 +198,11 @@
       const raw =
         'https://raw.githubusercontent.com/TobiasBriones/example.programming.web.coniestica/gh-pages/js/suggestions.bundle.js';
       const req = new XMLHttpRequest();
-      
-      req.onreadystatechange = function() {
+
+      req.onreadystatechange = function () {
         if (this.readyState === 4 && this.status === 200) {
           const script = document.createElement('script');
-          
+
           script.innerHTML = this.responseText;
           document.body.appendChild(script);
         }
@@ -210,7 +210,7 @@
       req.open('GET', raw, true);
       req.send();
     </script>
-  
+
   </body>
 
 </html>

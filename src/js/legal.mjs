@@ -67,11 +67,11 @@ switch (param) {
   case 'privacy':
     gotoPrivacy();
     break;
-  
+
   case 'terms-and-conditions':
     gotoTerms();
     break;
-  
+
   default:
     gotoPrivacy();
     break;
