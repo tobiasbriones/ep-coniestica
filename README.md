@@ -8,7 +8,7 @@ Example project for a simple company information front-end website made in pure 
 ![Screenshot 2](https://raw.githubusercontent.com/TobiasBriones/images-nl/master/example-projects/example.programming.web.coniestica/screenshot-2.png)
 
 ## License
-Example Project - Coniestica
+Example Project: Coniestica
 
 Copyright © 2019-2020 Tobias Briones. All rights reserved.
 
