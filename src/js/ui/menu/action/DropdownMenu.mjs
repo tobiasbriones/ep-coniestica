@@ -26,23 +26,13 @@ const DROPDOWN_MENU_SEL = 'nav > div > .dropdown-menu';
 export default class DropdownMenu {
   constructor() {
     this.dropdownMenuEl = null;
-    this.aboutDropdownItemsHTML = null;
+    this.aboutDropdownItemsHtml = null;
     this.isMenuOpened = false;
   }
 
   init() {
-    const getAboutItemsHTML = () => {
-      let html = '';
-
-      NAV_ABOUT_ITEMS.forEach((item, i) => html += `
-        <a href="${ NAV_ABOUT_ITEMS_URLS[i] }">
-          <span>${ item }</span>
-        </a>
-      `);
-      return html;
-    };
     this.dropdownMenuEl = document.querySelector(DROPDOWN_MENU_SEL);
-    this.aboutDropdownItemsHTML = getAboutItemsHTML();
+    this.aboutDropdownItemsHtml = getAboutItemsHtml.call(this);
     this.isMenuOpened = false;
 
     this.dropdownMenuEl.addEventListener('mouseout', e => {
@@ -53,14 +43,14 @@ export default class DropdownMenu {
   }
 
   open(menu, x) {
-    let menuHTML = '';
+    let menuHtml = '';
 
     switch (menu) {
       case 'about':
-        menuHTML = this.aboutDropdownItemsHTML;
+        menuHtml = this.aboutDropdownItemsHtml;
         break;
     }
-    this.dropdownMenuEl.innerHTML = menuHTML;
+    this.dropdownMenuEl.innerHTML = menuHtml;
     this.dropdownMenuEl.style.transform = `translateX(${ x }px)`;
 
     this.dropdownMenuEl.classList.remove('gone');
@@ -73,16 +63,35 @@ export default class DropdownMenu {
   }
 
   isInBounds(e) {
-    if (!this.isMenuOpened) {
-      return false;
-    }
-    const rect = this.dropdownMenuEl.getClientRects()[0];
+    let inBounds = false;
 
-    return (
-      e.pageX >= rect.left &&
-      e.pageX <= rect.right &&
-      e.pageY >= rect.top &&
-      e.pageY <= rect.bottom
-    );
+    if (this.isMenuOpened) {
+      inBounds = isEventInDropdownMenuBounds.call(this, e);
+    }
+    return inBounds;
   }
+}
+
+function getAboutItemsHtml() {
+  let html = '';
+
+  NAV_ABOUT_ITEMS.forEach((item, i) => {
+    html += `
+          <a href="${ NAV_ABOUT_ITEMS_URLS[i] }">
+            <span>${ item }</span>
+          </a>
+        `;
+  });
+  return html;
+}
+
+function isEventInDropdownMenuBounds(e) {
+  const rect = this.dropdownMenuEl.getClientRects()[0];
+
+  return (
+    e.pageX >= rect.left &&
+    e.pageX <= rect.right &&
+    e.pageY >= rect.top &&
+    e.pageY <= rect.bottom
+  );
 }

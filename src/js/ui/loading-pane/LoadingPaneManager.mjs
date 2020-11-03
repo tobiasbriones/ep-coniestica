@@ -43,29 +43,25 @@ export default class LoadingPaneManager {
   }
 
   loaded() {
-    if (this.isLoaded) {
-      return;
+    if (!this.isLoaded) {
+      load.call(this);
     }
-    this.dismissLoadingPane();
-    this.isLoaded = true;
   }
 
   windowLoaded() {
     this.isWindowLoaded = true;
 
-    if (!this.isMinimumTimeOver) {
-      return;
+    if (this.isMinimumTimeOver) {
+      this.loaded();
     }
-    this.loaded();
   }
 
   minimumTimeOver() {
     this.isMinimumTimeOver = true;
 
-    if (!this.isWindowLoaded) {
-      return;
+    if (this.isWindowLoaded) {
+      this.loaded();
     }
-    this.loaded();
   }
 
   maximumTimeOver() {
@@ -74,10 +70,17 @@ export default class LoadingPaneManager {
 
   init() {
     window.addEventListener('load', () => this.windowLoaded());
-
-    // Run loading pane
-    document.body.classList.add('loading');
-    setTimeout(() => this.minimumTimeOver(), MINIMUM_TIME_MS);
-    setTimeout(() => this.maximumTimeOver(), MAXIMUM_TIME_MS);
+    runLoadingPane.call(this);
   }
+}
+
+function runLoadingPane() {
+  document.body.classList.add('loading');
+  setTimeout(() => this.minimumTimeOver(), MINIMUM_TIME_MS);
+  setTimeout(() => this.maximumTimeOver(), MAXIMUM_TIME_MS);
+}
+
+function load() {
+  this.dismissLoadingPane();
+  this.isLoaded = true;
 }
