@@ -25,21 +25,38 @@ const LANG_CODES = {
 export default {
   LANG_CODES: LANG_CODES,
   putLanguageCode: langCode => {
-    if (!Object.values(LANG_CODES).includes(langCode)) {
-      console.error('Invalid language code');
-      return false;
+    let succeeded = false;
+
+    if (validateLangCode(langCode)) {
+      succeeded = setLangCode(langCode);
     }
-    try {
-      localStorage.setItem(LANG_KEY, langCode);
-      return true;
-    }
-    catch (e) {
-      console.error(`Error when saving language. ${ e }`);
-    }
-    return false;
+    return succeeded;
   },
   loadLanguageCode: () => {
     const lsLangCode = localStorage.getItem(LANG_KEY);
     return lsLangCode || LANG_CODES.SPANISH;
   }
 };
+
+function validateLangCode(langCode) {
+  let isValidLangCode = true;
+
+  if (!Object.values(LANG_CODES).includes(langCode)) {
+    isValidLangCode = false;
+    console.error('Invalid language code');
+  }
+  return isValidLangCode;
+}
+
+function setLangCode(langCode) {
+  let succeeded = true;
+
+  try {
+    localStorage.setItem(LANG_KEY, langCode);
+  }
+  catch (e) {
+    succeeded = false;
+    console.error(`Error when saving language. ${ e }`);
+  }
+  return succeeded;
+}
