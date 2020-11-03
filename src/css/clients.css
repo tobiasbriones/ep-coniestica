@@ -1,6 +1,6 @@
 /*
- * This file is part of example.programming.web.coniestica = Coniestica
- * Copyright (C) 2019 Tobias Briones
+ * This file is part of Example Project: Coniestica
+ * Copyright (C) 2019-2020 Tobias Briones
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
