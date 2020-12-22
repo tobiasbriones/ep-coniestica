@@ -43,7 +43,6 @@ class AboutPage {
 
     this.bindEvents();
     this.updateContent();
-
   }
 
   bindEvents() {
