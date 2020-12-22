@@ -29,72 +29,89 @@ import LoadingPaneManager from './ui/loading-pane/LoadingPaneManager.mjs';
 import NavigationManager from './ui/menu/NavigationManager.mjs';
 import { stringLoader } from './values/model';
 
-const loadingPaneManager = new LoadingPaneManager();
-const navigationManager = new NavigationManager();
-let str = null;
-
-const changeLanguage = async newLangCode => {
-  properties.putLanguageCode(newLangCode);
-  await start();
-};
-
-const onSubscribeKeyup = e => {
-  if (e.key === 'Enter') {
-    e.preventDefault();
-    document.getElementById('subscribeButton').click();
+class MainPage {
+  constructor() {
+    this.loadingPaneManager = new LoadingPaneManager();
+    this.navigationManager = new NavigationManager();
+    this.str = null;
   }
-};
 
-const onSubscribeClick = () => {
-  const inputEl = document.querySelector('aside.subscribe input');
-  const email = inputEl.value;
-  const simpleEmailRegex = new RegExp('[^@]+@[^.]+..+');
-
-  if (!simpleEmailRegex.test(email)) {
-    alert(str.ENTER_CORRECT_EMAIL_MSG);
-    return;
+  async init() {
+    this.initComponents();
+    this.bindEvents();
+    await this.start();
   }
-  inputEl.value = '';
-  // ...
-  alert(str.SUCCESSFULLY_SUBSCRIBE_MSG);
-};
 
-const init = async () => {
-  // Init Components
-  loadingPaneManager.init();
-  navigationManager.init();
+  async start() {
+    this.str = await stringLoader.loadStrings();
 
-  // Add events to the page elements
-  document.querySelector('aside.subscribe input')
-          .addEventListener('keyup', onSubscribeKeyup);
-  document.getElementById('subscribeButton')
-          .addEventListener('click', onSubscribeClick);
-  document.getElementById('lang-es-button')
-          .addEventListener('click', () =>
-            changeLanguage(properties.LANG_CODES.SPANISH)
-          );
-  document.getElementById('lang-en-button')
-          .addEventListener('click', () =>
-            changeLanguage(properties.LANG_CODES.ENGLISH)
-          );
+    document.querySelectorAll('[data-str]').forEach(el => {
+      el.innerHTML = this.str[el.dataset['str']];
+    });
+  }
 
-  // Continue the lifecycle
-  await start();
-};
+  initComponents() {
+    this.loadingPaneManager.init();
+    this.navigationManager.init();
+  }
 
-const callInit = () => {
-  init().then(() => 0)
-        .catch(reason => console.error(reason));
-};
+  bindEvents() {
+    const changeLanguage = async newLangCode => {
+      properties.putLanguageCode(newLangCode);
+      await this.start();
+    };
 
-const start = async () => {
-  str = await stringLoader.loadStrings();
+    this.on('aside.subscribe input', 'keyup').call(this.onSubscribeKeyup);
+    this.on('#subscribeButton', 'click').call(this.onSubscribeClick);
 
-  document.querySelectorAll('[data-str]').forEach(el => {
-    el.innerHTML = str[el.dataset['str']];
-  });
-};
+    document.getElementById('lang-es-button')
+            .addEventListener('click', () =>
+              changeLanguage(properties.LANG_CODES.SPANISH)
+            );
+    document.getElementById('lang-en-button')
+            .addEventListener('click', () =>
+              changeLanguage(properties.LANG_CODES.ENGLISH)
+            );
+  }
 
-// --------------------------------  SCRIPT  -------------------------------- //
+  onSubscribeKeyup(e) {
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      document.getElementById('subscribeButton').click();
+    }
+  }
 
-callInit();
+  onSubscribeClick() {
+    const inputEl = document.querySelector('aside.subscribe input');
+    const email = inputEl.value;
+    const simpleEmailRegex = new RegExp('[^@]+@[^.]+..+');
+
+    if (!simpleEmailRegex.test(email)) {
+      alert(this.str.ENTER_CORRECT_EMAIL_MSG);
+      return;
+    }
+    inputEl.value = '';
+
+    // ...
+
+    alert(this.str.SUCCESSFULLY_SUBSCRIBE_MSG);
+  }
+
+  on(selector, event) {
+    const context = this;
+    const el = document.querySelector(selector);
+    return {
+      call(fn) {
+        el.addEventListener(event, e => fn.call(context, e));
+      }
+    }
+  }
+}
+
+const mainPage = new MainPage();
+
+callInit(mainPage);
+
+function callInit(mainPage) {
+  mainPage.init().then(() => 0).catch(reason => console.error(reason));
+}
