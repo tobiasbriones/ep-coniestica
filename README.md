@@ -6,6 +6,12 @@ Example project for a simple company information front-end website made in pure 
 JS/CSS library or framework. Coniestica: Consolidadora internacional importación exportación y
 servicio de logística. Notice that Coniestica is a fictitious company.
 
+## Getting started
+
+Run ```npm run start``` to serve the website.
+
+Run ```npm run build:prod``` to build the production bundle.
+
 ## Screenshots
 
 ![Screenshot 1](https://raw.githubusercontent.com/TobiasBriones/images-nl/main/example-projects/example.programming.web.coniestica/screenshot-1.png)
