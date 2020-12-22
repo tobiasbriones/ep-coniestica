@@ -24,7 +24,7 @@ import '../css/default-legacy.css';
 import '../css/default.css';
 import '../css/main.css';
 import '../css/services.css';
-import NavigationManager from './ui/menu/NavigationManager.mjs';
+import { NavigationManager } from './ui/menu/NavigationManager.mjs';
 
 const navigationManager = new NavigationManager();
 

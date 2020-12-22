@@ -24,7 +24,7 @@ import '../css/default-legacy.css';
 import '../css/default.css';
 import '../css/main.css';
 import '../css/legal.css';
-import NavigationManager from './ui/menu/NavigationManager.mjs';
+import { NavigationManager } from './ui/menu/NavigationManager.mjs';
 import { LEGAL_PRIVACY, LEGAL_TERMS_AND_CONDITIONS } from './values/model.mjs';
 
 class LegalPage {

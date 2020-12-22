@@ -34,7 +34,7 @@ const MAXIMUM_TIME_MS = 3000;
  * Defines a manager for showing the loading pane once when loading the web
  * page.
  */
-export default class LoadingPaneManager {
+export class LoadingPaneManager {
   constructor() {
     this.isLoaded = false;
     this.isWindowLoaded = false;
