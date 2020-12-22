@@ -41,6 +41,11 @@ export default class LoadingPaneManager {
     this.isMinimumTimeOver = false;
   }
 
+  init() {
+    window.addEventListener('load', () => this.windowLoaded());
+    runLoadingPane.call(this);
+  }
+
   dismissLoadingPane() {
     document.body.classList.remove('loading');
   }
@@ -69,11 +74,6 @@ export default class LoadingPaneManager {
 
   maximumTimeOver() {
     this.loaded();
-  }
-
-  init() {
-    window.addEventListener('load', () => this.windowLoaded());
-    runLoadingPane.call(this);
   }
 }
 
