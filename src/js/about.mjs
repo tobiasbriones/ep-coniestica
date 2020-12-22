@@ -33,6 +33,7 @@ import {
 
 const cardsParentEl = document.querySelector('#content > .page > .cards');
 
+
 const getURLParam = paramName => {
   const urlStr = window.location.href;
   const url = new URL(urlStr);

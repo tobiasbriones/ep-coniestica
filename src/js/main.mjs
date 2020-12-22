@@ -108,6 +108,8 @@ class MainPage {
   }
 }
 
+// --------------------------------  SCRIPT  -------------------------------- //
+
 const mainPage = new MainPage();
 
 callInit(mainPage);
