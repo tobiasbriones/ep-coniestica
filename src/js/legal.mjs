@@ -27,55 +27,72 @@ import '../css/legal.css';
 import NavigationManager from './ui/menu/NavigationManager.mjs';
 import { LEGAL_PRIVACY, LEGAL_TERMS_AND_CONDITIONS } from './values/model.mjs';
 
-const titleEl = document.querySelector('section > h1');
-const textEl = document.querySelector('section > div.content');
+class LegalPage {
+  constructor() {
+    this.navigationManager = new NavigationManager();
+    this.titleEl = null;
+    this.textEl = null;
+  }
 
-const getURLParam = paramName => {
+  init() {
+    this.titleEl = document.querySelector('section > h1');
+    this.textEl = document.querySelector('section > div.content');
+
+    this.navigationManager.init();
+    this.updateContent();
+  }
+
+  updateContent() {
+    const param = getURLParam('v');
+
+    switch (param) {
+      case 'privacy':
+        this.gotoPrivacy();
+        break;
+
+      case 'terms-and-conditions':
+        this.gotoTerms();
+        break;
+
+      default:
+        this.gotoPrivacy();
+        break;
+    }
+  }
+
+  gotoPrivacy() {
+    history.pushState(
+      {},
+      'Coniestica - Misión de la empresa',
+      getPathName() + '?v=privacy'
+    );
+    this.titleEl.innerHTML = 'Términos de privacidad';
+    this.textEl.innerHTML = LEGAL_PRIVACY;
+  }
+
+  gotoTerms() {
+    history.pushState(
+      {},
+      'Coniestica - Visión de la empresa',
+      getPathName() + '?v=terms-and-conditions'
+    );
+    this.titleEl.innerHTML = 'Términos y Condiciones de Uso';
+    this.textEl.innerHTML = LEGAL_TERMS_AND_CONDITIONS;
+  }
+}
+
+function getURLParam(paramName) {
   const urlStr = window.location.href;
   const url = new URL(urlStr);
   return url.searchParams.get(paramName);
-};
+}
 
-const getPathName = () => {
+function getPathName() {
   return document.location.pathname;
-};
-
-const gotoPrivacy = () => {
-  history.pushState(
-    {},
-    'Coniestica - Misión de la empresa',
-    getPathName() + '?v=privacy'
-  );
-  titleEl.innerHTML = 'Términos de privacidad';
-  textEl.innerHTML = LEGAL_PRIVACY;
-};
-
-const gotoTerms = () => {
-  history.pushState(
-    {},
-    'Coniestica - Visión de la empresa',
-    getPathName() + '?v=terms-and-conditions'
-  );
-  titleEl.innerHTML = 'Términos y Condiciones de Uso';
-  textEl.innerHTML = LEGAL_TERMS_AND_CONDITIONS;
-};
+}
 
 // --------------------------------  SCRIPT  -------------------------------- //
 
-const navigationManager = new NavigationManager();
-const param = getURLParam('v');
+const legalPage = new LegalPage();
 
-navigationManager.init();
-switch (param) {
-  case 'privacy':
-    gotoPrivacy();
-    break;
-
-  case 'terms-and-conditions':
-    gotoTerms();
-    break;
-
-  default:
-    gotoPrivacy();
-    break;
-}
+legalPage.init();
