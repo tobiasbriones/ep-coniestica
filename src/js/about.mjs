@@ -31,67 +31,95 @@ import {
   COMPANY_VISION_CARD_HTML
 } from './values/model.mjs';
 
-const cardsParentEl = document.querySelector('#content > .page > .cards');
+class AboutPage {
+  constructor() {
+    this.navigationManager = new NavigationManager();
+    this.cardsParentEl = null;
+  }
 
+  init() {
+    this.cardsParentEl = document.querySelector('#content > .page > .cards');
+    this.navigationManager.init();
 
-const getURLParam = paramName => {
+    this.bindEvents();
+    this.updateContent();
+
+  }
+
+  bindEvents() {
+    this.on('#missionButton', 'click').call(this.gotoMission);
+    this.on('#visionButton', 'click').call(this.gotoVision);
+    this.on('#objectivesButton', 'click').call(this.gotoObjectives);
+  }
+
+  updateContent() {
+    const param = getURLParam('v');
+
+    switch (param) {
+      case 'vision':
+        this.gotoVision();
+        break;
+
+      case 'objectives':
+        this.gotoObjectives();
+        break;
+
+      default:
+        this.gotoMission();
+        break;
+    }
+  }
+
+  gotoMission() {
+    history.pushState(
+      {},
+      'Coniestica - Misión de la empresa',
+      getPathName() + '?v=mission'
+    );
+    this.cardsParentEl.innerHTML = COMPANY_MISSION_CARD_HTML;
+  }
+
+  gotoVision() {
+    history.pushState(
+      {},
+      'Coniestica - Visión de la empresa',
+      getPathName() + '?v=vision'
+    );
+    this.cardsParentEl.innerHTML = COMPANY_VISION_CARD_HTML;
+  };
+
+  gotoObjectives() {
+    history.pushState(
+      {},
+      'Coniestica - Objetivos de la empresa',
+      getPathName() + '?v=objectives'
+    );
+    this.cardsParentEl.innerHTML = COMPANY_OBJECTIVES_CARD_HTML;
+  }
+
+  on(selector, event) {
+    const context = this;
+    const el = document.querySelector(selector);
+    return {
+      call(fn) {
+        el.addEventListener(event, e => fn.call(context, e));
+      }
+    };
+  }
+}
+
+function getURLParam(paramName) {
   const urlStr = window.location.href;
   const url = new URL(urlStr);
   return url.searchParams.get(paramName);
-};
+}
 
-const getPathName = () => {
+function getPathName() {
   return document.location.pathname;
-};
-
-const gotoMission = () => {
-  history.pushState(
-    {},
-    'Coniestica - Misión de la empresa',
-    getPathName() + '?v=mission'
-  );
-  cardsParentEl.innerHTML = COMPANY_MISSION_CARD_HTML;
-};
-
-const gotoVision = () => {
-  history.pushState(
-    {},
-    'Coniestica - Visión de la empresa',
-    getPathName() + '?v=vision'
-  );
-  cardsParentEl.innerHTML = COMPANY_VISION_CARD_HTML;
-};
-
-const gotoObjectives = () => {
-  history.pushState(
-    {},
-    'Coniestica - Objetivos de la empresa',
-    getPathName() + '?v=objectives'
-  );
-  cardsParentEl.innerHTML = COMPANY_OBJECTIVES_CARD_HTML;
-};
+}
 
 // --------------------------------  SCRIPT  -------------------------------- //
 
-const navigationManager = new NavigationManager();
-const param = getURLParam('v');
+const aboutPage = new AboutPage();
 
-navigationManager.init();
-document.getElementById('missionButton').addEventListener('click', gotoMission);
-document.getElementById('visionButton').addEventListener('click', gotoVision);
-document.getElementById('objectivesButton')
-        .addEventListener('click', gotoObjectives);
-
-switch (param) {
-  case 'vision':
-    gotoVision();
-    break;
-
-  case 'objectives':
-    gotoObjectives();
-    break;
-
-  default:
-    gotoMission();
-    break;
-}
+aboutPage.init();
