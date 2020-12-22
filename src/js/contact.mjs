@@ -26,50 +26,71 @@ import '../css/main.css';
 import '../css/contact.css';
 import NavigationManager from './ui/menu/NavigationManager.mjs';
 
-const navigationManager = new NavigationManager();
-
-const onContactSubmit = (e) => {
-  e.preventDefault();
-  const simpleEmailRegex = new RegExp('[^@]+@[^.]+..+');
-  const nameEl = document.getElementById('contact-name');
-  const emailEl = document.getElementById('contact-email');
-  const messageEl = document.getElementById('contact-message');
-  const name = nameEl.value;
-  const email = emailEl.value;
-  const message = messageEl.value;
-  let isValidInput = true;
-
-  // Validate
-  isValidInput &= name.trim().length > 0;
-  isValidInput &= email.trim().length > 0;
-  isValidInput &= message.trim().length > 0;
-
-  if (!isValidInput) {
-    // This would be better done with a css framework to show the message below
-    // the corresponding input
-    alert('Please fill all the fields');
-    return;
-  }
-  isValidInput &= simpleEmailRegex.test(email);
-
-  if (!isValidInput) {
-    alert('Enter a valid email address');
-    return;
+class ContactPage {
+  constructor() {
+    this.navigationManager = new NavigationManager();
   }
 
-  // ...
-  alert('Great! We\'ll be in touch  with you soon');
+  init() {
+    this.navigationManager.init();
+    this.bindEvents();
+  }
 
-  // Clean
-  nameEl.value = '';
-  emailEl.value = '';
-  messageEl.value = '';
-};
+  bindEvents() {
+    this.on('#contact-form', 'submit').call(this.onContactSubmit)
+  }
 
-const init = () => {
-  navigationManager.init();
-  document.getElementById('contact-form')
-          .addEventListener('submit', onContactSubmit);
-};
+  onContactSubmit(e) {
+    e.preventDefault();
+    const simpleEmailRegex = new RegExp('[^@]+@[^.]+..+');
+    const nameEl = document.getElementById('contact-name');
+    const emailEl = document.getElementById('contact-email');
+    const messageEl = document.getElementById('contact-message');
+    const name = nameEl.value;
+    const email = emailEl.value;
+    const message = messageEl.value;
+    let isValidInput = true;
 
-init();
+    // Validate
+    isValidInput &= name.trim().length > 0;
+    isValidInput &= email.trim().length > 0;
+    isValidInput &= message.trim().length > 0;
+
+    if (!isValidInput) {
+      // This would be better done with a css framework to show the message below
+      // the corresponding input
+      alert('Please fill all the fields');
+      return;
+    }
+    isValidInput &= simpleEmailRegex.test(email);
+
+    if (!isValidInput) {
+      alert('Enter a valid email address');
+      return;
+    }
+
+    // ...
+    alert('Great! We\'ll be in touch  with you soon');
+
+    // Clean
+    nameEl.value = '';
+    emailEl.value = '';
+    messageEl.value = '';
+  }
+
+  on(selector, event) {
+    const context = this;
+    const el = document.querySelector(selector);
+    return {
+      call(fn) {
+        el.addEventListener(event, e => fn.call(context, e));
+      }
+    };
+  }
+}
+
+// --------------------------------  SCRIPT  -------------------------------- //
+
+const contactPage = new ContactPage();
+
+contactPage.init();
