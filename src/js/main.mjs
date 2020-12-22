@@ -46,7 +46,7 @@ class MainPage {
     this.str = await stringLoader.loadStrings();
 
     document.querySelectorAll('[data-str]').forEach(el => {
-      el.innerHTML = this.str[el.dataset['str']];
+      el.innerText = this.str[el.dataset['str']];
     });
   }
 
