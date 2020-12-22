@@ -161,7 +161,7 @@
               </a>
             </li>
             <li>
-              <a href="https://pixabay.com/">Pixabay imágenes</a>
+              <a href="https://pixabay.com">Pixabay imágenes</a>
             </li>
             <li>
               <a href="https://github.com/TobiasBriones/example.programming.web.coniestica">GitHub</a>
@@ -202,7 +202,7 @@
         'https://raw.githubusercontent.com/TobiasBriones/example.programming.web.coniestica/gh-pages/js/suggestions.bundle.js';
       const req = new XMLHttpRequest();
 
-      req.onreadystatechange = function () {
+      req.onreadystatechange = function() {
         if (this.readyState === 4 && this.status === 200) {
           const script = document.createElement('script');
 
