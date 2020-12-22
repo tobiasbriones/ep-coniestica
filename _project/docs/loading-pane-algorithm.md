@@ -16,7 +16,7 @@ then it allows the user to see the content that was already loaded by
 dismissing the animation and avoiding the user to leave because the loading
 process seemed really tough!.
 
-The loading pane view is managed at the [LoadingPaneManager.mjs
+The loading pane view is managed at the [LoadingPane.mjs
 ](https://github.com/TobiasBriones/example.programming.web.coniestica/tree/v2.0.0/src/js/ui/loading-pane/LoadingPaneManager.mjs)
 class.
 

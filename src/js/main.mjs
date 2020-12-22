@@ -25,13 +25,13 @@ import '../css/default.css';
 import '../css/loading-pane.css';
 import '../css/main.css';
 import properties from './config/properties.mjs';
-import { LoadingPaneManager } from './ui/loading-pane/LoadingPaneManager.mjs';
+import { LoadingPane } from './ui/loading-pane.mjs';
 import { NavigationManager } from './ui/menu/NavigationManager.mjs';
 import { stringLoader } from './values/model';
 
 class MainPage {
   constructor() {
-    this.loadingPaneManager = new LoadingPaneManager();
+    this.loadingPaneManager = new LoadingPane();
     this.navigationManager = new NavigationManager();
     this.str = null;
   }
