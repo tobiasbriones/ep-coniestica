@@ -12,6 +12,13 @@ Run ```npm run start``` to serve the website.
 
 Run ```npm run build:prod``` to build the production bundle.
 
+## Notes
+
+- The website uses hard-coded HTML and values to update the GUI, see [values](./src/js/values). This
+  is due to avoid calling an API to fetch resources and make the website standalone. This behavior
+  can be changed to fetch the data from a server and use HTML DOM elements to update the GUI
+  instead.
+
 ## Screenshots
 
 ![Screenshot 1](https://raw.githubusercontent.com/TobiasBriones/images-nl/main/example-projects/example.programming.web.coniestica/screenshot-1.png)
@@ -22,7 +29,8 @@ Run ```npm run build:prod``` to build the production bundle.
 
 ## Contact
 
-This software: [Website](https://tobiasbriones.github.io/example.programming.web.coniestica), [GitHub Repository](https://github.com/TobiasBriones/example.programming.web.coniestica)
+This software: [Website](https://tobiasbriones.github.io/example.programming.web.coniestica), 
+[GitHub Repository](https://github.com/TobiasBriones/example.programming.web.coniestica)
 
 Tobias Briones: [GitHub](https://github.com/TobiasBriones)
 
