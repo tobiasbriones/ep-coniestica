@@ -19,14 +19,49 @@
  * along with Coniestica.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-import { NAV_ABOUT_ITEMS, NAV_ABOUT_ITEMS_URLS } from '../../../values/model.mjs';
+import { NAV_ABOUT_ITEMS, NAV_ABOUT_ITEMS_URLS } from '../values/model.mjs';
 
+const NAV_ABOUT_SEL = 'nav > div > ul > .about';
 const DROPDOWN_MENU_SEL = 'nav > div > .dropdown-menu';
+
+/**
+ * Manages the web page navigation menu including the dropdown menus.
+ */
+export class NavigationManager {
+  constructor() {
+    this.dropdownMenu = new DropdownMenu();
+    this.aboutEl = null;
+  }
+
+  init() {
+    this.dropdownMenu.init();
+    this.aboutEl = document.querySelector(NAV_ABOUT_SEL);
+
+    this.aboutEl.addEventListener('mouseover', () => this.onAboutHover());
+    this.aboutEl.addEventListener('mouseout', e => this.onAboutHoverOut(e));
+  }
+
+  onAboutHover() {
+    let x = this.aboutEl.getClientRects()[0].x;
+
+    // This if statement is a fix for legacy browsers
+    if (!x) {
+      x = document.body.offsetWidth - this.aboutEl.offsetWidth;
+    }
+    this.dropdownMenu.open('about', x);
+  }
+
+  onAboutHoverOut(e) {
+    if (!this.dropdownMenu.isInBounds(e)) {
+      this.dropdownMenu.close();
+    }
+  }
+}
 
 /**
  * Defines a dropdown menu component shown in the web page navigation.
  */
-export class DropdownMenu {
+class DropdownMenu {
   constructor() {
     this.dropdownMenuEl = null;
     this.aboutDropdownItemsHtml = null;
@@ -35,7 +70,7 @@ export class DropdownMenu {
 
   init() {
     this.dropdownMenuEl = document.querySelector(DROPDOWN_MENU_SEL);
-    this.aboutDropdownItemsHtml = getAboutItemsHtml.call(this);
+    this.aboutDropdownItemsHtml = getAboutItemsHtml();
     this.isMenuOpened = false;
 
     this.dropdownMenuEl.addEventListener('mouseout', e => {

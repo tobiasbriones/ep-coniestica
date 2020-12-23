@@ -25,7 +25,7 @@ import '../css/default.css';
 import '../css/main.css';
 import '../css/clients.css';
 import '../css/suggestions.css';
-import { NavigationManager } from './ui/menu/NavigationManager.mjs';
+import { NavigationManager } from './ui/navigation.mjs';
 
 const navigationManager = new NavigationManager();
 

@@ -26,7 +26,7 @@ import '../css/loading-pane.css';
 import '../css/main.css';
 import properties from './config/properties.mjs';
 import { LoadingPane } from './ui/loading-pane.mjs';
-import { NavigationManager } from './ui/menu/NavigationManager.mjs';
+import { NavigationManager } from './ui/navigation.mjs';
 import { stringLoader } from './values/model';
 
 class MainPage {

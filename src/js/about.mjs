@@ -24,7 +24,7 @@ import '../css/default-legacy.css';
 import '../css/default.css';
 import '../css/main.css';
 import '../css/about.css';
-import { NavigationManager } from './ui/menu/NavigationManager.mjs';
+import { NavigationManager } from './ui/navigation.mjs';
 import {
   COMPANY_MISSION_CARD_HTML,
   COMPANY_OBJECTIVES_CARD_HTML,
