@@ -21,4 +21,4 @@ The loading pane view is managed at the [LoadingPane.mjs
 class.
 
 [![Loading Pane Algorithm](https://raw.githubusercontent.com/TobiasBriones/images/main/example-projects/example.programming.web.coniestica/docs/loading-pane/loading-pane-animation-algorithm.svg)](https://github.com/TobiasBriones/images/tree/main/example-projects)
-<p align=center><strong>Loading Pane Animation Algorithm</strong></p>
+<p style="text-align: center;"><strong>Loading Pane Animation Algorithm</strong></p>
