@@ -2,7 +2,7 @@
 
 ### Version
 
-Document created for Coniestica v2.0.0.
+Document created for Coniestica v2.2.0.
 
 ### Content
 
@@ -16,9 +16,7 @@ window takes too long to load, then it allows the user to see the content that w
 dismissing the animation and avoiding the user to leave because the loading process seemed really
 tough!.
 
-The loading pane view is managed at the [LoadingPane.mjs
-](https://github.com/TobiasBriones/example.programming.web.coniestica/tree/v2.0.0/src/js/ui/loading-pane/LoadingPaneManager.mjs)
-class.
+The loading pane view is managed at the [loading-pane.mjs](../src/js/ui/loading-pane.mjs) module.
 
 [![Loading Pane Algorithm](https://raw.githubusercontent.com/TobiasBriones/images/main/example-projects/example.programming.web.coniestica/docs/loading-pane/loading-pane-animation-algorithm.svg)](https://github.com/TobiasBriones/images/tree/main/example-projects)
 <p style="text-align: center;"><strong>Loading Pane Animation Algorithm</strong></p>
