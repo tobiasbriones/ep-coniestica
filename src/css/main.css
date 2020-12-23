@@ -207,12 +207,6 @@ footer .lang > div > img {
   padding: 8px 0;
 }
 
-/* Apply this to make it visible with the footer dark background */
-footer .social img[alt='github'] {
-  background: white;
-  border-radius: 50%;
-}
-
 /* ---------------------------  SUBSCRIBE ASIDE  ---------------------------- */
 aside {
   z-index: 2;
