@@ -28,6 +28,7 @@ header {
   width: 100%;
   z-index: 10000;
   background-color: white;
+  -webkit-transform: translateZ(0);
 }
 
 header > nav {
