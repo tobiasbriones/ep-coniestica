@@ -45,7 +45,8 @@ Tobias Briones: [GitHub](https://github.com/TobiasBriones)
 
 **Example Project: Coniestica**
 
-Example project for a simple company information front-end website made in pure JS.
+Example project for a simple front-end website made in pure JS for a fictitious company called
+Coniestica.
 
 Copyright © 2019-2020 Tobias Briones. All rights reserved.
 
