@@ -30,6 +30,10 @@ Run ```npm run build:prod``` to build the production bundle.
 
 ![Screenshot 2](https://raw.githubusercontent.com/TobiasBriones/general-images/main/example-projects/example.programming.web.coniestica/screenshot-2.png)
 
+---
+
+![Coniestica Website GIF](./_project/img/coniestica-website.gif)
+
 ## Contact
 
 This software: [Website](https://tobiasbriones.github.io/example.programming.web.coniestica), 
