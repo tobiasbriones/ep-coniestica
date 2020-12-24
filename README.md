@@ -33,6 +33,9 @@ Run ```npm run build:prod``` to build the production bundle.
 ---
 
 ![Coniestica Website GIF](./_project/img/coniestica-website.gif)
+<p style="text-align: center;">
+  <strong>Coniestica Website Animated GIF</strong>
+</p>
 
 ## Contact
 
