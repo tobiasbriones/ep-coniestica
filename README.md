@@ -1,6 +1,7 @@
 # Example Project: Coniestica
 
 [![EP](https://raw.githubusercontent.com/TobiasBriones/images/main/example-projects/example.programming.web.coniestica/ep-coniestica-badge.svg)](https://tobiasbriones.github.io/example-project/ep/coniestica)
+&nbsp;
 [![GitHub Repository](https://raw.githubusercontent.com/TobiasBriones/general-images/main/example-projects/badges/ep-gh-repo-badge.svg)](https://github.com/TobiasBriones/example.programming.web.coniestica)
 
 [![Project GitHub License](https://img.shields.io/github/license/TobiasBriones/example.programming.web.coniestica.svg?style=flat-square)](https://github.com/TobiasBriones/example.programming.web.coniestica/blob/main/LICENSE)
