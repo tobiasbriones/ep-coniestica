@@ -1,10 +1,10 @@
 # Example Project: Coniestica
 
-[![EP](https://raw.githubusercontent.com/TobiasBriones/images/main/example-projects/example.programming.web.coniestica/ep-coniestica-badge.svg)](https://tobiasbriones.github.io/example-project/ep/coniestica)
+[![EP](https://raw.githubusercontent.com/tobiasbriones/images/main/example-projects/example.programming.web.coniestica/ep-coniestica-badge.svg)](https://tobiasbriones.github.io/example-project/ep/coniestica)
 &nbsp;
-[![GitHub Repository](https://raw.githubusercontent.com/TobiasBriones/general-images/main/example-projects/badges/ep-gh-repo-badge.svg)](https://github.com/TobiasBriones/example.programming.web.coniestica)
+[![GitHub Repository](https://raw.githubusercontent.com/tobiasbriones/general-images/main/example-projects/badges/ep-gh-repo-badge.svg)](https://github.com/tobiasbriones/ep-coniestica)
 
-[![Project GitHub License](https://img.shields.io/github/license/TobiasBriones/example.programming.web.coniestica.svg?style=flat-square)](https://github.com/TobiasBriones/example.programming.web.coniestica/blob/main/LICENSE)
+[![Project GitHub License](https://img.shields.io/github/license/tobiasbriones/example.programming.web.coniestica.svg?style=flat-square)](https://github.com/tobiasbriones/ep-coniestica/blob/main/LICENSE)
 
 Example project for a simple company information front-end website made in pure JS without any
 JS/CSS library or framework. Coniestica: Consolidadora internacional importación exportación y
@@ -25,23 +25,23 @@ Run ```npm run build:prod``` to build the production bundle.
 
 ## Screenshots
 
-![Screenshot 1](https://raw.githubusercontent.com/TobiasBriones/general-images/main/example-projects/example.programming.web.coniestica/screenshot-1.png)
+![Screenshot 1](https://raw.githubusercontent.com/tobiasbriones/general-images/main/example-projects/example.programming.web.coniestica/screenshot-1.png)
 
 ---
 
-![Screenshot 2](https://raw.githubusercontent.com/TobiasBriones/general-images/main/example-projects/example.programming.web.coniestica/screenshot-2.png)
+![Screenshot 2](https://raw.githubusercontent.com/tobiasbriones/general-images/main/example-projects/example.programming.web.coniestica/screenshot-2.png)
 
 ---
 
 **Coniestica Website Animated GIF:**
-![Coniestica Website GIF](https://raw.githubusercontent.com/TobiasBriones/example.programming.web.coniestica/main/_project/img/coniestica-website.gif)
+![Coniestica Website GIF](https://raw.githubusercontent.com/tobiasbriones/example.programming.web.coniestica/main/_project/img/coniestica-website.gif)
 
 ## Contact
 
-This software: [Website](https://tobiasbriones.github.io/example.programming.web.coniestica), 
-[GitHub Repository](https://github.com/TobiasBriones/example.programming.web.coniestica)
+This software: [Website](https://tobiasbriones.github.io/ep-coniestica), 
+[GitHub Repository](https://github.com/tobiasbriones/ep-coniestica)
 
-Tobias Briones: [GitHub](https://github.com/TobiasBriones)
+Tobias Briones: [GitHub](https://github.com/tobiasbriones)
 
 ## About
 
