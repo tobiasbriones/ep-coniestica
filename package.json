@@ -1,5 +1,5 @@
 {
-  "name": "example.programming.web.coniestica",
+  "name": "ep-coniestica",
   "version": "2.2.0",
   "description": "Example project for a simple company information front-end website",
   "private": true,
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/TobiasBriones/example.programming.web.coniestica.git"
+    "url": "git+https://github.com/tobiasbriones/ep-coniestica.git"
   },
   "keywords": [
     "example-project",
@@ -21,11 +21,11 @@
     "pure-javascript"
   ],
   "author": "Tobias Briones <tobiasbriones.dev@gmail.com>",
-  "license": "GPL-3.0",
+  "license": "GPL-3.0-or-later",
   "bugs": {
-    "url": "https://github.com/TobiasBriones/example.programming.web.coniestica/issues"
+    "url": "https://github.com/tobiasbriones/ep-coniestica/issues"
   },
-  "homepage": "https://github.com/TobiasBriones/example.programming.web.coniestica#readme",
+  "homepage": "https://github.com/tobiasbriones/ep-coniestica#readme",
   "devDependencies": {
     "@babel/cli": "^7.10.5",
     "@babel/core": "^7.10.5",
