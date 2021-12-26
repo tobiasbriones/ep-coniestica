@@ -6,21 +6,23 @@
 
 [![Project GitHub License](https://img.shields.io/github/license/tobiasbriones/example.programming.web.coniestica.svg?style=flat-square)](https://github.com/tobiasbriones/ep-coniestica/blob/main/LICENSE)
 
-Example project for a simple company information front-end website made in pure JS without any
-JS/CSS library or framework. Coniestica: Consolidadora internacional importación exportación y
-servicio de logística. Notice that Coniestica is a fictitious company.
+Example project for a simple company information front-end website made in pure
+JS without any JS/CSS library or framework. Coniestica: Consolidadora
+internacional importación exportación y servicio de logística. Notice that
+Coniestica is a fictitious company.
 
 ## Getting started
 
-Run ```npm run start``` to serve the website.
+Run `npm run start` to serve the website.
 
-Run ```npm run build:prod``` to build the production bundle.
+Run `npm run build:prod` to build the production bundle.
 
 ## Notes
 
-- The website uses hard-coded HTML and values to update the GUI, see [values](./src/js/values). This
-  is due to avoid calling an API to fetch resources and make the website standalone. This behavior
-  can be changed to fetch the data from a server and use HTML DOM elements to update the GUI
+- The website uses hard-coded HTML and values to update the GUI,
+  see [values](./src/js/values). This is due to avoid calling an API to fetch
+  resources and make the website standalone. This behavior can be changed to
+  fetch the data from a server and use HTML DOM elements to update the GUI
   instead.
 
 ## Screenshots
@@ -38,7 +40,7 @@ Run ```npm run build:prod``` to build the production bundle.
 
 ## Contact
 
-This software: [Website](https://tobiasbriones.github.io/ep-coniestica), 
+This software: [Website](https://tobiasbriones.github.io/ep-coniestica),
 [GitHub Repository](https://github.com/tobiasbriones/ep-coniestica)
 
 Tobias Briones: [GitHub](https://github.com/tobiasbriones)
@@ -47,16 +49,17 @@ Tobias Briones: [GitHub](https://github.com/tobiasbriones)
 
 **Example Project: Coniestica**
 
-Example project for a simple front-end website made in pure JS for a fictitious company called
-Coniestica.
+Example project for a simple front-end website made in pure JS for a fictitious
+company called Coniestica.
 
 Copyright © 2019-2020 Tobias Briones. All rights reserved.
 
 ### License
 
-This software is licensed under the [GNU General Public License v3.0 or later License](./LICENSE).
+This project is licensed under
+the [GNU General Public License v3.0 or later License](./LICENSE).
 
 ---
 
-This project includes images from Pixabay and icons, see the [NOTICE](./NOTICE) file for more
-details.
+This project includes images from Pixabay and icons, see the [NOTICE](./NOTICE)
+file for more details.
