@@ -61,5 +61,5 @@ the [GNU General Public License v3.0 or later License](./LICENSE).
 
 ---
 
-This project includes images from Pixabay and icons, see the [NOTICE](./NOTICE)
+This project includes images from Pixabay and icons, see the [NOTICE](./NOTICE.md)
 file for more details.
