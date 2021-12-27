@@ -77,13 +77,13 @@ where some of these images have been modified:
 
 
 - [ic_services_transport.png](./_project/img/ic_services_transport.png):
-  - From https://pixabay.com/illustrations/truck-vehicles-transport-lead-1918551
-  - By   https://pixabay.com/users/superbea-4052665
+    - From https://pixabay.com/illustrations/truck-vehicles-transport-lead-1918551
+    - By   https://pixabay.com/users/superbea-4052665
 
 
 - [ic_vector.png](./_project/img/ic_vector.png):
-  - From https://pixabay.com/vectors/gradient-mesh-bakery-products-bake-1264214
-  - By   https://pixabay.com/users/deviser-1919446
+    - From https://pixabay.com/vectors/gradient-mesh-bakery-products-bake-1264214
+    - By   https://pixabay.com/users/deviser-1919446
 
 
 - [british_flag.svg](./_project/img/british_flag.svg):
@@ -106,3 +106,9 @@ Social icons are taken from the corresponding company brand resources.
 
 - Loading css spinner from https://loading.io/css licensed under the
   [CC0 License](https://creativecommons.org/share-your-work/public-domain/cc0).
+
+### Soft-copied
+
+- Roboto Font:
+    - Source [Google Fonts](https://fonts.googleapis.com/css?family=Roboto&display=swap).
+    - Licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0).
