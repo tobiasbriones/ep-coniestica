@@ -27,16 +27,16 @@ Run `npm run build:prod` to build the production bundle.
 
 ## Screenshots
 
-![Screenshot 1](https://raw.githubusercontent.com/tobiasbriones/general-images/main/example-projects/example.programming.web.coniestica/screenshot-1.png)
+![Screenshot 1](https://github.com/tobiasbriones/ep-coniestica/releases/download/v2.0.0/screenshot-1.png)
 
 ---
 
-![Screenshot 2](https://raw.githubusercontent.com/tobiasbriones/general-images/main/example-projects/example.programming.web.coniestica/screenshot-2.png)
+![Screenshot 2](https://github.com/tobiasbriones/ep-coniestica/releases/download/v2.0.0/screenshot-2.png)
 
 ---
 
 **Coniestica Website Animated GIF:**
-![Coniestica Website GIF](https://raw.githubusercontent.com/tobiasbriones/example.programming.web.coniestica/main/_project/img/coniestica-website.gif)
+![Coniestica Website GIF](https://github.com/tobiasbriones/ep-coniestica/releases/download/v2.0.0/coniestica-website.gif)
 
 ## Contact
 
