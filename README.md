@@ -11,7 +11,7 @@ JS without any JS/CSS library or framework. Coniestica: Consolidadora
 internacional importación exportación y servicio de logística. Notice that
 Coniestica is a fictitious company.
 
-## Getting started
+## Getting Started
 
 Run `npm run start` to serve the website.
 
