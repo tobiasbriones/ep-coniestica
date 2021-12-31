@@ -1,10 +1,10 @@
 # Example Project: Coniestica
 
-[![EP](https://raw.githubusercontent.com/tobiasbriones/images/main/example-projects/example.programming.web.coniestica/ep-coniestica-badge.svg)](https://tobiasbriones.github.io/example-project/ep/coniestica)
+[![EP](https://raw.githubusercontent.com/tobiasbriones/ep-coniestica/static/badge.svg)](https://tobiasbriones.github.io/ep-coniestica)
 &nbsp;
 [![GitHub Repository](https://raw.githubusercontent.com/tobiasbriones/general-images/main/example-projects/badges/ep-gh-repo-badge.svg)](https://github.com/tobiasbriones/ep-coniestica)
 
-[![Project GitHub License](https://img.shields.io/github/license/tobiasbriones/example.programming.web.coniestica.svg?style=flat-square)](https://github.com/tobiasbriones/ep-coniestica/blob/main/LICENSE)
+[![Project GitHub License](https://img.shields.io/github/license/tobiasbriones/ep-coniestica.svg?style=flat-square)](https://github.com/tobiasbriones/ep-coniestica/blob/main/LICENSE)
 
 Example project for a simple company information front-end website made in pure
 JS without any JS/CSS library or framework. Coniestica: Consolidadora

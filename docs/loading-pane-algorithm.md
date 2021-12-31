@@ -19,4 +19,4 @@ tough!.
 The loading pane view is managed at the [loading-pane.mjs](../src/js/ui/loading-pane.mjs) module.
 
 **Loading Pane Animation Algorithm:**
-[![Loading Pane Algorithm](https://raw.githubusercontent.com/TobiasBriones/images/main/example-projects/example.programming.web.coniestica/docs/loading-pane/loading-pane-animation-algorithm.svg)](https://github.com/TobiasBriones/images/tree/main/example-projects)
+![Loading Pane Algorithm](https://raw.githubusercontent.com/tobiasbriones/ep-coniestica/static/loading-pane-animation-algorithm.svg)
