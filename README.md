@@ -18,6 +18,8 @@ Run `npm run start` to serve the website.
 
 Run `npm run build:prod` to build the production bundle.
 
+Go to: [Website](https://coniestica.ep.dev.mathsoftware.engineer).
+
 ## Notes
 
 - The website uses hard-coded HTML and values to update the GUI,
@@ -40,9 +42,6 @@ Run `npm run build:prod` to build the production bundle.
 ![Coniestica Website GIF](https://github.com/tobiasbriones/ep-coniestica/releases/download/v2.0.0/coniestica-website.gif)
 
 ## Contact
-
-This software: [Website](https://tobiasbriones.github.io/ep-coniestica),
-[GitHub Repository](https://github.com/tobiasbriones/ep-coniestica)
 
 Tobias Briones: [GitHub](https://github.com/tobiasbriones)
 
